@@ -15,16 +15,23 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // {
+      //   rel: "stylesheet",
+      //   href: "https://fonts.googleapis.com/css2?family=Oxygen&display=swap",
+      // },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/fonts/poppins.css',
+    '~/assets/fonts/montserrat.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // '~/plugins/vuetify.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,6 +43,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // !google font config
+    // '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,16 +55,16 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      light: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: '#377DFF',
+          secondary: '#233142',
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
         }
       }
     }
@@ -70,5 +79,5 @@ export default {
     typeCheck: {
       async: false
     }
-  }
+  },
 }

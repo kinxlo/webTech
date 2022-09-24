@@ -1,5 +1,8 @@
 <template>
-  <h1>{{ fullName }}</h1>
+  <v-app>
+    <h1 class="name">{{ fullName }}</h1>
+    <v-card width="10rem" height="10rem" color="primary" elevation="2"></v-card>
+  </v-app>
 </template>
 
 <script lang="ts">
@@ -13,7 +16,7 @@ export default Vue.extend({
       message:
         "This is a [Vue 2 | Nuxt 2 & Typescript] boiler plate template with type check and ts-runtime error display on browser",
       firstName: `kingsley`,
-      lastName: `Solomon`,
+      lastName: `Solomon W`,
     };
   },
 
@@ -25,4 +28,8 @@ export default Vue.extend({
 });
 </script>
 
-<style></style>
+<style scoped>
+.name {
+  font-family: "Montserrat", sans-serif;
+}
+</style>

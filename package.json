@@ -21,6 +21,8 @@
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
-    "fork-ts-checker-webpack-plugin": "^7.2.13"
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "sass": "^1.55.0",
+    "sass-loader": "10"
   }
 }
