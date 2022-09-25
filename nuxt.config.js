@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - webtech',
-    title: 'webtech',
+    titleTemplate: '%s - nuxt_typescripit_template',
+    title: 'nuxt_typescripit_template',
     htmlAttrs: {
       lang: 'en'
     },
@@ -16,17 +16,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // {
-      //   rel: "stylesheet",
-      //   href: "https://fonts.googleapis.com/css2?family=Oxygen&display=swap",
-      // },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // local fonts imports
     '~/assets/fonts/poppins.css',
-    '~/assets/fonts/montserrat.css'
+    '~/assets/fonts/montserrat.css',
+    // SCSS file in the project
+    '~/assets/scss/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,8 +42,6 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    // !google font config
-    // '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -53,10 +50,28 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    // *USE THE OPTIONPATH FOR MODULARITY
+    // optionsPath: './vuetify.options.js',
+
+    // customVariables: ['~/assets/variables.scss'],
+    // treeShake: true,
     theme: {
-      light: true,
+      options: {
+        customProperties: true,
+      },
+      // dark: true,
       themes: {
+        light: {
+          primary: '#377DFF',
+          secondary: '#233142',
+          accent: colors.grey.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3,
+          background: '#141D28', //custom name
+        },
+
         dark: {
           primary: '#377DFF',
           secondary: '#233142',
@@ -65,6 +80,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+          background: '#141D28', //costom name
         }
       }
     }
@@ -74,7 +90,7 @@ export default {
   build: {
   },
 
-  // !dont know if its doing anything...
+  // !not sure if its doing anything...
   typescript: {
     typeCheck: {
       async: false
