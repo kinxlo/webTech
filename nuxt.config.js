@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - nuxt_typescripit_template',
-    title: 'nuxt_typescripit_template',
+    titleTemplate: '%s - webTech',
+    title: 'webtech',
     htmlAttrs: {
       lang: 'en'
     },
@@ -70,6 +70,8 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
           background: '#141D28', //custom name
+          navbarBg: '#0C1117'
+
         },
 
         dark: {

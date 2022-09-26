@@ -1,1 +1,92 @@
 // main entry scss file.
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.cc-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+p,
+a,
+span {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0 !important;
+}
+
+.font-m {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-p {
+  font-family: "Poppins", sans-serif !important;
+}
+
+// .d-flex {
+//   gap: 10px;
+//   gap: 10px 20px;
+//   /* row-gap column gap */
+//   row-gap: 10px;
+//   /* sets only for rows */
+//   column-gap: 20px;
+//   /* sets only for columns */
+// }
+
+.hero {
+  position: relative;
+  background: url(~assets/heroImg.svg) no-repeat center;
+  background-size: cover;
+//   background-blend-mode:luminosity;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #121B26BA;
+    // z-index: -1;
+  }
+
+  .hero_desc{
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero_overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+     z-index: 1;
+  }
+
+  .hero_title_number {
+    font-size: 140px;
+    opacity: 0.13;
+  }
+
+  .hero_title {
+    border-left: 3px solid #377DFF;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .superhero {
+    // !create a mixin
+    position: absolute;
+    z-index: 1;
+    bottom: 6.5em;
+    right: 0;
+  }
+}
