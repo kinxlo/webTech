@@ -17,7 +17,19 @@
             <NuxtLink to="/" class="white--text"> Contact Us </NuxtLink>
           </v-layout>
         </v-layout>
+
       </v-app-bar>
     </v-sheet>
   </client-only>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+  data: () => ({
+    firstName: `kingsley`,
+    lastName: `you`,
+    img: `https://images.unsplash.com/photo-1661961111247-e218f67d1cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60`,
+  }),
+});
+</script>
