@@ -13,11 +13,11 @@
             <v-layout class="align-center text-h3 mb-10">
               <h1 class="hero_title_number">01</h1>
               <div class="hero_title pl-5 ml-5">
-                <p class="font-m mb-8">The Uniqe Creative</p>
+                <p class="font-m mb-8 white--text">The Uniqe Creative</p>
                 <p class="font-m accent--text">Design Agency</p>
               </div>
             </v-layout>
-            <p class="mr-10">
+            <p class="mr-10 white--text">
               Always on the lookout for the hi-tech advancements. Build not only
               a
               <br />
@@ -50,11 +50,21 @@
       </v-layout>
     </v-sheet>
     <!-- SECTION ONE -->
-    <v-layout flex-column class="cc-wrapper text-center mb-16">
-      <h2 class="text-h4 mb-16 font-weight-bold">
-        <span class="font-m accent--text left_border pl-7">How</span>
-        <span class="font-m">we Work</span>
-      </h2>
+    <v-layout flex-column class="cc-wrapper text-center v-spacing">
+      <div class="py-5 text-center">
+        <h2
+          style="font-size: 40px"
+          class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
+        >
+          How
+        </h2>
+        <h2
+          style="font-size: 40px"
+          class="font-m py-2 font-weight-bold d-inline"
+        >
+          We Work
+        </h2>
+      </div>
 
       <v-layout align-center justify-space-between class="mt-5">
         <v-sheet class="text-center">
@@ -94,7 +104,7 @@
       </v-layout>
     </v-layout>
     <!-- SECTION TWO -->
-    <v-layout class="secondary white--text py-16 my-16vb">
+    <v-layout class="secondary white--text v-padding">
       <v-layout flex-column class="cc-wrapper">
         <v-row dense v-for="n in 2" key="n" class="my-7">
           <v-col v-for="n in 3" key="n" class="d-flex">
@@ -102,8 +112,10 @@
               icon.mdiFileDocumentOutline
             }}</v-icon>
             <v-layout class="ml-3" flex-column>
-              <h4 style="font-size: 20px" class="my-4">SEO Ready Code</h4>
-              <p>
+              <h4 style="font-size: 20px" class="my-4 white--text">
+                SEO Ready Code
+              </h4>
+              <p class="white--text">
                 Tincidunt felis dignissim justo congue, non rutrum tortor
                 volutpat .
               </p>
@@ -141,7 +153,9 @@
           style="font-size: 40px; letter-spacing: 1px; line-height: 46px"
         >
           Few reasons <br />
-          <span class="accent--text font-weight-bold font-m">why choose us</span>
+          <span class="accent--text font-weight-bold font-m"
+            >why choose us</span
+          >
         </h3>
         <v-sheet max-width="50em" width="100%" class="my-10 transparent">
           <h5 style="font-size: 44px" class="accent--text">.01</h5>
@@ -190,20 +204,115 @@
         </v-sheet>
       </v-layout>
     </v-layout>
+    <!-- SECTION FIVE -->
+    <v-layout class="cc-wrappe">
+      <v-row no-gutters>
+        <v-col v-for="n in 4" :key="n">
+          <v-card
+            @mouseenter="showOverlay"
+            class="sect_5_card"
+            width="360"
+            height="360"
+          >
+            <v-img
+              class="img-fluid"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              alt="img"
+            ></v-img>
+            <v-sheet
+              color="var(--mainOverlay)"
+              class="plus_icon d-none align-center justify-center"
+            >
+              <v-icon color="accent" size="50">{{ icon.mdiPlus }}</v-icon>
+            </v-sheet>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-layout>
+    <!-- SECTION SIX -->
+    <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
+      <div class="py-5 text-center">
+        <h2
+          style="font-size: 40px"
+          class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
+        >
+          Our
+        </h2>
+        <h2
+          style="font-size: 40px"
+          class="font-m py-2 font-weight-bold d-inline"
+        >
+          Testimonials
+        </h2>
+      </div>
+
+      <TestimonialCarousel />
+    </v-sheet>
+    <!-- SECTION SEVEN -->
+    <v-sheet height="635" class="secondary my-16">
+      <v-layout fill-height class="cc-wrapper">
+        <v-sheet height="100%" class="transparent sec_7_img_container">
+          <v-img
+            class="sec_7_img"
+            src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664405024/webtech/Rectangle_2_eaeuym.png"
+            alt="img"
+          ></v-img>
+        </v-sheet>
+        <v-sheet
+          class="transparent d-flex flex-column align-start justify-center"
+        >
+          <h1
+            class="white--text font-weight-bold"
+            style="font-size: 70px; letter-spacing: 1px; line-height: 80px"
+          >
+            A New Era of <br />
+            <span class="accent--text font-weight-medium">Innovation</span>
+          </h1>
+          <p
+            class="white--text my-10 font-m"
+            style="font-size: 18px; letter-spacing: 1px"
+          >
+            Always on the lookout for the hi-tech advancements. Build a product
+            that will sell well
+          </p>
+          <div>
+            <v-btn color="accent" x-large class="px-7 rounded-0 mr-5"
+              >Start Now</v-btn
+            >
+            <v-btn color="accent" outlined x-large class="px-7 rounded-0 mr-5"
+              ><span class="white--text">Learn More</span></v-btn
+            >
+          </div>
+        </v-sheet>
+      </v-layout>
+    </v-sheet>
   </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { mdiAccount, mdiFileCheck, mdiFileDocumentOutline } from "@mdi/js";
+import {
+  mdiAccount,
+  mdiFileCheck,
+  mdiFileDocumentOutline,
+  mdiPlus,
+} from "@mdi/js";
+
 export default Vue.extend({
   data: () => ({
     icon: {
       mdiAccount,
       mdiFileCheck,
       mdiFileDocumentOutline,
+      mdiPlus,
     },
   }),
+
+  methods: {
+    showOverlay(e): void {
+      e.target.children[1].classList.add(`d-flex`);
+    },
+  },
 });
 </script>
 

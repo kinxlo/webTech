@@ -1,3 +1,26 @@
+:root {
+  // --font-sans:
+  //   'Assistant',
+  //   'Philosopher',
+  //   -apple-system,
+  //   system-ui,
+  //   sans-serif;
+  // --font-serif:
+  //   'Cormorant Garamond',
+  //   'Lora',
+  //   serif;
+  // --font-mono:
+  //   'IBM Plex Mono',
+  //   'Inconsolata',
+  //   monospace;
+
+  --mainOverlay-light: #121B26BA;
+  --lightBg: #fbf4f3;
+  --darkBg: #0f171f;
+
+  --mainOverlay: var(--mainOverlay-light);
+}
+
 // main entry scss file.
 * {
   margin: 0;
@@ -5,12 +28,23 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif !important;
+
 }
 
 .cc-wrapper {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+.v-spacing {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.v-padding {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 h1,
@@ -26,6 +60,16 @@ h6 {
 
 button {
   text-transform: capitalize !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #141D28;
 }
 
 p,
@@ -77,7 +121,7 @@ span {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #121B26BA;
+    background: var(--mainOverlay);
     // z-index: -1;
   }
 
@@ -128,4 +172,39 @@ span {
   background-color: rgba(247, 247, 247, 0.9);
   background-size: cover;
   background-blend-mode: screen;
+}
+
+.sect_5_card {
+  position: relative;
+
+  .plus_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+
+.hooper {
+  // border: 1px solid red;
+  height: 20rem !important;
+  // width: 50% !important;
+
+  .is-current {
+    .v-avatar {
+      // border: 2px solid red;
+      width: 250px !important;
+      height: 250px !important;
+    }
+  }
+}
+
+
+.sec_7_img {
+  transform: translate(-60px, -230px);
+  position: absolute;
+  top: 0;
+  left: 0;
 }

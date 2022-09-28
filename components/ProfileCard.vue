@@ -50,8 +50,7 @@ export default Vue.extend({
 
   methods: {
     showProfileSolcials(e): void {
-      //   const elSocials: object = e.target.getElementById(`profileSocials`);
-      console.log(e.target.children[1].classList.add(`d-flex`));
+      e.target.children[1].classList.add(`d-flex`);
     },
   },
 });
