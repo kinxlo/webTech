@@ -42,6 +42,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // For Sanity 
+    '@nuxtjs/sanity'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

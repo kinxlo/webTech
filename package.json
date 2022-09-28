@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
+    "@nuxtjs/sanity": "^1.3.0",
+    "@sanity/client": "^3.4.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
