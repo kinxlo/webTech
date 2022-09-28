@@ -96,7 +96,7 @@
     <!-- SECTION TWO -->
     <v-layout class="secondary white--text py-16 my-16vb">
       <v-layout flex-column class="cc-wrapper">
-        <v-row dense v-for="n in 2" key="n" class="my-7">
+        <!-- <v-row dense v-for="n in 2" key="n" class="my-7">
           <v-col v-for="n in 3" key="n" class="d-flex">
             <v-icon size="50" color="accent">{{
               icon.mdiFileDocumentOutline
@@ -109,7 +109,7 @@
               </p>
             </v-layout>
           </v-col>
-        </v-row>
+        </v-row> -->
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
@@ -141,7 +141,9 @@
           style="font-size: 40px; letter-spacing: 1px; line-height: 46px"
         >
           Few reasons <br />
-          <span class="accent--text font-weight-bold font-m">why choose us</span>
+          <span class="accent--text font-weight-bold font-m"
+            >why choose us</span
+          >
         </h3>
         <v-sheet max-width="50em" width="100%" class="my-10 transparent">
           <h5 style="font-size: 44px" class="accent--text">.01</h5>

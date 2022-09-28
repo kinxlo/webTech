@@ -32,4 +32,10 @@ export default Vue.extend({
 });
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+  .background {
+    max-height: 10%;
+  }
+</style>>
+
+</style>

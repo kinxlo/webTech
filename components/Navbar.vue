@@ -10,11 +10,11 @@
           <v-spacer></v-spacer>
           <v-layout class="justify-space-between">
             <NuxtLink to="/" class="white--text"> Home </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Pages </NuxtLink>
+            <NuxtLink to="/pages" class="white--text"> Pages </NuxtLink>
             <NuxtLink to="/" class="white--text"> Services </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Portfolio </NuxtLink>
+            <NuxtLink to="/portfolio" class="white--text"> Portfolio </NuxtLink>
             <NuxtLink to="/" class="white--text"> Blog </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Contact Us </NuxtLink>
+            <NuxtLink to="/contact-us" class="white--text"> Contact Us </NuxtLink>
           </v-layout>
         </v-layout>
 
