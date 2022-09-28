@@ -113,7 +113,7 @@
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
-    <v-layout justify-space-between class="cc-wrapper my-16">
+    <v-layout justify-space-between class="cc-wrapper my-16 py-16">
       <v-card
         elevation="0"
         width="287px"
@@ -132,6 +132,63 @@
         >
       </v-card>
       <ProfileCard v-for="n in 3" :key="n" />
+    </v-layout>
+    <!-- SECTION FOUR -->
+    <v-layout class="section_4">
+      <v-layout flex-column class="cc-wrapper py-10">
+        <h3
+          class="left_border pl-5 my-13 text-capitalize"
+          style="font-size: 40px; letter-spacing: 1px; line-height: 46px"
+        >
+          Few reasons <br />
+          <span class="accent--text font-weight-bold font-m">why choose us</span>
+        </h3>
+        <v-sheet max-width="50em" width="100%" class="my-10 transparent">
+          <h5 style="font-size: 44px" class="accent--text">.01</h5>
+          <h6
+            class="my-8 font-weight-bold"
+            style="font-size: 16px; letter-spacing: 1px"
+          >
+            Clients
+          </h6>
+          <p class="info--text" style="line-height: 30px">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            quas error odio quia commodi, vitae in laboriosam. Voluptate
+            quisquam beatae ipsa amet, odit repudiandae placeat qui aspernatur
+            officiis explicabo ad.
+          </p>
+        </v-sheet>
+        <v-sheet max-width="50em" width="100%" class="my-10 transparent">
+          <h5 style="font-size: 44px" class="info--text">.02</h5>
+          <h6
+            class="my-8 font-weight-bold"
+            style="font-size: 16px; letter-spacing: 1px"
+          >
+            Projects
+          </h6>
+          <p class="info--text" style="line-height: 30px">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            quas error odio quia commodi, vitae in laboriosam. Voluptate
+            quisquam beatae ipsa amet, odit repudiandae placeat qui aspernatur
+            officiis explicabo ad.
+          </p>
+        </v-sheet>
+        <v-sheet max-width="50em" width="100%" class="my-10 transparent">
+          <h5 style="font-size: 44px" class="info--text">.03</h5>
+          <h6
+            class="my-8 font-weight-bold"
+            style="font-size: 16px; letter-spacing: 1px"
+          >
+            Reporting & Analysis
+          </h6>
+          <p class="info--text" style="line-height: 30px">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            quas error odio quia commodi, vitae in laboriosam. Voluptate
+            quisquam beatae ipsa amet, odit repudiandae placeat qui aspernatur
+            officiis explicabo ad.
+          </p>
+        </v-sheet>
+      </v-layout>
     </v-layout>
   </main>
 </template>

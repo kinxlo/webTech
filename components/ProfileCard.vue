@@ -1,6 +1,7 @@
 <template>
   <section>
     <v-card
+      @mouseenter="showProfileSolcials"
       width="287"
       height="357"
       elevation="0"
@@ -12,8 +13,10 @@
         alt="img"
       ></v-img>
       <v-sheet
+        id="profileSocials"
         width="100%"
-        class="accent profile_socials pa-3 d-flex justify-center"
+        class="accent profile_socials pa-3 justify-center"
+        :class="`d-none`"
       >
         <NuxtLink to="/" v-for="n in 5" :key="n" class="mx-2">
           <v-icon color="white">{{ icon.mdiFacebook }}</v-icon>
@@ -24,7 +27,10 @@
       <h5 class="primary--text" style="font-size: 26px; letter-spacing: 1px">
         Kingsley Solomon
       </h5>
-      <p class="text-uppercase info--text mt-2" style="font-size: 14px; letter-spacing: 2px">
+      <p
+        class="text-uppercase info--text mt-2"
+        style="font-size: 14px; letter-spacing: 2px"
+      >
         Head of SEO
       </p>
     </v-layout>
@@ -41,5 +47,12 @@ export default Vue.extend({
       mdiFacebook,
     },
   }),
+
+  methods: {
+    showProfileSolcials(e): void {
+      //   const elSocials: object = e.target.getElementById(`profileSocials`);
+      console.log(e.target.children[1].classList.add(`d-flex`));
+    },
+  },
 });
 </script>

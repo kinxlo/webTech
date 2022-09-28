@@ -66,7 +66,7 @@ span {
 
 .hero {
   position: relative;
-  background: url(~assets/heroImg.svg) no-repeat center;
+  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/v1664304177/webtech/Rectangle_1_sxwzbj.png) no-repeat center;
   background-size: cover;
   //   background-blend-mode:luminosity;
 
@@ -121,4 +121,11 @@ span {
     bottom: 0;
     left: 0;
   }
+}
+
+.section_4 {
+  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/v1664304148/webtech/Rectangle_goskdz.png) no-repeat center;
+  background-color: rgba(247, 247, 247, 0.9);
+  background-size: cover;
+  background-blend-mode: screen;
 }
