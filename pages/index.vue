@@ -11,7 +11,7 @@
         >
           <v-layout class="flex-column white--text hero_desc mt-10">
             <v-layout class="align-center text-h3 mb-10">
-              <h1 class="hero_title_number">01</h1>
+              <h1 class="hero_title_number grey--text">01</h1>
               <div class="hero_title pl-5 ml-5">
                 <p class="font-m mb-8 white--text">The Uniqe Creative</p>
                 <p class="font-m accent--text">Design Agency</p>
@@ -286,6 +286,86 @@
         </v-sheet>
       </v-layout>
     </v-sheet>
+    <!-- SECTION EIGHT -->
+    <v-layout flex-column class="cc-wrapper v-spacing">
+      <div class="py-5 text-center mb-16">
+        <h2
+          style="font-size: 40px"
+          class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
+        >
+          Our
+        </h2>
+        <h2
+          style="font-size: 40px"
+          class="font-m py-2 font-weight-bold d-inline"
+        >
+          News
+        </h2>
+      </div>
+      <v-row no-gutters>
+        <v-col cols="8" class="pr-3">
+          <v-card class="rounded-0">
+            <v-img
+              src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664407849/webtech/Rectangle_3_dggxie.png"
+              alt="img"
+            >
+              <v-chip class="ma-5 rounded-0 accent">Software</v-chip>
+            </v-img>
+          </v-card>
+          <v-layout flex-column class="pa-16">
+            <h4 class="letter-spacing">Motion Animation And VR Headset</h4>
+            <div class="info--text mt-3 mb-7">
+              <span class="text-body-2 text-capitalize mr-16">emmajohnson</span>
+              <span class="text-body-2 text-capitalize mr-16"
+                >May 17, 2019</span
+              >
+            </div>
+            <p class="info--text mb-16" style="line-height: 30px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              tenetur deleniti natus corrupti asperiores ratione alias
+              laboriosam saepe harum mollitia ad eligendi at deserunt, doloribus
+              numquam maxime velit beatae temporibus autem, accusantium
+              molestias aliquid. Quos repudiandae iure, animi ipsum fugiat
+              blanditiis fuga dolore aperiam quidem, amet accusamus cum numquam
+              harum dolorum doloremque eligendi.
+            </p>
+            <p @click="" class="text-overline font-weight-bold">View Details</p>
+          </v-layout>
+        </v-col>
+        <v-col cols="4" class="pl-3">
+          <v-card
+            v-for="n in 2"
+            :key="n"
+            height="393"
+            elevation="0"
+            class="rounded-0 transparent mb-6"
+          >
+            <v-sheet height="60%">
+              <v-img
+                class="img-fluid"
+                src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664407849/webtech/Rectangle_3_dggxie.png"
+                alt="img"
+              >
+                <v-chip class="ma-5 rounded-0 accent">Security</v-chip>
+              </v-img>
+            </v-sheet>
+            <v-sheet height="40%" class="primary pa-7">
+              <h6 style="font-size: 18px" class="white--text letter-spacing">
+                Awesome Tips to Become CEO Of Big NetWork Startup
+              </h6>
+              <div class="info--text mt-3 mb-7 white--text">
+                <span class="text-body-2 text-capitalize mr-16"
+                  >emmajohnson</span
+                >
+                <span class="text-body-2 text-capitalize mr-16"
+                  >May 17, 2019</span
+                >
+              </div>
+            </v-sheet>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-layout>
   </main>
 </template>
 
