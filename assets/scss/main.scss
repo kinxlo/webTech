@@ -101,6 +101,7 @@ span {
 .left_border {
   border-left: 3px solid #377DFF;
 }
+
 .bottom_border {
   border-bottom: 1px solid #377DFF;
 }
@@ -215,3 +216,5 @@ span {
   top: 0;
   left: 0;
 }
+
+@import './about.scss';

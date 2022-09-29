@@ -2,8 +2,10 @@
   <section>
     <v-card
       @mouseenter="showProfileSolcials"
-      width="287"
-      height="357"
+      @mouseleave="showProfileSolcials"
+      :max-width="width"
+      width="100%"
+      :height="height"
       elevation="0"
       class="profile_card rounded-0"
     >
@@ -41,6 +43,11 @@
 import Vue from "vue";
 import { mdiFacebook, mdiTwitter } from "@mdi/js";
 export default Vue.extend({
+  props: {
+    width: Number,
+    height: Number,
+  },
+
   data: () => ({
     icon: {
       mdiTwitter,
@@ -50,7 +57,14 @@ export default Vue.extend({
 
   methods: {
     showProfileSolcials(e): void {
-      e.target.children[1].classList.add(`d-flex`);
+      switch (e.type) {
+        case `mouseenter`:
+          e.target.children[1].classList.add(`d-flex`);
+          break;
+        case `mouseleave`:
+          e.target.children[1].classList.remove(`d-flex`);
+          break;
+      }
     },
   },
 });

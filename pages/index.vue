@@ -143,7 +143,13 @@
           ><span class="primary--text">View Team</span></v-btn
         >
       </v-card>
-      <ProfileCard v-for="n in 3" :key="n" />
+      <v-layout>
+        <v-row no-gutters>
+          <v-col cols="4" class="d-flex justify-center" v-for="n in 3" :key="n">
+            <ProfileCard :width="287" :height="356" />
+          </v-col>
+        </v-row>
+      </v-layout>
     </v-layout>
     <!-- SECTION FOUR -->
     <v-layout class="section_4">
@@ -205,47 +211,11 @@
       </v-layout>
     </v-layout>
     <!-- SECTION FIVE -->
-    <v-layout class="cc-wrappe">
-      <v-row no-gutters>
-        <v-col v-for="n in 4" :key="n">
-          <v-card
-            @mouseenter="showOverlay"
-            class="sect_5_card"
-            width="360"
-            height="360"
-          >
-            <v-img
-              class="img-fluid"
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt="img"
-            ></v-img>
-            <v-sheet
-              color="var(--mainOverlay)"
-              class="plus_icon d-none align-center justify-center"
-            >
-              <v-icon color="accent" size="50">{{ icon.mdiPlus }}</v-icon>
-            </v-sheet>
-          </v-card>
-        </v-col>
-      </v-row>
+    <v-layout>
+      <PictureGrid />
     </v-layout>
     <!-- SECTION SIX -->
     <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
-      <div class="py-5 text-center">
-        <h2
-          style="font-size: 40px"
-          class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
-        >
-          Our
-        </h2>
-        <h2
-          style="font-size: 40px"
-          class="font-m py-2 font-weight-bold d-inline"
-        >
-          Testimonials
-        </h2>
-      </div>
-
       <TestimonialCarousel />
     </v-sheet>
     <!-- SECTION SEVEN -->
@@ -387,12 +357,6 @@ export default Vue.extend({
       mdiPlus,
     },
   }),
-
-  methods: {
-    showOverlay(e): void {
-      e.target.children[1].classList.add(`d-flex`);
-    },
-  },
 });
 </script>
 

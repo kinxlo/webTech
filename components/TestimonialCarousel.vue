@@ -1,5 +1,16 @@
 <template>
   <main>
+    <section class="py-5 text-center">
+      <h2
+        style="font-size: 40px"
+        class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
+      >
+        Our
+      </h2>
+      <h2 style="font-size: 40px" class="font-m py-2 font-weight-bold d-inline">
+        Testimonials
+      </h2>
+    </section>
     <section class="d-flex align-center">
       <v-icon color="accent" @click.prevent="" size="60">{{
         icon.mdiArrowLeftThinCircleOutline
@@ -35,15 +46,22 @@
         Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis
         lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.
       </p>
-      <h4 style="font-size: 27px; letter-spacing: 1px;" class="primary--text mt-7 mb-1">Ronal C. Hartung</h4>
-      <p style="letter-spacing: 4px;" class="info--text text-uppercase">marketer</p>
+      <h4
+        style="font-size: 27px; letter-spacing: 1px"
+        class="primary--text mt-7 mb-1"
+      >
+        Ronal C. Hartung
+      </h4>
+      <p style="letter-spacing: 4px" class="info--text text-uppercase">
+        marketer
+      </p>
     </section>
   </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { Hooper, Slide, } from "hooper";
+import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 import {
   mdiArrowLeftThinCircleOutline,
