@@ -106,7 +106,7 @@
     <!-- SECTION TWO -->
     <v-layout class="secondary white--text v-padding">
       <v-layout flex-column class="cc-wrapper">
-        <v-row dense v-for="n in 2" key="n" class="my-7">
+        <!-- <v-row dense v-for="n in 2" key="n" class="my-7">
           <v-col v-for="n in 3" key="n" class="d-flex">
             <v-icon size="50" color="accent">{{
               icon.mdiFileDocumentOutline
@@ -121,7 +121,7 @@
               </p>
             </v-layout>
           </v-col>
-        </v-row>
+        </v-row> -->
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
