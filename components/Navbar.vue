@@ -12,9 +12,10 @@
             <NuxtLink to="/" class="white--text"> Home </NuxtLink>
             <NuxtLink to="/about" class="white--text"> About </NuxtLink>
             <NuxtLink to="/services" class="white--text"> Services </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Portfolio </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Blog </NuxtLink>
-            <NuxtLink to="/" class="white--text"> Contact Us </NuxtLink>
+            <NuxtLink to="/portfolio" class="white--text"> Portfolio </NuxtLink>
+            <NuxtLink to="/blog" class="white--text"> Blog </NuxtLink>
+            <NuxtLink to="/pricing" class="white--text"> Pricing </NuxtLink>
+            <NuxtLink to="/contact" class="white--text"> Contact Us </NuxtLink>
           </v-layout>
         </v-layout>
       </v-app-bar>
