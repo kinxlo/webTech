@@ -16,7 +16,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ]
+      { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" }
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -30,7 +31,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '~/plugins/vuetify.js'
+    // '~/plugins/vuetify.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,11 +53,6 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    // *USE THE OPTIONPATH FOR MODULARITY
-    // optionsPath: './vuetify.options.js',
-
-    // customVariables: ['~/assets/variables.scss'],
-    // treeShake: true,
     theme: {
       options: {
         customProperties: true,
@@ -92,6 +88,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
   },
 
   // !not sure if its doing anything...
