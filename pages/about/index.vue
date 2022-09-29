@@ -42,7 +42,7 @@
         <section class="pl-10 my-10">
           <v-row no-gutters>
             <v-col cols="6" v-for="n in 4" :key="n">
-              <div class="pa-3 info--text">
+              <div class="pa-3 pr-15 info--text">
                 <h4 class="mb-3 font-weight-bold" style="font-size: 20px">
                   Awesome Features
                 </h4>
