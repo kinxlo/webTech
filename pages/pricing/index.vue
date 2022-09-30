@@ -1,15 +1,9 @@
 <template>
-  <main>
-    
-  </main>
+  <main></main>
 </template>
 
-<script>
-export default {
+<script setup lang="ts">
 
-}
 </script>
 
-<style>
-
-</style>
+<style></style>

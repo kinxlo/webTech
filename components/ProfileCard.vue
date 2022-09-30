@@ -20,13 +20,23 @@
         class="accent profile_socials pa-3 justify-center"
         :class="`d-none`"
       >
-        <NuxtLink to="/" v-for="n in 5" :key="n" class="mx-2">
-          <v-icon color="white">{{ icon.mdiFacebook }}</v-icon>
+        <NuxtLink
+          to="/"
+          v-for="n in 5"
+          :key="n"
+          class="mx-2"
+        >
+          <v-icon color="white">{{
+            state.icon.mdiFacebook
+          }}</v-icon>
         </NuxtLink>
       </v-sheet>
     </v-card>
     <v-layout flex-column align-center class="mt-7">
-      <h5 class="primary--text" style="font-size: 26px; letter-spacing: 1px">
+      <h5
+        class="primary--text"
+        style="font-size: 26px; letter-spacing: 1px"
+      >
         Kingsley Solomon
       </h5>
       <p
@@ -39,33 +49,30 @@
   </section>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import { mdiFacebook, mdiTwitter } from "@mdi/js";
-export default Vue.extend({
-  props: {
-    width: Number,
-    height: Number,
-  },
+<script setup lang="ts">
+import { mdiFacebook, mdiTwitter } from '@mdi/js';
+import { reactive } from 'vue';
 
-  data: () => ({
-    icon: {
-      mdiTwitter,
-      mdiFacebook,
-    },
-  }),
+defineProps({
+  width: Number,
+  height: Number,
+});
 
-  methods: {
-    showProfileSolcials(e): void {
-      switch (e.type) {
-        case `mouseenter`:
-          e.target.children[1].classList.add(`d-flex`);
-          break;
-        case `mouseleave`:
-          e.target.children[1].classList.remove(`d-flex`);
-          break;
-      }
-    },
+const state = reactive({
+  icon: {
+    mdiTwitter,
+    mdiFacebook,
   },
 });
+
+function showProfileSolcials(e): void {
+  switch (e.type) {
+    case `mouseenter`:
+      e.target.children[1].classList.add(`d-flex`);
+      break;
+    case `mouseleave`:
+      e.target.children[1].classList.remove(`d-flex`);
+      break;
+  }
+}
 </script>

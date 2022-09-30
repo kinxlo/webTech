@@ -7,16 +7,19 @@
       >
         Our
       </h2>
-      <h2 style="font-size: 40px" class="font-m py-2 font-weight-bold d-inline">
+      <h2
+        style="font-size: 40px"
+        class="font-m py-2 font-weight-bold d-inline"
+      >
         Testimonials
       </h2>
     </section>
     <section class="d-flex align-center">
       <v-icon color="accent" @click.prevent="" size="60">{{
-        icon.mdiArrowLeftThinCircleOutline
+        state.icon.mdiArrowLeftThinCircleOutline
       }}</v-icon>
       <v-layout>
-        <hooper
+        <!-- <Hooper
           :centerMode="true"
           ref="carousel"
           id="carousel"
@@ -35,16 +38,17 @@
               ></v-img>
             </v-avatar>
           </slide>
-        </hooper>
+        </Hooper> -->
       </v-layout>
       <v-icon color="accent" @click="" size="60">{{
-        icon.mdiArrowRightThinCircleOutline
+        state.icon.mdiArrowRightThinCircleOutline
       }}</v-icon>
     </section>
     <section class="text-center py-5 px-16">
       <p style="font-size: 20px" class="info--text">
-        Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis
-        lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.
+        Donec eget elit vel urna varius pharetra.
+        Suspendisse sodales venenatis lorem nec tincidunt.
+        Donec dignissim purus ut nulla ultricies.
       </p>
       <h4
         style="font-size: 27px; letter-spacing: 1px"
@@ -52,36 +56,30 @@
       >
         Ronal C. Hartung
       </h4>
-      <p style="letter-spacing: 4px" class="info--text text-uppercase">
+      <p
+        style="letter-spacing: 4px"
+        class="info--text text-uppercase"
+      >
         marketer
       </p>
     </section>
   </main>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-import { Hooper, Slide } from "hooper";
-import "hooper/dist/hooper.css";
+<script setup lang="ts">
+// import { Hooper, Slide } from 'hooper';
+// import 'hooper/dist/hooper.css';
 import {
   mdiArrowLeftThinCircleOutline,
   mdiArrowRightThinCircleOutline,
-} from "@mdi/js";
+} from '@mdi/js';
+import { reactive } from 'vue';
 
-export default Vue.extend({
-  components: {
-    Hooper,
-    Slide,
+const state = reactive({
+  icon: {
+    mdiArrowLeftThinCircleOutline,
+    mdiArrowRightThinCircleOutline,
   },
-
-  data: () => ({
-    icon: {
-      mdiArrowLeftThinCircleOutline,
-      mdiArrowRightThinCircleOutline,
-    },
-  }),
-
-  methods: {},
 });
 </script>
 

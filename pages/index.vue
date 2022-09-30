@@ -69,12 +69,13 @@
       <v-layout align-center justify-space-between class="mt-5">
         <v-sheet class="text-center">
           <v-avatar color="accent" size="180">
-            <v-img
-              src="https://images.unsplash.com/photo-1518976024611-28bf4b48222e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbm5pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              alt="img"
-            ></v-img>
+            <!-- <v-img src="" alt="img"></v-img> -->
+            <SanityImage
+              :asset-id="state.title[0].img.asset._ref"
+              auto="format"
+            />
           </v-avatar>
-          <h2>Planning</h2>
+          <h2>{{ state.title[0].desc }}</h2>
         </v-sheet>
         <div>
           <v-img src="/arrowUP.svg" alt="img"></v-img>
@@ -106,10 +107,10 @@
     <!-- SECTION TWO -->
     <v-layout class="secondary white--text v-padding">
       <v-layout flex-column class="cc-wrapper">
-        <!-- <v-row dense v-for="n in 2" key="n" class="my-7">
+        <v-row dense v-for="n in 2" key="n" class="my-7">
           <v-col v-for="n in 3" key="n" class="d-flex">
             <v-icon size="50" color="accent">{{
-              icon.mdiFileDocumentOutline
+              state.icon.mdiFileDocumentOutline
             }}</v-icon>
             <v-layout class="ml-3" flex-column>
               <h4 style="font-size: 20px" class="my-4 white--text">
@@ -121,7 +122,7 @@
               </p>
             </v-layout>
           </v-col>
-        </v-row> -->
+        </v-row>
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
@@ -339,25 +340,35 @@
   </main>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script setup lang="ts">
 import {
   mdiAccount,
   mdiFileCheck,
   mdiFileDocumentOutline,
   mdiPlus,
 } from "@mdi/js";
+import { groq } from "@nuxtjs/sanity";
+import { useFetch, useAsync, useContext } from "@nuxtjs/composition-api";
+import { computed, onMounted, reactive } from "vue";
 
-export default Vue.extend({
-  data: () => ({
-    icon: {
-      mdiAccount,
-      mdiFileCheck,
-      mdiFileDocumentOutline,
-      mdiPlus,
-    },
-  }),
+const state = reactive({
+  title: {},
+  icon: {
+    mdiAccount,
+    mdiFileCheck,
+    mdiFileDocumentOutline,
+    mdiPlus,
+  },
 });
+const query = groq`*[_type == "workOne"]`;
+const sanity = useContext().app.$sanity;
+
+state.title = useAsync(() => sanity.fetch(query));
+console.log(state.title);
+
+// onMounted(() => {
+//   console.log(sanity.$urlFor(state.title[0].img).url());
+// });
 </script>
 
 <style></style>
