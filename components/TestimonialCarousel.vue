@@ -37,7 +37,7 @@
           </slide>
         </hooper>
       </v-layout>
-      <v-icon color="accent" @click="" size="60">{{
+      <v-icon color="accent" size="60">{{
         icon.mdiArrowRightThinCircleOutline
       }}</v-icon>
     </section>
@@ -61,8 +61,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Hooper, Slide } from "hooper";
-import "hooper/dist/hooper.css";
+// import { Hooper, Slide } from "hooper";
+// import "hooper/dist/hooper.css";
 import {
   mdiArrowLeftThinCircleOutline,
   mdiArrowRightThinCircleOutline,
@@ -70,8 +70,8 @@ import {
 
 export default Vue.extend({
   components: {
-    Hooper,
-    Slide,
+    // Hooper,
+    // Slide,
   },
 
   data: () => ({

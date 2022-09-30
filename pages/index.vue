@@ -106,8 +106,9 @@
     <!-- SECTION TWO -->
     <v-layout class="secondary white--text v-padding">
       <v-layout flex-column class="cc-wrapper">
-        <!-- <v-row dense v-for="n in 2" key="n" class="my-7">
-          <v-col v-for="n in 3" key="n" class="d-flex">
+        <v-row dense v-for="n in 2" :key="n" class="my-7">
+          //where is 2 from?????
+          <v-col v-for="n in 3" :key="n" class="d-flex">
             <v-icon size="50" color="accent">{{
               icon.mdiFileDocumentOutline
             }}</v-icon>
@@ -121,7 +122,7 @@
               </p>
             </v-layout>
           </v-col>
-        </v-row> -->
+        </v-row>
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
@@ -299,7 +300,7 @@
               blanditiis fuga dolore aperiam quidem, amet accusamus cum numquam
               harum dolorum doloremque eligendi.
             </p>
-            <p @click="" class="text-overline font-weight-bold">View Details</p>
+            <p class="text-overline font-weight-bold">View Details</p>
           </v-layout>
         </v-col>
         <v-col cols="4" class="pl-3">
