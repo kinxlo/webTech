@@ -7,10 +7,7 @@
       >
         Our
       </h2>
-      <h2
-        style="font-size: 40px"
-        class="font-m py-2 font-weight-bold d-inline"
-      >
+      <h2 style="font-size: 40px" class="font-m py-2 font-weight-bold d-inline">
         Testimonials
       </h2>
     </section>
@@ -19,7 +16,7 @@
         state.icon.mdiArrowLeftThinCircleOutline
       }}</v-icon>
       <v-layout>
-        <!-- <Hooper
+        <Hooper
           :centerMode="true"
           ref="carousel"
           id="carousel"
@@ -27,18 +24,15 @@
           class="hooper ma-0 pa-0"
         >
           <slide
-            v-for="n in 10"
-            :key="n"
+            v-for="(head, i) in state.sectionSeven"
+            :key="i"
             class="hopper_item d-flex align-center justify-center"
           >
             <v-avatar size="200">
-              <v-img
-                src="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFzc3BvcnQlMjBwaG90b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt="img"
-              ></v-img>
+              <SanityImage :asset-id="head.img.asset._ref" auto="format" />
             </v-avatar>
           </slide>
-        </Hooper> -->
+        </Hooper>
       </v-layout>
       <v-icon color="accent" @click="" size="60">{{
         state.icon.mdiArrowRightThinCircleOutline
@@ -46,9 +40,8 @@
     </section>
     <section class="text-center py-5 px-16">
       <p style="font-size: 20px" class="info--text">
-        Donec eget elit vel urna varius pharetra.
-        Suspendisse sodales venenatis lorem nec tincidunt.
-        Donec dignissim purus ut nulla ultricies.
+        Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis
+        lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.
       </p>
       <h4
         style="font-size: 27px; letter-spacing: 1px"
@@ -56,10 +49,7 @@
       >
         Ronal C. Hartung
       </h4>
-      <p
-        style="letter-spacing: 4px"
-        class="info--text text-uppercase"
-      >
+      <p style="letter-spacing: 4px" class="info--text text-uppercase">
         marketer
       </p>
     </section>
@@ -67,20 +57,30 @@
 </template>
 
 <script setup lang="ts">
-// import { Hooper, Slide } from 'hooper';
-// import 'hooper/dist/hooper.css';
+import { Hooper, Slide } from "hooper";
+import "hooper/dist/hooper.css";
 import {
   mdiArrowLeftThinCircleOutline,
   mdiArrowRightThinCircleOutline,
-} from '@mdi/js';
-import { reactive } from 'vue';
+} from "@mdi/js";
+import { reactive } from "vue";
+import { groq } from "@nuxtjs/sanity";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
 
 const state = reactive({
+  sectionSeven: {},
+
   icon: {
     mdiArrowLeftThinCircleOutline,
     mdiArrowRightThinCircleOutline,
   },
 });
+const sectionSeven = groq`*[_type == "workSeven"]`;
+
+const sanity = useContext().app.$sanity;
+
+state.sectionSeven = useAsync(() => sanity.fetch(sectionSeven));
+console.log(state.sectionSeven);
 </script>
 
 <style lang="scss">

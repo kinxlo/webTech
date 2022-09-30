@@ -71,47 +71,51 @@
           <v-avatar color="accent" size="180">
             <!-- <v-img src="" alt="img"></v-img> -->
             <SanityImage
-              :asset-id="state.title[0].img.asset._ref"
+              :asset-id="state.sectionOne[0].img.asset._ref"
               auto="format"
             />
           </v-avatar>
-          <h2>{{ state.title[0].desc }}</h2>
+          <h2>{{ state.sectionOne[0].desc }}</h2>
         </v-sheet>
         <div>
           <v-img src="/arrowUP.svg" alt="img"></v-img>
         </div>
         <v-sheet class="text-center">
           <v-avatar color="accent" size="180">
-            <v-img
-              class="img-fluid"
-              src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGRlc2lnbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-              alt="img"
-            ></v-img>
+            <SanityImage
+              :asset-id="state.sectionOne[1].img.asset._ref"
+              auto="format"
+            />
           </v-avatar>
-          <h2>Design</h2>
+          <h2>{{ state.sectionOne[1].desc }}</h2>
         </v-sheet>
         <div>
           <v-img width="100%" src="/arrowDown.svg" alt="img"></v-img>
         </div>
         <v-sheet class="text-center">
           <v-avatar color="accent" size="180">
-            <v-img
-              src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt="img"
-            ></v-img>
+            <SanityImage
+              :asset-id="state.sectionOne[2].img.asset._ref"
+              auto="format"
+            />
           </v-avatar>
-          <h2>Development</h2>
+          <h2>{{ state.sectionOne[2].desc }}</h2>
         </v-sheet>
       </v-layout>
     </v-layout>
     <!-- SECTION TWO -->
-    <v-layout class="secondary white--text v-padding">
-      <v-layout flex-column class="cc-wrapper">
-        <v-row dense v-for="n in 2" key="n" class="my-7">
-          <v-col v-for="n in 3" key="n" class="d-flex">
-            <v-icon size="50" color="accent">{{
-              state.icon.mdiFileDocumentOutline
-            }}</v-icon>
+    <v-layout class="secondary white--text py-16">
+      <v-layout flex-column class="cc-wrapper py-16">
+        <v-row>
+          <v-col
+            cols="4"
+            v-for="(article, i) in state.sectionTwo"
+            :key="i"
+            class="d-flex align-start my-10"
+          >
+            <v-avatar size="40" class="transparent rounded-0 mt-2">
+              <SanityImage :asset-id="article.img.asset._ref" auto="format" />
+            </v-avatar>
             <v-layout class="ml-3" flex-column>
               <h4 style="font-size: 20px" class="my-4 white--text">
                 SEO Ready Code
@@ -146,8 +150,19 @@
       </v-card>
       <v-layout>
         <v-row no-gutters>
-          <v-col cols="4" class="d-flex justify-center" v-for="n in 3" :key="n">
-            <ProfileCard :width="287" :height="356" />
+          <v-col
+            cols="4"
+            class="d-flex justify-center"
+            v-for="(person, i) in state.sectionThree"
+            :key="i"
+          >
+            <ProfileCard
+              :width="287"
+              :height="356"
+              :name="person.name"
+              :title="person.title"
+              :img="person.img.asset._ref"
+            />
           </v-col>
         </v-row>
       </v-layout>
@@ -348,11 +363,13 @@ import {
   mdiPlus,
 } from "@mdi/js";
 import { groq } from "@nuxtjs/sanity";
-import { useFetch, useAsync, useContext } from "@nuxtjs/composition-api";
-import { computed, onMounted, reactive } from "vue";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
+import { reactive } from "vue";
 
 const state = reactive({
-  title: {},
+  sectionOne: {},
+  sectionTwo: {},
+  sectionThree: {},
   icon: {
     mdiAccount,
     mdiFileCheck,
@@ -360,15 +377,15 @@ const state = reactive({
     mdiPlus,
   },
 });
-const query = groq`*[_type == "workOne"]`;
+const sectionOne = groq`*[_type == "workOne"]`;
+const sectionTwo = groq`*[_type == "workTwo"]`;
+const sectionThree = groq`*[_type == "workThree"]`;
 const sanity = useContext().app.$sanity;
 
-state.title = useAsync(() => sanity.fetch(query));
-console.log(state.title);
-
-// onMounted(() => {
-//   console.log(sanity.$urlFor(state.title[0].img).url());
-// });
+state.sectionOne = useAsync(() => sanity.fetch(sectionOne));
+state.sectionTwo = useAsync(() => sanity.fetch(sectionTwo));
+state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
+console.log(state.sectionThree);
 </script>
 
 <style></style>
