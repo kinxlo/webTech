@@ -3,51 +3,53 @@
     <v-sheet class="py-2" color="navbarBg">
       <v-app-bar elevation="0" class="transparent">
         <v-layout class="cc-wrapper align-center">
-          <v-app-bar-nav-icon v-show="false">
-          </v-app-bar-nav-icon>
           <v-toolbar-title class="pa-0">
-            <v-img
-              max-width="16.9rem"
-              src="/Frame.svg"
-              alt="logo"
-            ></v-img
+            <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img
           ></v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-layout class="justify-space-between">
-            <NuxtLink to="/" class="white--text">
-              Home
-            </NuxtLink>
-            <NuxtLink to="/about" class="white--text">
-              About
-            </NuxtLink>
-            <NuxtLink to="/services" class="white--text">
-              Services
-            </NuxtLink>
-            <NuxtLink to="/portfolio" class="white--text">
-              Portfolio
-            </NuxtLink>
-            <NuxtLink to="/blog" class="white--text">
-              Blog
-            </NuxtLink>
-            <NuxtLink to="/pricing" class="white--text">
-              Pricing
-            </NuxtLink>
-            <NuxtLink to="/contact" class="white--text">
-              Contact Us
-            </NuxtLink>
+          <v-layout class="justify-space-between d-none d-sm-flex">
+            <NuxtLink to="/" class="white--text"> Home </NuxtLink>
+            <NuxtLink to="/about" class="white--text"> About </NuxtLink>
+            <NuxtLink to="/services" class="white--text"> Services </NuxtLink>
+            <NuxtLink to="/portfolio" class="white--text"> Portfolio </NuxtLink>
+            <NuxtLink to="/blog" class="white--text"> Blog </NuxtLink>
+            <NuxtLink to="/pricing" class="white--text"> Pricing </NuxtLink>
+            <NuxtLink to="/contact" class="white--text"> Contact Us </NuxtLink>
           </v-layout>
+          <v-icon dark @click="state.drawer = !state.drawer"
+            >{{ state.icon.menu }}
+          </v-icon>
         </v-layout>
       </v-app-bar>
+      <v-navigation-drawer height="100%" temporary app v-model="state.drawer">
+        <v-sheet
+          height="100%"
+          class="d-flex flex-column align-center justify-space-around"
+        >
+          <NuxtLink to="/"> Home </NuxtLink>
+          <NuxtLink to="/about"> About </NuxtLink>
+          <NuxtLink to="/services"> Services </NuxtLink>
+          <NuxtLink to="/portfolio"> Portfolio </NuxtLink>
+          <NuxtLink to="/blog"> Blog </NuxtLink>
+          <NuxtLink to="/pricing"> Pricing </NuxtLink>
+          <NuxtLink to="/contact"> Contact Us </NuxtLink>
+        </v-sheet>
+      </v-navigation-drawer>
     </v-sheet>
   </client-only>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { mdiMenu } from "@mdi/js";
+import { reactive } from "vue";
 
 const state = reactive({
   firstName: `kingsley`,
   lastName: `you`,
   img: `https://images.unsplash.com/photo-1661961111247-e218f67d1cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60`,
+  icon: {
+    menu: mdiMenu,
+  },
+  drawer: null,
 });
 </script>

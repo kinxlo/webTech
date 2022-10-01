@@ -1,21 +1,25 @@
 <template>
-  <v-layout flex-column class="primary">
+  <v-layout flex-column class="primary px-10 px-md-0">
     <v-footer color="transparent" class="cc-wrapper v-spacing" padless>
       <v-row no-gutters>
-        <v-col cols="4" class="pr-5">
+        <v-col
+          cols="12"
+          md="4"
+          class="pr-md-5 text-center text-md-left mb-16 mb-md-0"
+        >
           <h4
             class="accent--text text-uppercase font-m"
             style="letter-spacing: 4.8px; font-size: 12px"
           >
             About Us
           </h4>
-          <p class="white--text my-10" style="line-height: 30px">
+          <p class="white--text my-10 font-caption" style="line-height: 30px">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
             nostrum explicabo! Quas voluptas officia doloremque cumque, nemo
             voluptate est, obcaecati repellendus inventore neque molestiae sint
             exercitationem consectetur nobis doloribus asperiores.
           </p>
-          <v-layout>
+          <v-layout justify-center justify-md-start>
             <v-icon dark class="mr-5" color="">{{
               state.icon.mdiInstagram
             }}</v-icon>
@@ -31,14 +35,18 @@
           </v-layout>
         </v-col>
 
-        <v-col cols="4" class="px-5">
+        <v-col
+          cols="12"
+          md="4"
+          class="px-md-5 text-center text-md-left mb-16 mb-md-0"
+        >
           <h4
             class="accent--text text-uppercase font-m mb-10"
             style="letter-spacing: 4.8px; font-size: 12px"
           >
             Recent post
           </h4>
-          <v-layout flex-column class="justify-space-between">
+          <v-layout flex-column justify-space-between>
             <div class="pb-5 bottom_border">
               <NuxtLink to="/" class="white--text d-flex align-start">
                 <v-icon color="accent">{{ state.icon.mdiChevronRight }}</v-icon>
@@ -64,7 +72,11 @@
           </v-layout>
         </v-col>
 
-        <v-col cols="4" class="pl-5">
+        <v-col
+          cols="12"
+          md="4"
+          class="pl-md-5 text-center text-md-left mb-16 mb-md-0"
+        >
           <h4
             class="accent--text text-uppercase font-m mb-10"
             style="letter-spacing: 4.8px; font-size: 12px"

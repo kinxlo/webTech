@@ -48,7 +48,6 @@ export default Vue.extend({
   props: ["title", "subTitle", "items", "price", "color", "theme"],
   data: () => {
     return {
-      items: [],
       icons: { mdiChevronRight },
     };
   },
