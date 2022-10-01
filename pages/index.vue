@@ -315,7 +315,7 @@
               blanditiis fuga dolore aperiam quidem, amet accusamus cum numquam
               harum dolorum doloremque eligendi.
             </p>
-            <p @click="" class="text-overline font-weight-bold">View Details</p>
+            <p class="text-overline font-weight-bold">View Details</p>
           </v-layout>
         </v-col>
         <v-col cols="4" class="pl-3">
