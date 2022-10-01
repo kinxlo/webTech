@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="px-5">
     <Prenav />
     <Navbar />
     <Nuxt />

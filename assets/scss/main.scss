@@ -14,14 +14,23 @@
   //   'Inconsolata',
   //   monospace;
 
-  --mainOverlay-light: #121B26BA;
-  --mainAccent-light: #377DFF;
-  --lightBg: #fbf4f3;
+  --mainOverlay: #121B26BA;
+  --mainAccent: #377DFF;
   --darkBg: #141D28;
 
+}
 
-  --mainOverlay: var(--mainOverlay-light);
-  --mainAccent: var(--mainAccent-light)
+html,
+body,
+#__nuxt,
+#__layout {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow: -moz-scrollbars-none !important; //for older versions of firefox
 }
 
 // main entry scss file.
@@ -31,6 +40,46 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif !important;
+  // font-size: small;
+
+  // @media screen and (min-width: 600px) {
+  //   font-size: larger
+  // }
+}
+
+.font-jumbo {
+  font-size: 40px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+
+.font-header {
+  font-size: 30px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 40px
+  }
+
+}
+
+.font-title {
+  font-size: 20px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 30px
+  }
+
+}
+
+.font-subtitle {
+  font-size: 16px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 20px
+  }
 
 }
 
@@ -39,9 +88,10 @@
 }
 
 .cc-wrapper {
-  max-width: 1200px;
+  max-width: 1216px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 .v-spacing {
@@ -149,8 +199,12 @@ span {
   }
 
   .hero_title_number {
-    font-size: 140px;
+    font-size: 70px;
     opacity: 0.13;
+
+    @media screen and (min-width: 600px) {
+      font-size: 140px
+    }
   }
 
   .hero_title {
@@ -203,11 +257,14 @@ span {
   height: 20rem !important;
   // width: 50% !important;
 
+  // transform: scale(0.5);
+
   .is-current {
+    // border: 2px solid green;
+
     .v-avatar {
-      // border: 2px solid red;
-      width: 250px !important;
-      height: 250px !important;
+      // width: 250px !important;
+      // height: 250px !important;
     }
   }
 }
