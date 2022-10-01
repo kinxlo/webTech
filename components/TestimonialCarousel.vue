@@ -13,10 +13,10 @@
     </section>
     <section class="d-flex align-center">
       <v-icon color="accent" @click.prevent="" size="60">{{
-        icon.mdiArrowLeftThinCircleOutline
+        state.icon.mdiArrowLeftThinCircleOutline
       }}</v-icon>
       <v-layout>
-        <hooper
+        <Hooper
           :centerMode="true"
           ref="carousel"
           id="carousel"
@@ -24,21 +24,18 @@
           class="hooper ma-0 pa-0"
         >
           <slide
-            v-for="n in 10"
-            :key="n"
+            v-for="(head, i) in state.sectionSeven"
+            :key="i"
             class="hopper_item d-flex align-center justify-center"
           >
             <v-avatar size="200">
-              <v-img
-                src="https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFzc3BvcnQlMjBwaG90b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt="img"
-              ></v-img>
+              <SanityImage :asset-id="head.img.asset._ref" auto="format" />
             </v-avatar>
           </slide>
-        </hooper>
+        </Hooper>
       </v-layout>
       <v-icon color="accent" @click="" size="60">{{
-        icon.mdiArrowRightThinCircleOutline
+        state.icon.mdiArrowRightThinCircleOutline
       }}</v-icon>
     </section>
     <section class="text-center py-5 px-16">
@@ -59,30 +56,31 @@
   </main>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script setup lang="ts">
 import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 import {
   mdiArrowLeftThinCircleOutline,
   mdiArrowRightThinCircleOutline,
 } from "@mdi/js";
+import { reactive } from "vue";
+import { groq } from "@nuxtjs/sanity";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
 
-export default Vue.extend({
-  components: {
-    Hooper,
-    Slide,
+const state = reactive({
+  sectionSeven: {},
+
+  icon: {
+    mdiArrowLeftThinCircleOutline,
+    mdiArrowRightThinCircleOutline,
   },
-
-  data: () => ({
-    icon: {
-      mdiArrowLeftThinCircleOutline,
-      mdiArrowRightThinCircleOutline,
-    },
-  }),
-
-  methods: {},
 });
+const sectionSeven = groq`*[_type == "workSeven"]`;
+
+const sanity = useContext().app.$sanity;
+
+state.sectionSeven = useAsync(() => sanity.fetch(sectionSeven));
+console.log(state.sectionSeven);
 </script>
 
 <style lang="scss">

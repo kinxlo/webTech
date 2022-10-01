@@ -16,10 +16,18 @@
             exercitationem consectetur nobis doloribus asperiores.
           </p>
           <v-layout>
-            <v-icon dark class="mr-5" color="">{{ icon.mdiInstagram }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{ icon.mdiBasketball }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{ icon.mdiTwitter }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{ icon.mdiYoutube }}</v-icon>
+            <v-icon dark class="mr-5" color="">{{
+              state.icon.mdiInstagram
+            }}</v-icon>
+            <v-icon dark class="mr-5" color="">{{
+              state.icon.mdiBasketball
+            }}</v-icon>
+            <v-icon dark class="mr-5" color="">{{
+              state.icon.mdiTwitter
+            }}</v-icon>
+            <v-icon dark class="mr-5" color="">{{
+              state.icon.mdiYoutube
+            }}</v-icon>
           </v-layout>
         </v-col>
 
@@ -33,13 +41,13 @@
           <v-layout flex-column class="justify-space-between">
             <div class="pb-5 bottom_border">
               <NuxtLink to="/" class="white--text d-flex align-start">
-                <v-icon color="accent">{{ icon.mdiChevronRight }}</v-icon>
+                <v-icon color="accent">{{ state.icon.mdiChevronRight }}</v-icon>
                 <p class="white--text ml-2">Motion Animation And VR Headset</p>
               </NuxtLink>
             </div>
             <div class="py-5 bottom_border">
               <NuxtLink to="/" class="white--text d-flex align-start">
-                <v-icon color="accent">{{ icon.mdiChevronRight }}</v-icon>
+                <v-icon color="accent">{{ state.icon.mdiChevronRight }}</v-icon>
                 <p class="white--text ml-2">
                   Awesome Tips to Become CEO Of Big NetWork Startup
                 </p>
@@ -47,7 +55,7 @@
             </div>
             <div class="py-5 bottom_borde">
               <NuxtLink to="/" class="white--text d-flex align-start">
-                <v-icon color="accent">{{ icon.mdiChevronRight }}</v-icon>
+                <v-icon color="accent">{{ state.icon.mdiChevronRight }}</v-icon>
                 <p class="white--text ml-2">
                   Awesome Tips to Become CEO Of Big NetWork Startup
                 </p>
@@ -65,17 +73,17 @@
           </h4>
           <v-layout flex-column class="justify-space-between">
             <div to="/" class="white--text d-flex align-start mb-5">
-              <v-icon color="accent">{{ icon.mdiMapMarker }}</v-icon>
+              <v-icon color="accent">{{ state.icon.mdiMapMarker }}</v-icon>
               <p class="white--text ml-2">53 Hilltop Drive,Tx 79022</p>
             </div>
 
             <div to="/" class="white--text d-flex align-start mb-5">
-              <v-icon color="accent">{{ icon.mdiPhone }}</v-icon>
+              <v-icon color="accent">{{ state.icon.mdiPhone }}</v-icon>
               <p class="white--text ml-2">806-377-1600</p>
             </div>
 
             <div to="/" class="white--text d-flex align-start mb-5">
-              <v-icon color="accent">{{ icon.mdiMail }}</v-icon>
+              <v-icon color="accent">{{ state.icon.mdiMail }}</v-icon>
               <p class="white--text ml-2">example@example.com</p>
             </div>
           </v-layout>
@@ -93,8 +101,7 @@
   </v-layout>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script setup lang="ts">
 import {
   mdiInstagram,
   mdiTwitter,
@@ -105,24 +112,23 @@ import {
   mdiPhone,
   mdiMail,
 } from "@mdi/js";
-export default Vue.extend({
-  data: () => ({
-    icon: {
-      mdiInstagram,
-      mdiTwitter,
-      mdiBasketball,
-      mdiYoutube,
-      mdiChevronRight,
-      mdiMapMarker,
-      mdiPhone,
-      mdiMail,
-    },
-  }),
 
-  computed: {
-    year(): number {
-      return new Date().getFullYear();
-    },
+import { computed, reactive } from "vue";
+
+const state = reactive({
+  icon: {
+    mdiInstagram,
+    mdiTwitter,
+    mdiBasketball,
+    mdiYoutube,
+    mdiChevronRight,
+    mdiMapMarker,
+    mdiPhone,
+    mdiMail,
   },
+});
+
+const year = computed(() => {
+  return new Date().getFullYear();
 });
 </script>
