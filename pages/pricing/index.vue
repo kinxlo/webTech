@@ -6,31 +6,25 @@
       :nav="nav"
     />
     <!-- section two -->
-    <v-sheet class="cc-wrapper v-spacing d-flex flex-row justify-space-around">
-      <PriceCard
-        title="Base"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="55"
-        :items="items1"
-        class="styles"
-        color= "#F9FAFA"
-      />
-      <PriceCard
-        title="Medium"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="65"
-        :items="items1"
-        color="#377DFF"
-      />
-      <PriceCard
-        title="Pro"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="105"
-        :items="items1"
-        color="#141D28"
-        styles="style1"
-      />
-    </v-sheet>
+    <v-layout class="cc-wrapper v-spacing">
+      <v-row no-gutters>
+        <v-col
+          v-for="theme in themes"
+          :key="theme"
+          cols="4"
+          class="d-flex justify-center"
+        >
+          <PriceCard
+            title="Base"
+            :price="55"
+            subTitle="Vivamus blandit gravida erat id aliquam"
+            :items="items1"
+            :theme="theme"
+          >
+          </PriceCard>
+        </v-col>
+      </v-row>
+    </v-layout>
 
     <!-- section three -->
     <v-sheet class="cc-wrapper v-spacing">
@@ -159,12 +153,13 @@ export default Vue.extend({
       "Nullam laoreet ante",
       "Etiam vulputate suscipit",
     ],
+
+    themes: [`theme1`, `theme2`, `theme3`],
   }),
 });
 </script>
 
 <style scoped>
-
 main {
   box-sizing: border-box;
 }
@@ -174,12 +169,12 @@ main {
 }
 
 .head {
-  border-left: 3px solid #377DFF;
+  border-left: 3px solid #377dff;
   padding-left: 33.5px;
   color: #377dff;
 }
 
 .styles {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 </style>

@@ -385,7 +385,6 @@ const sanity = useContext().app.$sanity;
 state.sectionOne = useAsync(() => sanity.fetch(sectionOne));
 state.sectionTwo = useAsync(() => sanity.fetch(sectionTwo));
 state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
-console.log(state.sectionThree);
 </script>
 
 <style></style>

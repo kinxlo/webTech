@@ -35,27 +35,19 @@
           </h2>
         </div>
         <p class="info--text" style="line-height: 30px">
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Sed laudantium ullam similique
-          nobis adipisci magnam dicta rerum, et numquam
-          voluptatibus.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
+          laudantium ullam similique nobis adipisci magnam dicta rerum, et
+          numquam voluptatibus.
         </p>
         <section class="pl-10 my-10">
           <v-row no-gutters>
             <v-col cols="6" v-for="n in 4" :key="n">
               <div class="pa-3 pr-15 info--text">
-                <h4
-                  class="mb-3 font-weight-bold"
-                  style="font-size: 20px"
-                >
+                <h4 class="mb-3 font-weight-bold" style="font-size: 20px">
                   Awesome Features
                 </h4>
-                <p
-                  class="info--text"
-                  style="line-height: 24px"
-                >
-                  Easy-to-use, dynamic colors, grid, video,
-                  map and much more .
+                <p class="info--text" style="line-height: 24px">
+                  Easy-to-use, dynamic colors, grid, video, map and much more .
                 </p>
               </div>
             </v-col>
@@ -83,11 +75,17 @@
         <v-row dense no-gutters>
           <v-col
             cols="4"
-            v-for="n in 3"
-            :key="n"
+            v-for="(person, i) in state.sectionThree"
+            :key="i"
             class="d-flex align-center justify-center"
           >
-            <ProfileCard :width="387" :height="481" />
+            <ProfileCard
+              :width="481"
+              :height="387"
+              :name="person.name"
+              :title="person.title"
+              :img="person.img.asset._ref"
+            />
           </v-col>
         </v-row>
       </v-layout>
@@ -97,20 +95,26 @@
       <PictureGrid />
     </v-layout>
     <!-- SECTION FIVE -->
-    <v-sheet
-      class="cc-wrapper d-flex flex-column v-spacing"
-    >
+    <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
       <TestimonialCarousel />
     </v-sheet>
   </main>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { useAsync, useContext } from "@nuxtjs/composition-api";
+import { reactive } from "vue";
+import { groq } from "@nuxtjs/sanity";
+
+const sectionThree = groq`*[_type == "workThree"]`;
+const sanity = useContext().app.$sanity;
 
 const state = reactive({
-  nav: ['Homepage', 'service'],
+  sectionThree: {},
+  nav: ["Homepage", "service"],
 });
+
+state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
 </script>
 
 <style></style>
