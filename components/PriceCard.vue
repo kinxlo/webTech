@@ -3,8 +3,10 @@
     width="350"
     height="627"
     class="d-flex flex-column justify-start align-center pt-16"
+    :class="board"
     :color="color"
     elevation="0"
+    tile
   >
     <h3 class="mb-5">{{title}}</h3>
     <h6 class="card-h6 text-center subtitle-1 mb-11">
@@ -43,7 +45,7 @@ import Vue from "vue";
 import { mdiChevronRight } from "@mdi/js";
 export default Vue.extend ({
   name: "PriceCard",
-  props: ['title', 'subTitle', "items", 'price', "color"],
+  props: ['title', 'subTitle', "items", 'price', "color", "board"],
   data: () => {
     return {
       items: [],
@@ -79,6 +81,5 @@ export default Vue.extend ({
         position: relative;
     }
 }
-
 
 </style>

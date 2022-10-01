@@ -182,4 +182,8 @@ main {
 .styles {
     border: 1px solid red;
 }
+
+/* .board1 {
+
+} */
 </style>
