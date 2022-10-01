@@ -31,7 +31,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '~/plugins/vuetify.js',
+    // '~/plugins/urlResolver',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,8 +43,10 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    // For Sanity 
-    '@nuxtjs/sanity'
+    // For Sanity
+    '@nuxtjs/sanity/module',
+    // composition api
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -89,12 +91,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
 
-  },
-
-  // !not sure if its doing anything...
-  typescript: {
-    typeCheck: {
-      async: false
-    }
   },
 }

@@ -1,0 +1,10 @@
+.portfolio_card {
+  position: relative;
+
+  .v-sheet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

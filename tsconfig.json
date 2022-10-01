@@ -17,7 +17,12 @@
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/vue-app", "@nuxtjs/vuetify"]
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app",
+      "@nuxtjs/vuetify",
+      "@nuxtjs/sanity"
+    ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
