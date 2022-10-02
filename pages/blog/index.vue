@@ -82,6 +82,7 @@
           </BlogCard>
           <v-card class="px-16 py-16 mb-16" elevation="0" tile outlined>
             <BlogCardBody
+            class="this"
               showMainP
               showSpanText
               headtext="Sample Post Format: Aside"
@@ -90,7 +91,7 @@
               p_span_3="Leave a comment"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7" elevation="0" tile outlined>security</v-btn>
+              <v-btn class="mb-7" elevation="0" tile >security</v-btn>
             </BlogCardBody>
           </v-card>
           <v-card class="px-16 py-16 mb-16" elevation="0" tile outlined>
@@ -103,7 +104,7 @@
               P_span_2="May 17, 2019"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7" elevation="0" tile outlined>Software</v-btn>
+              <v-btn class="mb-7 cardbutton" elevation="0" tile>Software</v-btn>
             </BlogCardBody>
           </v-card>
           <v-card class="px-16 py-16" elevation="0" tile outlined>
@@ -116,11 +117,13 @@
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
               p_text_head="okay"
             >
-              <v-btn class="mb-7" elevation="0" tile outlined>security</v-btn>
+              <v-btn class="mb-7 cardbutton" elevation="0" tile>security</v-btn>
             </BlogCardBody>
           </v-card>
         </v-col>
+
         <v-col>
+
           <v-card class="px-10 py-8 mb-16" color="#F9FAFA" elevation="0" tile>
             <v-card-title>Search</v-card-title>
             <v-card-actions>
@@ -132,6 +135,7 @@
               ></v-text-field>
             </v-card-actions>
           </v-card>
+
           <v-sheet class="mt-5 mb-16">
             <h4>Categories</h4>
             <v-divider />
@@ -161,8 +165,58 @@
             </div>
             <v-divider />
           </v-sheet>
-          <v-sheet class="mt-5 mb-16"> okay </v-sheet>
-          <v-sheet class="mt-5 mb-16"> okay </v-sheet>
+
+          <v-sheet
+            height="66"
+            color="#F8F8F9"
+            class="pr-8 mt-5 mb-4 d-flex justify-space-between align-center facebook"
+          >
+            <div class="ban d-flex justify-center align-center">
+              <v-icon color="#FFFFFF">{{ icons.mdiFacebook }}</v-icon>
+            </div>
+            <p>facebook</p>
+            <p>fan</p>
+          </v-sheet>
+          <v-sheet
+            height="66"
+            color="#F8F8F9"
+            class="pr-8 mb-4 d-flex justify-space-between align-center twitter"
+          >
+            <div class="ban d-flex justify-center align-center">
+              <v-icon color="#FFFFFF">{{ icons.mdiTwitter }}</v-icon>
+            </div>
+            <p>Twitter</p>
+            <p>Followers</p>
+          </v-sheet>
+          <v-sheet
+            height="66"
+            color="#F8F8F9"
+            class="pr-8 mb-11 d-flex justify-space-between align-center google"
+          >
+            <div class="ban d-flex justify-center align-center">
+              <v-icon color="#FFFFFF">{{ icons.mdiGooglePlus }}</v-icon>
+            </div>
+            <p>Google+</p>
+            <p>Followers</p>
+          </v-sheet>
+
+          <v-sheet max-width="306" class="mt-16">
+            <h4>Popular Posts</h4>
+            <v-list v-for="(post, i) in Posts" :key="i" class="d-flex align-center justify-space-around mb-8">
+              <v-img max-width="70" max-height="70" :src="post.img" />
+              <div class="text-left  ml-3">
+                <p>{{post.headText}}</p>
+                <p class="ml-3">{{post.date}}</p>
+              </div>
+            </v-list>
+          </v-sheet>
+
+          <v-sheet class="mt-16 tags">
+            <h4 class="mb-5">Tags</h4>
+            <div class="d-flex flex-wrap">
+              <v-btn class="mr-3 mb-2" v-for="(btn, i) in button" :key="i"  elevation="0" tile color="#fffff">{{btn}}</v-btn>
+            </div>
+          </v-sheet>
         </v-col>
       </v-row>
     </v-layout>
@@ -173,13 +227,22 @@
 import Vue from "vue";
 import BlogCard from "../../components/BlogCard.vue";
 import BlogCardBody from "../../components/BlogCardBody.vue";
-import { mdiChevronRight } from "@mdi/js";
+import { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus } from "@mdi/js";
+
+interface Post {
+  img: String;
+  headText: String;
+  date: String;
+}
+
+type button = String
 
 export default Vue.extend({
   components: { BlogCard, BlogCardBody },
+
   data: () => ({
     nav: ["Homepage", "Blog"],
-    icons: { mdiChevronRight },
+    icons: { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus },
 
     showSpanText: true,
 
@@ -187,12 +250,32 @@ export default Vue.extend({
       return !showSpanText;
     },
 
-    p_text: () => {},
+    Posts: <Post[]>  [
+      {
+        img: "post1.png", 
+        headText: "Motion Animation And VR Headset", 
+        date: "May 17, 2019"
+      },
+      {
+        img: "post2.png", 
+        headText: "Top 5 Amazing changing For The Social Media Industry", 
+        date: "May 17, 2019"
+      },
+      {
+        img: "post3.svg", 
+        headText: "Awesome Tips to Become CEO Of Big NetWork Startup", 
+        date: "May 17, 2019"
+      },
+    ], 
+
+    button: <button[]> ["Digital", "Networking", "New", "Security", "Software"]
+
   }),
+
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .test {
   border: 1px solid red;
 }
@@ -209,4 +292,54 @@ export default Vue.extend({
   border-bottom: 0.5px solid rgba(20, 29, 40, 0.1);
   background: #f8f8f9;
 }
+
+.ban {
+  width: 60px;
+  height: 100%;
+}
+
+.facebook {
+  .ban {
+    background: #3b5998;
+  }
+
+  p {
+    color: black;
+  }
+}
+
+.twitter {
+  .ban {
+    background: #1dcaff;
+  }
+
+  p {
+    color: black;
+  }
+}
+
+.google {
+  .ban {
+    background: #dd4b39;
+  }
+
+  p {
+    color: black;
+  }
+}
+
+.tags {
+  h4{
+    font-family: Montserrat;
+    color: #141D28;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .v-btn {
+    border: 1px solid #141D28;
+    background: #FFFFFF;
+  }
+}
+
 </style>

@@ -12,7 +12,7 @@
         subTitle="Vivamus blandit gravida erat id aliquam"
         price="55"
         :items="items1"
-        class="styles"
+        class="base"
         color= "#F9FAFA"
       />
       <PriceCard
@@ -21,9 +21,11 @@
         price="65"
         :items="items1"
         color="#377DFF"
+        class="medium"
       />
       <PriceCard
         title="Pro"
+        class="pro"
         subTitle="Vivamus blandit gravida erat id aliquam"
         price="105"
         :items="items1"
@@ -178,12 +180,4 @@ main {
   padding-left: 33.5px;
   color: #377dff;
 }
-
-.styles {
-    border: 1px solid red;
-}
-
-/* .board1 {
-
-} */
 </style>
