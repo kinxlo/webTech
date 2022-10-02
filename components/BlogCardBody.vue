@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{format}">
     <slot></slot>
     <h3 class="mb-4">{{ headtext }}</h3>
     <p v-if="showSpanText" class="mb-6">
@@ -9,7 +9,7 @@
     </p>
     <div>
       <p v-if="showMainP" class="mb-12">{{ p_text }}</p>
-      <v-sheet v-else class="mb-12">
+      <v-sheet id="sheeet" v-else class="mb-12">
         <v-sheet class="d-flex align-center">
           <v-img
             v-if="emma"
@@ -71,7 +71,7 @@ export default Vue.extend({
 });
 </script>
 
-<style>
+<style lang="scss">
 h3 {
   font-family: "Montserrat";
   font-weight: 400;
@@ -90,5 +90,23 @@ p {
 
 .border {
   border-left: 2px solid #377dff;
+}
+
+.format {
+  h3, p {
+    color: white;
+  }
+
+  .v-btn {
+    color: white;
+  }
+}
+
+#sheeet {
+  background-color: none;
+
+  .theme--light.v-sheet {
+    background: none;
+  }
 }
 </style>
