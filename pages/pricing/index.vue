@@ -6,7 +6,6 @@
       :nav="nav"
     />
     <!-- section two -->
-<<<<<<< HEAD
     <v-layout class="cc-wrapper v-spacing">
       <v-row no-gutters>
         <v-col
@@ -26,35 +25,6 @@
         </v-col>
       </v-row>
     </v-layout>
-=======
-    <v-sheet class="cc-wrapper v-spacing d-flex flex-row justify-space-around">
-      <PriceCard
-        title="Base"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="55"
-        :items="items1"
-        class="base"
-        color= "#F9FAFA"
-      />
-      <PriceCard
-        title="Medium"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="65"
-        :items="items1"
-        color="#377DFF"
-        class="medium"
-      />
-      <PriceCard
-        title="Pro"
-        class="pro"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="105"
-        :items="items1"
-        color="#141D28"
-        styles="style1"
-      />
-    </v-sheet>
->>>>>>> ef46ae731b0a86b90ac12c61071e8a4b5cd65939
 
     <!-- section three -->
     <v-sheet class="cc-wrapper v-spacing">
@@ -203,11 +173,8 @@ main {
   padding-left: 33.5px;
   color: #377dff;
 }
-<<<<<<< HEAD
 
 .styles {
   border: 1px solid red;
 }
-=======
->>>>>>> ef46ae731b0a86b90ac12c61071e8a4b5cd65939
 </style>

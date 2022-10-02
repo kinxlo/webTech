@@ -141,7 +141,9 @@
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
               p_text_head="okay"
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
+                >security</v-btn
+              >
             </BlogCardBody>
           </v-card>
         </v-col>

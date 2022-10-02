@@ -22,7 +22,7 @@
           :centerMode="true"
           ref="carousel"
           id="carousel"
-          :itemsToShow="$vuetify.breakpoint.md ? 3 : 1"
+          :itemsToShow="$vuetify.breakpoint.xs ? 1 : 3"
           class="hooper ma-0 pa-0"
         >
           <slide

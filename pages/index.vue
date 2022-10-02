@@ -18,8 +18,18 @@
               <h1 class="hero_title_number grey--text">01</h1>
 
               <div class="hero_title pl-5 ml-5">
-                <p class="font-m mb-8 white--text">The Uniqe Creative</p>
-                <p class="font-m accent--text">Design Agency</p>
+                <p
+                  class="font-m mb-8 white--text"
+                  style="font-size: 50px; line-height: 50px"
+                >
+                  The Uniqe Creative
+                </p>
+                <p
+                  class="font-m accent--text"
+                  style="font-size: 50px; line-height: 50px"
+                >
+                  Design Agency
+                </p>
               </div>
             </section>
             <section class="mt-16 mt-md-0">
@@ -355,7 +365,7 @@
               height="40%"
               class="primary d-flex flex-column justify-center px-7"
             >
-              <h3 class="white--text letter-spacing">
+              <h3 class="white--text letter-spacing font-subtitle">
                 Awesome Tips to Become CEO Of Big NetWork Startup
               </h3>
               <div
