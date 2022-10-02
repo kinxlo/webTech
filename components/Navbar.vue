@@ -4,7 +4,11 @@
       <v-app-bar elevation="0" class="transparent">
         <v-layout class="cc-wrapper align-center pa-0">
           <v-toolbar-title class="pa-0">
-            <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img
+            <v-img
+              max-width="16.9rem"
+              src="/Frame.svg"
+              alt="logo"
+            ></v-img
           ></v-toolbar-title>
           <v-spacer></v-spacer>
           <v-layout class="justify-space-between d-none d-md-flex">

@@ -31,9 +31,10 @@
           </h2>
         </div>
         <p class="info--text" style="line-height: 30px">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-          laudantium ullam similique nobis adipisci magnam dicta rerum, et
-          numquam voluptatibus.
+          Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Sed laudantium ullam similique
+          nobis adipisci magnam dicta rerum, et numquam
+          voluptatibus.
         </p>
         <section class="pl-md-10 my-10">
           <v-row no-gutters>
@@ -48,8 +49,12 @@
                 <h4 class="mb-3 font-weight-bold" style="font-size: 20px">
                   Awesome Features
                 </h4>
-                <p class="info--text" style="line-height: 24px">
-                  Easy-to-use, dynamic colors, grid, video, map and much more .
+                <p
+                  class="info--text"
+                  style="line-height: 24px"
+                >
+                  Easy-to-use, dynamic colors, grid, video,
+                  map and much more .
                 </p>
               </div>
             </v-col>
@@ -98,7 +103,9 @@
       <PictureGrid v-for="n in 4" :key="n" />
     </v-layout>
     <!-- SECTION FIVE -->
-    <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
+    <v-sheet
+      class="cc-wrapper d-flex flex-column v-spacing"
+    >
       <TestimonialCarousel />
     </v-sheet>
   </main>
