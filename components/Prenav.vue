@@ -1,7 +1,7 @@
 <template>
   <v-layout class="background">
     <v-layout
-      class="align-center justify-space-between cc-wrapper py-3"
+      class="align-center justify-space-between cc-wrapper py-5 px-lg-0"
     >
       <span class="white--text">+123 456 789</span>
       <!-- <v-spacer></v-spacer> -->

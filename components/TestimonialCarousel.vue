@@ -43,7 +43,7 @@
         >{{ state.icon.mdiArrowRightThinCircleOutline }}</v-icon
       >
     </section>
-    <section class="text-center py-5 px-md-16">
+    <section class="d-flex flex-column align-center py-5 px-md-16 text-center">
       <p class="info--text font-subtitle">
         Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis
         lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.

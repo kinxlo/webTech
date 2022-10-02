@@ -4,16 +4,16 @@
     <v-sheet height="63em" class="hero">
       <v-layout class="cc-wrapper" fill-height>
         <v-sheet
-          color="d-flex align-md-center transparent"
+          color="d-flex align-md-center justify-center justify-lg-start transparent"
           width="100%"
           height="100%"
         >
           <section
-            class="d-flex flex-column align-center justify-center align-md-start hero_desc"
+            class="d-flex flex-column align-center align-sm-start justify-center hero_desc"
           >
             <section
               style="font-size: 50px; line-height: 50px"
-              class="d-flex flex-column flex-md-row align-end align-md-center justify-center justify-md-start mb-md-10"
+              class="d-flex flex-column flex-sm-row align-end align-sm-center justify-center justify-md-start mb-md-10"
             >
               <h1 class="hero_title_number grey--text">01</h1>
 
@@ -40,16 +40,16 @@
                 product that can sell well, but a platform through which to
                 deliver it.
               </p>
-              <v-layout flex-column flex-md-row class="mt-10 px-16 px-md-0">
+              <v-layout flex-column flex-sm-row class="mt-10 px-16 px-sm-0">
                 <v-btn
-                  class="rounded-pill mr-md-5 my-5 text-subtitle-1 px-10 text-capitalize"
+                  class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize"
                   x-large
                   color="accent"
                   >start now</v-btn
                 >
                 <v-btn
                   outlined
-                  class="rounded-pill mr-md-5 my-5 text-subtitle-1 px-10 text-capitalize"
+                  class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize"
                   x-large
                   color="accent"
                   ><span class="white--text">learn more</span></v-btn
@@ -59,7 +59,7 @@
           </section>
         </v-sheet>
       </v-layout>
-      <v-layout class="superhero d-none d-md-block">
+      <v-layout class="superhero d-none d-lg-block">
         <v-img eager src="businessman.svg" alt="img"></v-img>
       </v-layout>
       <v-layout class="hero_overlay">
@@ -264,10 +264,10 @@
     </v-sheet>
     <!-- SECTION SEVEN -->
     <v-sheet height="635" class="secondary my-16">
-      <v-layout fill-height class="cc-wrapper">
+      <v-layout justify-center fill-height class="cc-wrapper">
         <v-sheet
           height="100%"
-          class="transparent sec_7_img_container d-none d-md-block"
+          class="transparent sec_7_img_container d-none d-lg-block"
         >
           <v-img
             class="sec_7_img"
@@ -315,7 +315,7 @@
         <h2 class="font-m py-2 font-weight-bold d-inline font-header">News</h2>
       </div>
       <v-row no-gutters>
-        <v-col cols="12" md="8" class="pr-md-3">
+        <v-col cols="12" md="7" lg="8" class="pr-md-3">
           <v-card class="rounded-0">
             <v-img
               src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664407849/webtech/Rectangle_3_dggxie.png"
@@ -344,7 +344,7 @@
             <p class="text-overline font-weight-bold">View Details</p>
           </v-layout>
         </v-col>
-        <v-col cols="12" md="4" class="pl-md-3 mt-16 mt-md-0">
+        <v-col cols="12" md="5" lg="4" class="pl-md-3 mt-16 mt-md-0">
           <v-card
             v-for="n in 2"
             :key="n"

@@ -6,7 +6,7 @@
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
     </v-img>
-    <v-sheet class="pa-16 py-10">
+    <v-sheet class="pa-16 py-10 pa-md-5 pa-lg-16">
       <v-card-subtitle
         style="font-size: 17px"
         class="pb-0 text-center font-weight-bold letter-spacing"

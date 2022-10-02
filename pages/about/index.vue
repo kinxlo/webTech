@@ -6,10 +6,15 @@
       :nav="state.nav"
     />
     <!-- SECTION TWO -->
-    <v-layout flex-column-reverse flex-md-row class="cc-wrapper my-16 py-16">
+    <v-layout
+      flex-column-reverse
+      flex-lg-row
+      align-center
+      class="cc-wrapper my-16 py-16"
+    >
       <v-card
         flat
-        class="about_img_sec_2 rounded-0 mr-16"
+        class="about_img_sec_2 rounded-0 mr-md-16"
         width="470"
         height="630"
       >
@@ -19,7 +24,7 @@
           alt="img"
         ></v-img>
       </v-card>
-      <section class="pl-md-10">
+      <section class="pl-md-10 d-flex flex-column align-center align-md-start">
         <div class="py-5 mb-16 font-title text-center text-md-left">
           <h2
             class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline letter-spacing"
@@ -31,30 +36,28 @@
           </h2>
         </div>
         <p class="info--text" style="line-height: 30px">
-          Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Sed laudantium ullam similique
-          nobis adipisci magnam dicta rerum, et numquam
-          voluptatibus.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
+          laudantium ullam similique nobis adipisci magnam dicta rerum, et
+          numquam voluptatibus.
         </p>
-        <section class="pl-md-10 my-10">
+        <section class="pl-lg-10 my-10">
           <v-row no-gutters>
             <v-col
               cols="12"
               md="6"
               v-for="n in 4"
               :key="n"
-              class="mb-10 mb-md-0"
+              class="mb-10 mb-md-0 d-flex justify-center"
             >
-              <div class="pa-3 pr-md-15 info--text">
-                <h4 class="mb-3 font-weight-bold" style="font-size: 20px">
+              <div class="pa-lg-3 pr-md-15 info--text">
+                <h4
+                  class="mb-3 font-weight-bold text-center text-md-left"
+                  style="font-size: 20px"
+                >
                   Awesome Features
                 </h4>
-                <p
-                  class="info--text"
-                  style="line-height: 24px"
-                >
-                  Easy-to-use, dynamic colors, grid, video,
-                  map and much more .
+                <p class="info--text" style="line-height: 24px">
+                  Easy-to-use, dynamic colors, grid, video, map and much more .
                 </p>
               </div>
             </v-col>
@@ -103,9 +106,7 @@
       <PictureGrid v-for="n in 4" :key="n" />
     </v-layout>
     <!-- SECTION FIVE -->
-    <v-sheet
-      class="cc-wrapper d-flex flex-column v-spacing"
-    >
+    <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
       <TestimonialCarousel />
     </v-sheet>
   </main>

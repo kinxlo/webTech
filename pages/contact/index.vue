@@ -8,7 +8,7 @@
     <!-- SECTION ONE -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row>
-        <v-col cols="12" md="3" v-for="n in 4" :key="n" class="mb-10 mb-md-0">
+        <v-col cols="12" sm="6" v-for="n in 4" :key="n" class="mb-10 mb-md-0 d-flex justify-center">
           <div class="d-flex align-start">
             <v-icon large color="accent">{{ state.icon.mdiCellphone }}</v-icon>
             <div class="ml-5">

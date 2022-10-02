@@ -1,11 +1,11 @@
 <template>
-  <v-layout flex-column class="primary px-10 px-md-0">
-    <v-footer color="transparent" class="cc-wrapper v-spacing" padless>
+  <v-layout flex-column class="primary ">
+    <v-footer color="transparent" class="cc-wrapper v-spacing px-10 px-lg-0" padless>
       <v-row no-gutters>
         <v-col
           cols="12"
           md="4"
-          class="pr-md-5 text-center text-md-left mb-16 mb-md-0"
+          class="pr-md-5 text-center text-sm-left text-md-left mb-16 mb-md-0"
         >
           <h4
             class="accent--text text-uppercase font-m"
@@ -19,7 +19,7 @@
             voluptate est, obcaecati repellendus inventore neque molestiae sint
             exercitationem consectetur nobis doloribus asperiores.
           </p>
-          <v-layout justify-center justify-md-start>
+          <v-layout justify-center justify-sm-start>
             <v-icon dark class="mr-5" color="">{{
               state.icon.mdiInstagram
             }}</v-icon>
@@ -38,7 +38,7 @@
         <v-col
           cols="12"
           md="4"
-          class="px-md-5 text-center text-md-left mb-16 mb-md-0"
+          class="px-md-5 text-center text-sm-left mb-16 mb-md-0"
         >
           <h4
             class="accent--text text-uppercase font-m mb-10"
@@ -75,7 +75,7 @@
         <v-col
           cols="12"
           md="4"
-          class="pl-md-5 text-center text-md-left mb-16 mb-md-0"
+          class="pl-md-5 text-center text-sm-left mb-16 mb-md-0"
         >
           <h4
             class="accent--text text-uppercase font-m mb-10"
