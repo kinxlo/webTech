@@ -245,9 +245,9 @@
       </v-layout>
     </v-layout>
     <!-- SECTION FIVE -->
-    <section class="d-flex overflow-x-auto">
+    <v-layout class="overflow-x-auto">
       <PictureGrid v-for="n in 4" :key="n" />
-    </section>
+    </v-layout>
     <!-- SECTION SIX -->
     <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
       <TestimonialCarousel />
