@@ -6,7 +6,7 @@
       :nav="state.nav"
     />
     <!-- SECTION TWO -->
-    <v-layout class="cc-wrapper v-spacing">
+    <v-layout flex-column-reverse flex-md-row class="cc-wrapper my-16 py-16">
       <v-card
         flat
         class="about_img_sec_2 rounded-0 mr-16"
@@ -19,18 +19,14 @@
           alt="img"
         ></v-img>
       </v-card>
-      <section class="pl-10">
-        <div class="py-5 mb-16">
+      <section class="pl-md-10">
+        <div class="py-5 mb-16 font-title text-center text-md-left">
           <h2
-            style="font-size: 40px"
             class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline letter-spacing"
           >
             About
           </h2>
-          <h2
-            style="font-size: 40px"
-            class="font-m py-2 font-weight-bold d-inline letter-spacing"
-          >
+          <h2 class="font-m py-2 font-weight-bold d-inline letter-spacing">
             Us
           </h2>
         </div>
@@ -39,10 +35,16 @@
           laudantium ullam similique nobis adipisci magnam dicta rerum, et
           numquam voluptatibus.
         </p>
-        <section class="pl-10 my-10">
+        <section class="pl-md-10 my-10">
           <v-row no-gutters>
-            <v-col cols="6" v-for="n in 4" :key="n">
-              <div class="pa-3 pr-15 info--text">
+            <v-col
+              cols="12"
+              md="6"
+              v-for="n in 4"
+              :key="n"
+              class="mb-10 mb-md-0"
+            >
+              <div class="pa-3 pr-md-15 info--text">
                 <h4 class="mb-3 font-weight-bold" style="font-size: 20px">
                   Awesome Features
                 </h4>
@@ -74,10 +76,11 @@
         </div>
         <v-row dense no-gutters>
           <v-col
-            cols="4"
+            cols="12"
+            md="4"
             v-for="(person, i) in state.sectionThree"
             :key="i"
-            class="d-flex align-center justify-center"
+            class="d-flex align-center justify-center mb-16 mb-md-0"
           >
             <ProfileCard
               :width="481"
@@ -91,8 +94,8 @@
       </v-layout>
     </v-layout>
     <!-- SECTION FOUR -->
-    <v-layout>
-      <PictureGrid />
+    <v-layout class="overflow-x-auto">
+      <PictureGrid v-for="n in 4" key="n" />
     </v-layout>
     <!-- SECTION FIVE -->
     <v-sheet class="cc-wrapper d-flex flex-column v-spacing">

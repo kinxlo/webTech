@@ -2,7 +2,7 @@
   <client-only>
     <v-sheet class="py-2" color="navbarBg">
       <v-app-bar elevation="0" class="transparent">
-        <v-layout class="cc-wrapper align-center">
+        <v-layout class="cc-wrapper align-center pa-0">
           <v-toolbar-title class="pa-0">
             <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img
           ></v-toolbar-title>
@@ -16,7 +16,7 @@
             <NuxtLink to="/pricing" class="white--text"> Pricing </NuxtLink>
             <NuxtLink to="/contact" class="white--text"> Contact Us </NuxtLink>
           </v-layout>
-          <v-icon dark @click="state.drawer = !state.drawer"
+          <v-icon dark @click="state.drawer = !state.drawer" class="d-md-none"
             >{{ state.icon.menu }}
           </v-icon>
         </v-layout>
