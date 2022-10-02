@@ -33,10 +33,10 @@
     </v-sheet>
     <!-- SECTION THREE -->
     <v-layout class="cc-wrapper">
-      <v-form class="my-16">
+      <v-form class="my-16 mx-auto">
         <v-container>
           <v-row>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-text-field
                 color="accent"
                 solo
@@ -47,7 +47,7 @@
               ></v-text-field>
             </v-col>
 
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-text-field
                 color="accent"
                 solo
@@ -58,7 +58,7 @@
               ></v-text-field>
             </v-col>
 
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-text-field
                 color="accent"
                 type="email"
@@ -70,7 +70,7 @@
               ></v-text-field>
             </v-col>
 
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-text-field
                 color="accent"
                 solo

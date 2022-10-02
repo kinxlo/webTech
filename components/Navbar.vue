@@ -7,7 +7,7 @@
             <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img
           ></v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-layout class="justify-space-between d-none d-sm-flex">
+          <v-layout class="justify-space-between d-none d-md-flex">
             <NuxtLink to="/" class="white--text"> Home </NuxtLink>
             <NuxtLink to="/about" class="white--text"> About </NuxtLink>
             <NuxtLink to="/services" class="white--text"> Services </NuxtLink>

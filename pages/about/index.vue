@@ -95,7 +95,7 @@
     </v-layout>
     <!-- SECTION FOUR -->
     <v-layout class="overflow-x-auto">
-      <PictureGrid v-for="n in 4" key="n" />
+      <PictureGrid v-for="n in 4" :key="n" />
     </v-layout>
     <!-- SECTION FIVE -->
     <v-sheet class="cc-wrapper d-flex flex-column v-spacing">
