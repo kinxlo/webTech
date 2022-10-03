@@ -1,19 +1,4 @@
 :root {
-  // --font-sans:
-  //   'Assistant',
-  //   'Philosopher',
-  //   -apple-system,
-  //   system-ui,
-  //   sans-serif;
-  // --font-serif:
-  //   'Cormorant Garamond',
-  //   'Lora',
-  //   serif;
-  // --font-mono:
-  //   'IBM Plex Mono',
-  //   'Inconsolata',
-  //   monospace;
-
   --mainOverlay: #121B26BA;
   --mainAccent: #377DFF;
   --darkBg: #141D28;
@@ -40,6 +25,7 @@ body,
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif !important;
+  scroll-behavior: smooth;
   // font-size: small;
 
   // @media screen and (min-width: 600px) {
