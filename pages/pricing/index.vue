@@ -11,8 +11,9 @@
         <v-col
           v-for="theme in themes"
           :key="theme"
-          cols="4"
-          class="d-flex justify-center"
+          cols="12"
+          md="4"
+          class="d-flex justify-center mb-10 mb-md-0"
         >
           <PriceCard
             title="Base"
@@ -32,8 +33,8 @@
         <span class="head">Have</span> a Question?
       </h3>
       <v-row>
-        <v-col>
-          <v-card width="555" elevation="0" flat tile>
+        <v-col class="d-flex justify-center">
+          <v-card width="555" flat tile>
             <v-expansion-panels accordion flat>
               <v-expansion-panel color="#F8F8F9" class="mb-5">
                 <v-expansion-panel-header
@@ -192,8 +193,8 @@
             </v-expansion-panels>
           </v-card>
         </v-col>
-        <v-col>
-          <v-card width="555" elevation="0" flat tile>
+        <v-col class="d-flex justify-center">
+          <v-card width="555" flat tile>
             <v-expansion-panels accordion flat>
               <v-expansion-panel color="#F8F8F9" class="mb-5">
                 <v-expansion-panel-header
@@ -349,7 +350,6 @@
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
-
             </v-expansion-panels>
           </v-card>
         </v-col>
