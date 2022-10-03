@@ -6,7 +6,7 @@
       :nav="nav"
     />
     <v-layout class="cc-wrapper v-spacing">
-      <v-row align="flex-start">
+      <v-row class="align-flex-start">
         <v-col>
           <BlogCard
             imageUrl="motion.png"
@@ -80,6 +80,7 @@
               >
             </v-row>
           </BlogCard>
+
           <v-card
             class="px-16 py-16 mb-16"
             style="background-color: #141d28"
@@ -102,6 +103,7 @@
               >
             </BlogCardBody>
           </v-card>
+
           <v-card
             class="px-16 py-16 mb-16"
             elevation="0"
@@ -124,6 +126,7 @@
               >
             </BlogCardBody>
           </v-card>
+
           <v-card
             class="px-16 py-16"
             elevation="0"
@@ -141,7 +144,9 @@
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
               p_text_head="okay"
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
+                >security</v-btn
+              >
             </BlogCardBody>
           </v-card>
         </v-col>
@@ -226,14 +231,14 @@
           <v-sheet max-width="306" class="mt-16">
             <h4>Popular Posts</h4>
             <v-list
-              v-for="(post, i) in Posts"
+              v-for="(pos, i) in Posts"
               :key="i"
               class="d-flex align-center justify-space-around mb-8"
             >
-              <v-img max-width="70" max-height="70" :src="post.img" />
+              <v-img max-width="70" max-height="70" :src="pos.img" />
               <div class="text-left ml-3">
-                <p>{{ post.headText }}</p>
-                <p class="ml-3">{{ post.date }}</p>
+                <p>{{ pos.headText }}</p>
+                <p class="ml-3">{{ pos.date }}</p>
               </div>
             </v-list>
           </v-sheet>
@@ -260,8 +265,9 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { ref } from 'vue'
 import BlogCard from "../../components/BlogCard.vue";
-import BlogCardBody from "../../components/BlogCardBody.vue";
+import BlogCardBody from "~/components/BlogCardBody.vue";
 import {
   mdiChevronRight,
   mdiFacebook,
@@ -277,7 +283,7 @@ interface Post {
 
 type button = String;
 
-export default Vue.extend({
+export default {
   components: { BlogCard, BlogCardBody },
 
   data: () => ({
@@ -285,12 +291,11 @@ export default Vue.extend({
     icons: { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus },
 
     showSpanText: true,
+    showMainP: true,
+  }),
 
-    showSpan: (showSpanText: Boolean) => {
-      return !showSpanText;
-    },
-
-    Posts: <Post[]>[
+  setup (){
+    const Posts: Post[] = [
       {
         img: "post1.png",
         headText: "Motion Animation And VR Headset",
@@ -306,11 +311,17 @@ export default Vue.extend({
         headText: "Awesome Tips to Become CEO Of Big NetWork Startup",
         date: "May 17, 2019",
       },
-    ],
+    ]
 
-    button: <button[]>["Digital", "Networking", "New", "Security", "Software"],
-  }),
-});
+    const button: button[]= ["Digital", "Networking", "New", "Security", "Software"]
+
+    const showSpan = (showSpanText: Boolean) => {
+      return !showSpanText;
+    }
+
+    return {Posts, button, showSpan}
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -372,13 +383,6 @@ export default Vue.extend({
     color: #141d28;
     font-size: 20px;
     font-weight: 400;
-  }
-
-  .format {
-    .btnn {
-      // border: 1px solid #141d28;
-      color: red !important;
-    }
   }
 }
 </style>

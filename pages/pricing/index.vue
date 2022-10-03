@@ -6,14 +6,16 @@
       :nav="nav"
     />
     <!-- section two -->
-    <v-sheet class="cc-wrapper v-spacing d-flex flex-row justify-space-around">
+    <v-sheet
+      class="cc-wrapper v-spacing d-flex flex-row flex-wrap justify-space-around align-content-space-between"
+    >
       <PriceCard
         title="Base"
         subTitle="Vivamus blandit gravida erat id aliquam"
         price="55"
         :items="items1"
-        class="base"
-        color= "#F9FAFA"
+        class="base mb-2"
+        color="#F9FAFA"
       />
       <PriceCard
         title="Medium"
@@ -21,11 +23,11 @@
         price="65"
         :items="items1"
         color="#377DFF"
-        class="medium"
+        class="medium mb-2"
       />
       <PriceCard
         title="Pro"
-        class="pro"
+        class="pro mb-2"
         subTitle="Vivamus blandit gravida erat id aliquam"
         price="105"
         :items="items1"
@@ -39,109 +41,328 @@
       <h3 class="text-center mb-13">
         <span class="head">Have</span> a Question?
       </h3>
-      <v-row class="mb-5" justify="space-between">
-        <v-card color="#F8F8F9" width="555" class="px-8 py-7" elevation="0">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiMinus }}
-            </v-icon>
-            <p>
-              Lorem ipsum dolor sit amet, consec
-              <br />
-              <br />
-              Phasellus pulvinar, nunc nec congue efficitur, velit risus
-              interdum augue, dapibus lacinia dui massa a lorem. Nulla a
-              bibendum ex. Maecenas vel erat convallis.
-            </p>
-          </div>
-        </v-card>
-        <v-card color="#F8F8F9" width="555" class="px-8 py-7" elevation="0">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiMinus }}
-            </v-icon>
-            <p>
-              Fusce id dolor eget felis pretium
-              <br />
-              <br />
-              Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a
-              ullamcorper enim. Pellentesque elementum eget dolor eu maximus.
-              Maecenas at porta lacus.
-            </p>
-          </div>
-        </v-card>
-      </v-row>
-      <v-row class="mb-5" justify="space-between">
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Nullam non ipsum dignissim, con</p>
-          </div>
-        </v-card>
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Nulla diam nunc, tristique quis</p>
-          </div>
-        </v-card>
-      </v-row>
-      <v-row class="mb-5" justify="space-between">
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Sem suscipit fringilla et sit amet sem.</p>
-          </div>
-        </v-card>
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Orci varius natoque penatibus et magn</p>
-          </div>
-        </v-card>
-      </v-row>
-      <v-row class="mb-5" justify="space-between">
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Ut luctus est nunc, at tinci</p>
-          </div>
-        </v-card>
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Mauris efficitur vel turpis ut laoreet.</p>
-          </div>
-        </v-card>
-      </v-row>
-      <v-row class="mb-5" justify="space-between">
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Curabitur convallis vel ante in posuere.</p>
-          </div>
-        </v-card>
-        <v-card color="#F8F8F9" width="555" elevation="0" class="px-8 py-7">
-          <div class="d-flex justify-start align-start">
-            <v-icon color="#377DFF">
-              {{ icons.mdiPlus }}
-            </v-icon>
-            <p>Etiam molestie ante id risus suscipit</p>
-          </div>
-        </v-card>
+      <v-row>
+        <v-col>
+          <v-card width="555" elevation="0" flat tile>
+            <v-expansion-panels accordion flat>
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-card>
+        </v-col>
+        <v-col>
+          <v-card width="555" elevation="0" flat tile>
+            <v-expansion-panels accordion flat>
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+              <v-expansion-panel color="#F8F8F9" class="mb-5">
+                <v-expansion-panel-header
+                  class="v-expansion-panel-header"
+                  @click="handleIconToggle"
+                  hide-actions
+                >
+                  <v-icon
+                    v-if="toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiMinus }}
+                  </v-icon>
+                  <v-icon
+                    v-else="!toggleIcon"
+                    color="#377DFF"
+                    class="plus mr-3 px-0 py-0"
+                  >
+                    {{ icons.mdiPlus }}
+                  </v-icon>
+                  <p>Lorem ipsum dolor sit amet, consec</p>
+                </v-expansion-panel-header>
+                <v-expansion-panel-content class="ml-9">
+                  <p>
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
+                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
+                    eu maximus. Maecenas at porta lacus.
+                  </p>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+
+            </v-expansion-panels>
+          </v-card>
+        </v-col>
       </v-row>
     </v-sheet>
   </main>
@@ -161,12 +382,20 @@ export default Vue.extend({
       "Nullam laoreet ante",
       "Etiam vulputate suscipit",
     ],
+
+    toggleIcon: false,
   }),
+
+  methods: {
+    handleIconToggle() {
+      this.toggleIcon = !this.toggleIcon;
+      console.log("icon");
+    },
+  },
 });
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 main {
   box-sizing: border-box;
 }
@@ -176,8 +405,24 @@ main {
 }
 
 .head {
-  border-left: 3px solid #377DFF;
+  border-left: 3px solid #377dff;
   padding-left: 33.5px;
   color: #377dff;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.v-expansion-panels .v-expansion-panel {
+  background-color: #f8f8f9;
+  color: rgba(0, 0, 0, 0.87);
+  min-width: 100%;
+}
+.v-expansion-panel-header {
+  .plus {
+    padding: 0;
+    flex: 0.1;
+  }
 }
 </style>

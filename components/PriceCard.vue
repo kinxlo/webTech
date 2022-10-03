@@ -55,7 +55,6 @@ export default Vue.extend({
   ],
   data: () => {
     return {
-      items: [],
       icons: { mdiChevronRight },
     };
   },

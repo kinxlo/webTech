@@ -1,5 +1,5 @@
 <template>
-  <v-sheet width="760">
+  <v-responsive max-width="760" >
     <v-sheet max-height="366">
       <img :src="imageUrl" alt="img" />
     </v-sheet>
@@ -15,7 +15,7 @@
       />
       <slot> </slot>
     </v-card>
-  </v-sheet>
+  </v-responsive>
 </template>
 
 <script lang="ts">
