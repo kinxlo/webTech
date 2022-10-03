@@ -1,5 +1,5 @@
 <template>
-  <div :class="{format}">
+  <div :class="format">
     <slot></slot>
     <h3 class="mb-4">{{ headtext }}</h3>
     <p v-if="showSpanText" class="mb-6">
@@ -9,33 +9,31 @@
     </p>
     <div>
       <p v-if="showMainP" class="mb-12">{{ p_text }}</p>
-      <v-sheet id="sheeet" v-else class="mb-12">
-        <v-sheet class="d-flex align-center">
-          <v-img
-            v-if="emma"
-            width="100"
-            height="100"
-            src="cardImage.png"
-            alt="cardImage"
-            class="mr-3"
-          />
-          <v-img
-            v-else
-            width="60"
-            height="60"
-            src="cardImage.png"
-            alt="cardImage"
-            class="mr-3"
-          />
-          <div>
-            <p class="pl-4 py-1 border">
-              Donec vulputate erat lectus, eu efficitur sem dignissim quis.
-              Donec sapien est, dictum eget blandit ac, aliquet vitae orci.
-              Fusce pellentesque justo at hendrerit hendrerit norbi tempor.
-            </p>
-            <p class="pl-4" v-if="emma" style="color: #377DFF">emmajohnson</p>
-          </div>
-        </v-sheet>
+      <v-sheet color="transparent" v-else id="sheeet" class="mb-12 d-flex align-center">
+        <v-img
+          v-if="emma"
+          width="100"
+          height="100"
+          src="cardImage.png"
+          alt="cardImage"
+          class="mr-3"
+        />
+        <v-img
+          v-else
+          width="60"
+          height="60"
+          src="cardImage.png"
+          alt="cardImage"
+          class="mr-3"
+        />
+        <div>
+          <p class="pl-4 py-1 border">
+            Donec vulputate erat lectus, eu efficitur sem dignissim quis. Donec
+            sapien est, dictum eget blandit ac, aliquet vitae orci. Fusce
+            pellentesque justo at hendrerit hendrerit norbi tempor.
+          </p>
+          <p class="pl-4" v-if="emma" style="color: #377dff">emmajohnson</p>
+        </div>
       </v-sheet>
     </div>
     <v-btn elevation="0" outlined tile v-if="showButton">{{ btn_text }}</v-btn>
@@ -44,7 +42,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({
+export default {
   name: "BlogCardBody",
   props: {
     headtext: String,
@@ -59,16 +57,15 @@ export default Vue.extend({
     btn_text: String,
     cardImage: String,
     emma: Boolean,
-    color: String
+    color: String,
+    format: Boolean,
   },
-  data() {
+  setup() {
     return {
-      showButton: false,
       showSpanText: true,
-      showMainP: false,
     };
   },
-});
+};
 </script>
 
 <style lang="scss">
@@ -93,7 +90,8 @@ p {
 }
 
 .format {
-  h3, p {
+  h3,
+  p {
     color: white;
   }
 
