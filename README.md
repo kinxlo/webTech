@@ -1,11 +1,12 @@
-<p align="right">
+<p >
   <a href="" rel="noopener">
  <img src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664904490/webtech/Frame_bmixls.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project WebTech</h3>
-
-<p align="center"> Few lines describing your project.
+<h3>Project WebTech</h3>
+<p> Few lines describing your project.
+    <br>
+    <br>
     <br>
 </p>
 
