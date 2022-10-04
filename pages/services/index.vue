@@ -3,7 +3,7 @@
     <Banner
       title="Services"
       :nav="state.nav"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664450831/webtech/Rectangle_6_n4i8bd.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664450831/webtech/Rectangle_6_n4i8bd.png"
     />
     <section class="v-spacing cc-wrapper">
       <v-row>

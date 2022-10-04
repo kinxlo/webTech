@@ -2,14 +2,14 @@
   <main>
     <Banner
       title="Blog"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664417563/webtech/Rectangle_4_whmbrs.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
     <v-layout class="cc-wrapper v-spacing">
       <v-row class="align-flex-start">
         <v-col>
           <BlogCard
-            imageUrl="motion.png"
+            imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896556/webtech/samples_eoosuq.png"
             headtext="Motion Animation And VR Headset"
             P_span_1="Emmajohnson"
             P_span_2="May 17, 2019"
@@ -20,7 +20,7 @@
             <v-btn outlined elevation="0" tile>Security</v-btn>
           </BlogCard>
           <BlogCard
-            imageUrl="chess.png"
+            imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896553/webtech/chess_sgtci6.png"
             headtext="Motion Animation And VR Headset"
             P_span_1="Emmajohnson"
             P_span_2="May 17, 2019"
@@ -33,7 +33,7 @@
             <v-btn outlined elevation="0" tile>Security</v-btn>
           </BlogCard>
           <BlogCard
-            imageUrl="changes.png"
+            imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664454274/webtech/Rectangle_7_zce5yx.png"
             headtext="Motion Animation And VR Headset"
             P_span_1="Emmajohnson"
             P_span_2="May 17, 2019"
@@ -46,7 +46,7 @@
             <v-btn outlined elevation="0" tile>Security</v-btn>
           </BlogCard>
           <BlogCard
-            imageUrl="chat.png"
+            imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896549/webtech/chat_rzzb7n.png"
             headtext="Sample Post Format: Link"
             P_span_1="Emmajohnson"
             P_span_2="May 17, 2019"

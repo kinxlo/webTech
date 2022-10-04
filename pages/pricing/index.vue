@@ -2,7 +2,7 @@
   <main>
     <Banner
       title="Pricing"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664417563/webtech/Rectangle_4_whmbrs.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
     <!-- section two -->

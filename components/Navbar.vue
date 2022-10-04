@@ -11,13 +11,13 @@
 
           <v-spacer></v-spacer>
           <v-layout class="justify-space-between d-none d-md-flex">
-            <NuxtLink class="hover-accent hvr-grow" to="/"> Home </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/about"> About </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/services"> Services </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/portfolio"> Portfolio </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/blog"> Blog </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/pricing"> Pricing </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow" to="/contact"> Contact Us </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/"> Home </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/about"> About </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/services"> Services </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/portfolio"> Portfolio </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/blog"> Blog </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/pricing"> Pricing </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow pa-3" to="/contact"> Contact Us </NuxtLink>
           </v-layout>
           <v-icon dark @click="state.drawer = !state.drawer" class="d-md-none"
             >{{ state.icon.menu }}

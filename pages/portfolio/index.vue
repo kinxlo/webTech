@@ -2,7 +2,7 @@
   <main>
     <Banner
       title="Portfolio"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664454274/webtech/Rectangle_7_zce5yx.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664454274/webtech/Rectangle_7_zce5yx.png"
       :nav="state.nav"
     />
     <section class="cc-wrapper v-spacing">

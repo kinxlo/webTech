@@ -2,7 +2,7 @@
   <main>
     <Banner
       title="Contact Us"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664454637/webtech/Rectangle_8_d0lzrx.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664454637/webtech/Rectangle_8_d0lzrx.png"
       :nav="state.nav"
     />
     <!-- SECTION ONE -->
@@ -12,9 +12,7 @@
           <div class="d-flex align-start">
             <v-icon large color="accent">{{ state.icon.mdiCellphone }}</v-icon>
             <div class="ml-5">
-              <h5 style="font-size: 20px" class="font-weight-bold mb-3">
-                Phone
-              </h5>
+              <h5 style="font-size: 20px" class="font-weight-bold mb-3">Phone</h5>
               <p style="font-size: 14px" class="info--text">
                 Call customer services on 808-872-9343
               </p>
@@ -27,7 +25,7 @@
     <v-sheet height="20em">
       <v-img
         class="img-fluid"
-        src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664456362/webtech/Mask_uqekkn.png"
+        src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664456362/webtech/Mask_uqekkn.png"
         alt="map"
       ></v-img>
     </v-sheet>

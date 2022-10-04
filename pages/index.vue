@@ -51,7 +51,11 @@
         </v-sheet>
       </v-layout>
       <v-layout class="superhero d-none d-lg-block">
-        <v-img eager src="businessman.svg" alt="img"></v-img>
+        <v-img
+          eager
+          src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664896534/webtech/businessman_oxcxww.png"
+          alt="img"
+        ></v-img>
       </v-layout>
       <v-layout class="hero_overlay">
         <v-img eager src="/overlay.png"></v-img>
@@ -230,7 +234,7 @@
         <v-sheet height="100%" class="transparent sec_7_img_container d-none d-lg-block">
           <v-img
             class="sec_7_img"
-            src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664405024/webtech/Rectangle_2_eaeuym.png"
+            src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664405024/webtech/Rectangle_2_eaeuym.png"
             alt="img"
           ></v-img>
         </v-sheet>
@@ -265,7 +269,7 @@
         <v-col cols="12" md="7" lg="8" class="pr-md-3 d-flex flex-column align-center">
           <v-card class="rounded-0">
             <v-img
-              src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664407849/webtech/Rectangle_3_dggxie.png"
+              src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664407849/webtech/Rectangle_3_dggxie.png"
               alt="img"
             >
               <v-chip class="ma-5 rounded-0 accent">Software</v-chip>
@@ -289,7 +293,12 @@
             </div>
           </v-layout>
         </v-col>
-        <v-col cols="12" md="5" lg="4" class="pl-md-3 mt-16 mt-md-0 d-flex flex-column align-center">
+        <v-col
+          cols="12"
+          md="5"
+          lg="4"
+          class="pl-md-3 mt-16 mt-md-0 d-flex flex-column align-center"
+        >
           <v-card
             v-for="n in 2"
             :key="n"
@@ -302,7 +311,7 @@
             <v-sheet height="60%">
               <v-img
                 class="img-fluid"
-                src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664407849/webtech/Rectangle_3_dggxie.png"
+                src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664407849/webtech/Rectangle_3_dggxie.png"
                 alt="img"
               >
                 <v-chip class="ma-5 rounded-0 accent">Security</v-chip>

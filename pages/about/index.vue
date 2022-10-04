@@ -2,7 +2,7 @@
   <main class="about">
     <Banner
       title="About"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664417563/webtech/Rectangle_4_whmbrs.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="state.nav"
     />
     <!-- SECTION TWO -->
@@ -20,7 +20,7 @@
       >
         <v-img
           class="img-fluid"
-          src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664420899/webtech/Rectangle_5_u8qgms.png"
+          src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664420899/webtech/Rectangle_5_u8qgms.png"
           alt="img"
         ></v-img>
       </v-card>
