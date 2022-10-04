@@ -1,4 +1,4 @@
-<p align="center">
+<p align="right">
   <a href="" rel="noopener">
  <img src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664904490/webtech/Frame_bmixls.svg" alt="Project logo"></a>
 </p>
