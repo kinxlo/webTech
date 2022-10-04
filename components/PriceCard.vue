@@ -38,9 +38,9 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
 import { mdiChevronRight } from "@mdi/js";
-export default Vue.extend({
+
+export default {
   name: "PriceCard",
   props: [
     "title",
@@ -53,12 +53,16 @@ export default Vue.extend({
     "base",
     "pro",
   ],
-  data: () => {
+
+  data () {
     return {
       icons: { mdiChevronRight },
+      // themes: ['theme1', 'theme2', 'theme3']
     };
   },
-});
+
+
+};
 </script>
 
 <style lang="scss" scoped>

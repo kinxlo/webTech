@@ -19,6 +19,7 @@
             <v-btn outlined elevation="0" tile>Networking</v-btn>
             <v-btn outlined elevation="0" tile>Security</v-btn>
           </BlogCard>
+
           <BlogCard
             imageUrl="chess.png"
             headtext="Motion Animation And VR Headset"
@@ -45,6 +46,7 @@
             <v-btn outlined elevation="0" tile>Networking</v-btn>
             <v-btn outlined elevation="0" tile>Security</v-btn>
           </BlogCard>
+          
           <BlogCard
             imageUrl="chat.png"
             headtext="Sample Post Format: Link"
@@ -264,8 +266,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { ref } from 'vue'
+
 import BlogCard from "../../components/BlogCard.vue";
 import BlogCardBody from "~/components/BlogCardBody.vue";
 import {

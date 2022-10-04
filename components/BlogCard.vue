@@ -1,5 +1,5 @@
 <template>
-  <v-responsive max-width="760" >
+  <v-responsive width="760">
     <v-sheet max-height="366">
       <img :src="imageUrl" alt="img" />
     </v-sheet>

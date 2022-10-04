@@ -29,6 +29,8 @@ export default {
     '~/assets/scss/main.scss'
   ],
 
+  loading: '~/components/Loading.vue',  //Nuxt loading component disabled
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // '~/plugins/urlResolver',
@@ -50,8 +52,18 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
+
+  // runtimeConfig: {
+  //   sanity: {
+  //     token: process.env.APP__TOKEN
+  //   },
+  // },
+  //how do we use .env in nuxt???????????
+  // sanity: {
+  //   projectId: "process.env.APP__PROJECT__ID",  //has to be in an env file
+  //   apiVersion: '2022-10-02'
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
