@@ -71,7 +71,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          background: "#141D28", //custom name
+          background: "#141D28",
           navbarBg: "#0C1117",
         },
 
@@ -83,7 +83,7 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
-          background: "#141D28", //costom name
+          background: "#141D28",
         },
       },
     },
