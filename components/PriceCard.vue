@@ -7,12 +7,14 @@
     flat
   >
     <section class="d-flex flex-column align-center">
+      
       <div class="text-center px-16 mx-3 heading">
         <h3 style="font-size: 30px" class="mb-5">{{ title }}</h3>
         <p style="line-height: 20px" class="text-capitalize">
           {{ subTitle }}
         </p>
       </div>
+
       <v-list color="transparent" class="mt-10 mb-16 pa-0">
         <v-list-item
           style="min-height: 35px"

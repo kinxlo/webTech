@@ -3,17 +3,19 @@
     <Prenav />
     <Navbar ref="nav" :setFixed="state.fixed" />
     <Nuxt />
+
     <Footer />
     <v-btn
-    dark
+      dark
       color="accent"
       ref="topButton"
       fab
       large
       @click.stop="scrollToTop"
       class="d-none"
-      ><v-icon>{{ state.icon.up }}</v-icon></v-btn
     >
+      <v-icon>{{ state.icon.up }}</v-icon>
+    </v-btn>
   </v-app>
 </template>
 

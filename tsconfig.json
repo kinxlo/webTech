@@ -4,7 +4,11 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     // "jsx": "preserve",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
@@ -15,15 +19,22 @@
     "strictNullChecks": false,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "types": [
       "@types/node",
-      "@nuxt/vue-app",
       "@nuxtjs/vuetify",
       "@nuxtjs/sanity"
     ]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
 }

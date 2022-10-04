@@ -14,7 +14,7 @@
             <section
               style="font-size: 50px; line-height: 50px"
               class="d-flex flex-column flex-sm-row align-end align-sm-center justify-center justify-md-start mb-md-10"
-            >
+            > 
               <h1 class="hero_title_number grey--text">01</h1>
 
               <div class="hero_title pl-5 ml-5">
@@ -45,7 +45,8 @@
                   class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize"
                   x-large
                   color="accent"
-                  >start now</v-btn
+                >
+                  start now</v-btn
                 >
                 <v-btn
                   outlined
@@ -93,7 +94,9 @@
               auto="format"
             />
           </v-avatar>
-          <h2 class="font-title mt-3">{{ state.sectionOne[0].desc }}</h2>
+          <h2 class="font-title mt-3">
+            {{ state.sectionOne[0].desc }}
+          </h2>
         </v-sheet>
         <div class="d-none d-md-block">
           <v-img src="/arrowUP.svg" alt="img"></v-img>
@@ -105,7 +108,9 @@
               auto="format"
             />
           </v-avatar>
-          <h2 class="font-title mt-3">{{ state.sectionOne[1].desc }}</h2>
+          <h2 class="font-title mt-3">
+            {{ state.sectionOne[1].desc }}
+          </h2>
         </v-sheet>
         <div class="d-none d-md-block">
           <v-img width="100%" src="/arrowDown.svg" alt="img"></v-img>
@@ -117,7 +122,9 @@
               auto="format"
             />
           </v-avatar>
-          <h2 class="font-title mt-3">{{ state.sectionOne[2].desc }}</h2>
+          <h2 class="font-title mt-3">
+            {{ state.sectionOne[2].desc }}
+          </h2>
         </v-sheet>
       </v-layout>
     </v-layout>
@@ -167,12 +174,13 @@
           class="left_border pl-5 py-3 font-header font-weight-bold"
           style="line-height: 46px; letter-spacing: 1px"
         >
-          <span class="accent--text font-weight-bold">Our</span> Best <br />
+          <span class="accent--text font-weight-bold">Our</span>
+          Best <br />
           Workers
         </h3>
         <v-btn outlined color="accent" x-large class="rounded-0 mb-5 mt-16"
-          ><span class="primary--text">View Team</span></v-btn
-        >
+          ><span class="primary--text">View Team</span>
+        </v-btn>
       </v-card>
       <v-layout>
         <v-row no-gutters>

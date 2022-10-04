@@ -25,10 +25,7 @@
       <h5 class="primary--text" style="font-size: 26px; letter-spacing: 1px">
         {{ name }}
       </h5>
-      <p
-        class="text-uppercase info--text mt-2"
-        style="font-size: 14px; letter-spacing: 2px"
-      >
+      <p class="text-uppercase info--text mt-2" style="font-size: 14px; letter-spacing: 2px">
         {{ title }}
       </p>
     </v-layout>
@@ -38,6 +35,8 @@
 <script setup lang="ts">
 import { mdiFacebook, mdiTwitter } from "@mdi/js";
 import { reactive } from "vue";
+
+const me = "kingsley";
 
 defineProps({
   width: Number,
