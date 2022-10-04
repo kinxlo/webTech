@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="/Frame.svg" alt="Project logo"></a>
+ <img width=200px height=200px src="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664904490/webtech/Frame_bmixls.svg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Project WebTech</h3>
