@@ -105,7 +105,7 @@ import { mdiCellphone } from "@mdi/js";
 import { reactive } from "vue";
 
 const state = reactive({
-  nav: ["Homepage", "service"],
+  nav: ["Home", "About"],
   icon: {
     mdiCellphone,
   },

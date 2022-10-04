@@ -20,16 +20,16 @@
             exercitationem consectetur nobis doloribus asperiores.
           </p>
           <v-layout justify-center justify-sm-start>
-            <v-icon dark class="mr-5" color="">{{
+            <v-icon dark class="mr-5 hvr-float" color="">{{
               state.icon.mdiInstagram
             }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{
+            <v-icon dark class="mr-5 hvr-float" color="">{{
               state.icon.mdiBasketball
             }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{
+            <v-icon dark class="mr-5 hvr-float" color="">{{
               state.icon.mdiTwitter
             }}</v-icon>
-            <v-icon dark class="mr-5" color="">{{
+            <v-icon dark class="mr-5 hvr-float" color="">{{
               state.icon.mdiYoutube
             }}</v-icon>
           </v-layout>

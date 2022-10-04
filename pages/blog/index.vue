@@ -287,7 +287,7 @@ export default {
   components: { BlogCard, BlogCardBody },
 
   data: () => ({
-    nav: ["Homepage", "Blog"],
+    nav: ["Portfolio", "Pricing"],
     icons: { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus },
 
     showSpanText: true,

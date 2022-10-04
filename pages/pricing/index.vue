@@ -364,7 +364,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   data: () => ({
-    nav: ["Homepage", "pricing"],
+    nav: ["Blog", "Contact"],
     icons: { mdiMinus, mdiPlus },
     items1: [
       "Donec tincidunt",

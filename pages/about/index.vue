@@ -122,7 +122,7 @@ const sanity = useContext().app.$sanity;
 
 const state = reactive({
   sectionThree: {},
-  nav: ["Homepage", "service"],
+  nav: ["Home", "Services"],
 });
 
 state.sectionThree = useAsync(() => sanity.fetch(sectionThree));

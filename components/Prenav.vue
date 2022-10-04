@@ -6,16 +6,16 @@
       <span class="white--text">+123 456 789</span>
       <!-- <v-spacer></v-spacer> -->
       <div>
-        <v-icon dark small class="ml-5" color="">{{
+        <v-icon dark small class="ml-5 hvr-grow" color="">{{
           state.icon.mdiInstagram
         }}</v-icon>
-        <v-icon dark small class="ml-5" color="">{{
+        <v-icon dark small class="ml-5 hvr-grow" color="">{{
           state.icon.mdiBasketball
         }}</v-icon>
-        <v-icon dark small class="ml-5" color="">{{
+        <v-icon dark small class="ml-5 hvr-grow" color="">{{
           state.icon.mdiTwitter
         }}</v-icon>
-        <v-icon dark small class="ml-5" color="">{{
+        <v-icon dark small class="ml-5 hvr-grow" color="">{{
           state.icon.mdiYoutube
         }}</v-icon>
       </div>

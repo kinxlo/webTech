@@ -3,18 +3,21 @@
     <v-sheet class="py-2" color="navbarBg">
       <v-app-bar :fixed="setFixed" flat class="navbarBg">
         <v-layout class="cc-wrapper align-center pa-0">
-          <v-toolbar-title class="pa-0">
-            <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img
-          ></v-toolbar-title>
+          <NuxtLink to="/">
+            <v-toolbar-title class="pa-0">
+              <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img>
+            </v-toolbar-title>
+          </NuxtLink>
+
           <v-spacer></v-spacer>
           <v-layout class="justify-space-between d-none d-md-flex">
-            <NuxtLink to="/" class="white--text"> Home </NuxtLink>
-            <NuxtLink to="/about" class="white--text"> About </NuxtLink>
-            <NuxtLink to="/services" class="white--text"> Services </NuxtLink>
-            <NuxtLink to="/portfolio" class="white--text"> Portfolio </NuxtLink>
-            <NuxtLink to="/blog" class="white--text"> Blog </NuxtLink>
-            <NuxtLink to="/pricing" class="white--text"> Pricing </NuxtLink>
-            <NuxtLink to="/contact" class="white--text"> Contact Us </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/"> Home </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/about"> About </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/services"> Services </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/portfolio"> Portfolio </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/blog"> Blog </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/pricing"> Pricing </NuxtLink>
+            <NuxtLink class="hover-accent hvr-grow" to="/contact"> Contact Us </NuxtLink>
           </v-layout>
           <v-icon dark @click="state.drawer = !state.drawer" class="d-md-none"
             >{{ state.icon.menu }}
@@ -36,7 +39,7 @@
         </v-list-item>
         <v-divider></v-divider>
         <v-list dense nav>
-          <NuxtLink to="/">
+          <NuxtLink class="hvr-grow" to="/">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -45,14 +48,12 @@
                 <v-icon dark small>{{ state.icon.home }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Home</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Home</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
 
-          <NuxtLink to="/about">
+          <NuxtLink class="hvr-grow" to="/about">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -61,13 +62,11 @@
                 <v-icon dark small>{{ state.icon.about }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >About</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">About</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink to="/services">
+          <NuxtLink class="hvr-grow" to="/services">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -76,13 +75,11 @@
                 <v-icon dark small>{{ state.icon.service }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Service</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Service</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink to="/portfolio">
+          <NuxtLink class="hvr-grow" to="/portfolio">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -91,13 +88,11 @@
                 <v-icon dark small>{{ state.icon.portfolio }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Portfolio</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Portfolio</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink to="/blog">
+          <NuxtLink class="hvr-grow" to="/blog">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -106,13 +101,11 @@
                 <v-icon dark small>{{ state.icon.blog }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Blog</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Blog</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink to="/pricing">
+          <NuxtLink class="hvr-grow" to="/pricing">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -121,13 +114,11 @@
                 <v-icon dark small>{{ state.icon.pricing }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Pricing</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Pricing</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink to="/contact">
+          <NuxtLink class="hvr-grow" to="/contact">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -136,9 +127,7 @@
                 <v-icon dark small>{{ state.icon.contact }}</v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title class="font-weight-bold"
-                  >Contact Us</v-list-item-title
-                >
+                <v-list-item-title class="font-weight-bold">Contact Us</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>

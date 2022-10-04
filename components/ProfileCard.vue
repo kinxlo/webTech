@@ -10,16 +10,18 @@
       class="profile_card rounded-0"
     >
       <SanityImage :asset-id="img" auto="format" />
-      <v-sheet
-        id="profileSocials"
-        width="100%"
-        class="accent profile_socials pa-3 justify-center"
-        :class="`d-none`"
-      >
-        <NuxtLink to="/" v-for="n in 5" :key="n" class="mx-2">
-          <v-icon color="white">{{ state.icon.mdiFacebook }}</v-icon>
-        </NuxtLink>
-      </v-sheet>
+      <Transition>
+        <v-sheet
+          v-if="state.show"
+          id="profileSocials"
+          width="100%"
+          class="accent profile_socials pa-3 justify-center d-flex"
+        >
+          <NuxtLink to="/" v-for="n in 5" :key="n" class="mx-2">
+            <v-icon color="white">{{ state.icon.mdiFacebook }}</v-icon>
+          </NuxtLink>
+        </v-sheet>
+      </Transition>
     </v-card>
     <v-layout flex-column align-center class="mt-7">
       <h5 class="primary--text" style="font-size: 26px; letter-spacing: 1px">
@@ -36,8 +38,6 @@
 import { mdiFacebook, mdiTwitter } from "@mdi/js";
 import { reactive } from "vue";
 
-const me = "kingsley";
-
 defineProps({
   width: Number,
   height: Number,
@@ -47,6 +47,7 @@ defineProps({
 });
 
 const state = reactive({
+  show: false,
   icon: {
     mdiTwitter,
     mdiFacebook,
@@ -56,11 +57,22 @@ const state = reactive({
 function showProfileSolcials(e): void {
   switch (e.type) {
     case `mouseenter`:
-      e.target.children[1].classList.add(`d-flex`);
+      state.show = !state.show;
       break;
     case `mouseleave`:
-      e.target.children[1].classList.remove(`d-flex`);
+      state.show = !state.show;
       break;
   }
 }
 </script>
+<style lang="scss" scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>

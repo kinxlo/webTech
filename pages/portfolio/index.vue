@@ -22,7 +22,7 @@
 import { reactive } from "vue";
 
 const state = reactive({
-  nav: ["About", "Portfolio"],
+  nav: ["Services", "Blog"],
 });
 </script>
 
