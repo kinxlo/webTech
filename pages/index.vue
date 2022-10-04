@@ -3,16 +3,10 @@
     <!-- HERO SECTION -->
     <v-sheet height="63em" class="hero">
       <v-layout class="cc-wrapper" fill-height>
-        <v-sheet
-          color="d-flex align-md-center justify-center justify-lg-start transparent"
-          width="100%"
-          height="100%"
-        >
+        <v-sheet color="d-flex align-md-center justify-center justify-lg-start transparent" width="100%" height="100%">
           <section class="d-flex flex-column align-center align-sm-start justify-center hero_desc">
-            <section
-              style="font-size: 50px; line-height: 50px"
-              class="d-flex flex-column flex-sm-row align-end align-sm-center justify-center justify-md-start mb-md-10"
-            >
+            <section style="font-size: 50px; line-height: 50px"
+              class="d-flex flex-column flex-sm-row align-end align-sm-center justify-center justify-md-start mb-md-10">
               <h1 class="hero_title_number grey--text">01</h1>
 
               <div class="hero_title pl-5 ml-5">
@@ -31,31 +25,19 @@
                 product that can sell well, but a platform through which to deliver it.
               </p>
               <v-layout flex-column flex-sm-row class="mt-10 px-16 px-sm-0">
-                <v-btn
-                  class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize"
-                  x-large
-                  color="accent"
-                >
-                  start now</v-btn
-                >
-                <v-btn
-                  outlined
-                  class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize"
-                  x-large
-                  color="accent"
-                  ><span class="white--text">learn more</span></v-btn
-                >
+                <v-btn class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize" x-large color="accent">
+                  start now</v-btn>
+                <v-btn outlined class="rounded-pill mr-sm-5 my-5 text-subtitle-1 px-10 text-capitalize" x-large
+                  color="accent"><span class="white--text">learn more</span></v-btn>
               </v-layout>
             </section>
           </section>
         </v-sheet>
       </v-layout>
       <v-layout class="superhero d-none d-lg-block">
-        <v-img
-          eager
+        <v-img eager
           src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664896534/webtech/businessman_oxcxww.png"
-          alt="img"
-        ></v-img>
+          alt="img"></v-img>
       </v-layout>
       <v-layout class="hero_overlay">
         <v-img eager src="/overlay.png"></v-img>
@@ -107,13 +89,8 @@
     <v-layout class="secondary white--text py-5">
       <v-layout flex-column class="cc-wrapper py-16">
         <v-row no-gutters>
-          <v-col
-            cols="12"
-            md="4"
-            v-for="(article, i) in state.sectionTwo"
-            :key="i"
-            class="d-flex flex-column flex-md-row align-center align-md-start my-10"
-          >
+          <v-col cols="12" md="4" v-for="(article, i) in state.sectionTwo" :key="i"
+            class="d-flex flex-column flex-md-row align-center align-md-start my-10">
             <v-avatar size="40" class="transparent rounded-0 mt-2">
               <SanityImage :asset-id="article.img.asset._ref" auto="format" />
             </v-avatar>
@@ -128,49 +105,22 @@
       </v-layout>
     </v-layout>
     <!-- SECTION THREE -->
-    <v-layout
-      flex-column
-      flex-md-row
-      justify-space-between
-      align-center
-      align-md-start
-      class="cc-wrapper v-spacing"
-    >
-      <v-card
-        elevation="0"
-        width="287px"
-        height="357px"
-        class="d-flex flex-column align-start justify-end"
-      >
-        <h3
-          class="left_border pl-5 py-3 font-header font-weight-bold"
-          style="line-height: 46px; letter-spacing: 1px"
-        >
+    <v-layout flex-column flex-md-row justify-space-between align-center align-md-start class="cc-wrapper v-spacing">
+      <v-card elevation="0" width="287px" height="357px" class="d-flex flex-column align-start justify-end">
+        <h3 class="left_border pl-5 py-3 font-header font-weight-bold" style="line-height: 46px; letter-spacing: 1px">
           <span class="accent--text font-weight-bold">Our</span>
           Best <br />
           Workers
         </h3>
-        <v-btn outlined color="accent" x-large class="rounded-0 mb-5 mt-16"
-          ><span class="primary--text">View Team</span>
+        <v-btn outlined color="accent" x-large class="rounded-0 mb-5 mt-16"><span class="primary--text">View Team</span>
         </v-btn>
       </v-card>
       <v-layout>
         <v-row no-gutters>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
-            class="d-flex justify-center mb-16 mb-md-0"
-            v-for="(person, i) in state.sectionThree"
-            :key="i"
-          >
-            <ProfileCard
-              :width="287"
-              :height="356"
-              :name="person.name"
-              :title="person.title"
-              :img="person.img.asset._ref"
-            />
+          <v-col cols="12" md="6" lg="4" class="d-flex justify-center mb-16 mb-md-0"
+            v-for="(person, i) in state.sectionThree" :key="i">
+            <ProfileCard :width="287" :height="356" :name="person.name" :title="person.title"
+              :img="person.img.asset._ref" />
           </v-col>
         </v-row>
       </v-layout>
@@ -178,10 +128,7 @@
     <!-- SECTION FOUR -->
     <v-layout class="section_4">
       <v-layout flex-column class="cc-wrapper py-10">
-        <h3
-          class="left_border pl-5 my-13 text-capitalize font-header"
-          style="letter-spacing: 1px; line-height: 46px"
-        >
+        <h3 class="left_border pl-5 my-13 text-capitalize font-header" style="letter-spacing: 1px; line-height: 46px">
           Few reasons <br />
           <span class="accent--text font-weight-bold font-m">why choose us</span>
         </h3>
@@ -232,15 +179,12 @@
     <v-sheet height="635" class="secondary my-16">
       <v-layout justify-center fill-height class="cc-wrapper">
         <v-sheet height="100%" class="transparent sec_7_img_container d-none d-lg-block">
-          <v-img
-            class="sec_7_img"
+          <v-img class="sec_7_img"
             src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664405024/webtech/Rectangle_2_eaeuym.png"
-            alt="img"
-          ></v-img>
+            alt="img"></v-img>
         </v-sheet>
         <v-sheet
-          class="text-center text-md-left transparent d-flex flex-column align-center align-md-start justify-center"
-        >
+          class="text-center text-md-left transparent d-flex flex-column align-center align-md-start justify-center">
           <h1 class="white--text font-weight-bold font-jumbo">
             A New Era of <br />
             <span class="accent--text font-weight-medium">Innovation</span>
@@ -250,9 +194,8 @@
           </p>
           <div class="d-flex flex-column flex-md-row">
             <v-btn color="accent" x-large class="px-7 rounded-0 mr-md-5 my-5">Start Now</v-btn>
-            <v-btn color="accent" outlined x-large class="px-7 rounded-0 mr-md-5 my-5"
-              ><span class="white--text">Learn More</span></v-btn
-            >
+            <v-btn color="accent" outlined x-large class="px-7 rounded-0 mr-md-5 my-5"><span class="white--text">Learn
+                More</span></v-btn>
           </div>
         </v-sheet>
       </v-layout>
@@ -270,8 +213,7 @@
           <v-card class="rounded-0">
             <v-img
               src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664407849/webtech/Rectangle_3_dggxie.png"
-              alt="img"
-            >
+              alt="img">
               <v-chip class="ma-5 rounded-0 accent">Software</v-chip>
             </v-img>
           </v-card>
@@ -293,27 +235,13 @@
             </div>
           </v-layout>
         </v-col>
-        <v-col
-          cols="12"
-          md="5"
-          lg="4"
-          class="pl-md-3 mt-16 mt-md-0 d-flex flex-column align-center"
-        >
-          <v-card
-            v-for="n in 2"
-            :key="n"
-            max-width="30rem"
-            width="100%"
-            height="393"
-            elevation="0"
-            class="rounded-0 transparent mb-10 mb-md-6"
-          >
+        <v-col cols="12" md="5" lg="4" class="pl-md-3 mt-16 mt-md-0 d-flex flex-column align-center">
+          <v-card v-for="n in 2" :key="n" max-width="30rem" width="100%" height="393" elevation="0"
+            class="rounded-0 transparent mb-10 mb-md-6">
             <v-sheet height="60%">
-              <v-img
-                class="img-fluid"
+              <v-img class="img-fluid"
                 src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664407849/webtech/Rectangle_3_dggxie.png"
-                alt="img"
-              >
+                alt="img">
                 <v-chip class="ma-5 rounded-0 accent">Security</v-chip>
               </v-img>
             </v-sheet>
@@ -361,4 +289,6 @@ state.sectionTwo = useAsync(() => sanity.fetch(sectionTwo));
 state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
 </script>
 
-<style></style>
+<style>
+
+</style>
