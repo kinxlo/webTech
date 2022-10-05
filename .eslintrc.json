@@ -4,7 +4,6 @@
         "es2021": true
     },
     "extends": [
-        // "./node_modules/eslint-config-airbnb-base/rules/imports.js",
         "./node_modules/eslint-config-airbnb-base/rules/best-practices.js",
         "./node_modules/eslint-config-airbnb-base/rules/errors.js",
         "./node_modules/eslint-config-airbnb-base/rules/es6.js",
