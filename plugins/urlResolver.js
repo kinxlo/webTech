@@ -1,11 +1,10 @@
-import imageUrlBuilder from '@sanity/image-url'
+import imageUrlBuilder from "@sanity/image-url";
 export default ({ $sanity }, inject) => {
-    const builder = imageUrlBuilder($sanity.config)
+  const builder = imageUrlBuilder($sanity.config);
 
-    function urlFor(source) {
-        return builder.image(source)
-    }
+  function urlFor(source) {
+    return builder.image(source);
+  }
 
-    inject('urlFor', urlFor)
-}
-
+  inject("urlFor", urlFor);
+};

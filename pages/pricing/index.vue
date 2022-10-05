@@ -29,9 +29,7 @@
 
     <!-- section three -->
     <v-sheet class="cc-wrapper v-spacing">
-      <h3 class="text-center mb-13">
-        <span class="head">Have</span> a Question?
-      </h3>
+      <h3 class="text-center mb-13"><span class="head">Have</span> a Question?</h3>
       <v-row>
         <v-col class="d-flex justify-center">
           <v-card width="555" flat tile>
@@ -42,27 +40,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -73,27 +62,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -104,27 +84,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -135,27 +106,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -166,27 +128,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -202,27 +155,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -233,27 +177,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -264,27 +199,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -295,27 +221,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -326,27 +243,18 @@
                   @click="handleIconToggle"
                   hide-actions
                 >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
+                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
                   <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
+                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices arcu, a ullamcorper
+                    enim. Pellentesque elementum eget dolor eu maximus. Maecenas at porta lacus.
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -380,7 +288,6 @@ export default Vue.extend({
   methods: {
     handleIconToggle() {
       this.toggleIcon = !this.toggleIcon;
-      console.log("icon");
     },
   },
 });
