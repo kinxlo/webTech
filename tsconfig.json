@@ -4,19 +4,37 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "preserve",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
+    "noImplicitAny": false,
     "noEmit": true,
     "experimentalDecorators": true,
+    "strictNullChecks": false,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
-    "types": ["@types/node", "@nuxt/vue-app", "@nuxtjs/vuetify"]
+    "types": [
+      "@types/node",
+      "@nuxtjs/vuetify",
+      "@nuxtjs/sanity"
+    ]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
 }
