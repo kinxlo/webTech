@@ -20,7 +20,6 @@
     "@mdi/js": "^7.0.96",
     "@nuxtjs/composition-api": "^0.33.1",
     "@nuxtjs/sanity": "0.10.0",
-    "@nuxtjs/vercel-builder": "^0.22.1",
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "core-js": "^3.19.3",
