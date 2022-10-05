@@ -3,7 +3,7 @@
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
-    // "jsx": "preserve",
+    "jsx": "preserve",
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
