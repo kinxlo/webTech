@@ -15,7 +15,7 @@
             <NuxtLink class="hover-accent hvr-grow pa-3" to="/about"> About </NuxtLink>
             <NuxtLink class="hover-accent hvr-grow pa-3" to="/services"> Services </NuxtLink>
             <NuxtLink class="hover-accent hvr-grow pa-3" to="/portfolio"> Portfolio </NuxtLink>
-            <NuxtLink class="hover-accent hvr-grow pa-3" to="/blog"> Blog </NuxtLink>
+            <!-- <NuxtLink class="hover-accent hvr-grow pa-3" to="/blog"> Blog </NuxtLink> -->
             <NuxtLink class="hover-accent hvr-grow pa-3" to="/pricing"> Pricing </NuxtLink>
             <NuxtLink class="hover-accent hvr-grow pa-3" to="/contact"> Contact Us </NuxtLink>
           </v-layout>
@@ -92,7 +92,7 @@
               </v-list-item-content>
             </v-list-item>
           </NuxtLink>
-          <NuxtLink class="hvr-grow" to="/blog">
+          <!-- <NuxtLink class="hvr-grow" to="/blog">
             <v-list-item class="my-3">
               <v-list-item-icon
                 style="height: fit-content !important"
@@ -104,7 +104,7 @@
                 <v-list-item-title class="font-weight-bold">Blog</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-          </NuxtLink>
+          </NuxtLink> -->
           <NuxtLink class="hvr-grow" to="/pricing">
             <v-list-item class="my-3">
               <v-list-item-icon
