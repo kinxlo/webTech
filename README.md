@@ -73,5 +73,5 @@ Add additional notes about how to deploy this on a live system.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-<!-- - [@kinxlo](https://github.com/kinxlo) - Frontend
-- [@intuneteq](https://github.com/Intuneteq) - Backend(Sanity) -->
+- [Nishar Multani](https://www.behance.net/nisharmultani) - UI/UX
+<!-- - [@intuneteq](https://github.com/Intuneteq) - Backend(Sanity) -->
