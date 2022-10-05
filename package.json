@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate --output dist",
+    "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
