@@ -20,7 +20,7 @@
   </v-card>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { mdiPlus } from "@mdi/js";
 import { reactive } from "vue";
 const state = reactive({
@@ -29,7 +29,7 @@ const state = reactive({
   },
 });
 
-function showOverlay(e): void {
+function showOverlay(e) {
   switch (e.type) {
     case `mouseenter`:
       e.target.children[1].classList.add(`d-flex`);

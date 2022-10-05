@@ -113,7 +113,7 @@
   </v-layout>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import {
   mdiInstagram,
   mdiTwitter,

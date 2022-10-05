@@ -46,7 +46,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 import { mdiArrowLeftThinCircleOutline, mdiArrowRightThinCircleOutline } from "@mdi/js";

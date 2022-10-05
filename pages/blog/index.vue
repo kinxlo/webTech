@@ -60,24 +60,20 @@
             <v-row class="rows last-row">
               <v-col class="cols">Anna:</v-col>
               <v-col
-                >In pellentesque id nisl cursus finibus. Proin maximus diam ut
-                scelerisque scelerisque.</v-col
+                >In pellentesque id nisl cursus finibus. Proin maximus diam ut scelerisque
+                scelerisque.</v-col
               >
             </v-row>
             <v-row class="rows">
               <v-col class="cols">Steave:</v-col>
               <v-col
-                >. Pellentesque fringilla lorem vel lectus sagittis, id accumsan
-                arcu varius. Maecenas quis ligula id dui finibus
-                fermentum.</v-col
+                >. Pellentesque fringilla lorem vel lectus sagittis, id accumsan arcu varius.
+                Maecenas quis ligula id dui finibus fermentum.</v-col
               >
             </v-row>
             <v-row class="rows last-row">
               <v-col class="cols">Anna:</v-col>
-              <v-col
-                >Donec mollis pretium egestas. Fusce ornare id sapien at
-                ultrices.</v-col
-              >
+              <v-col>Donec mollis pretium egestas. Fusce ornare id sapien at ultrices.</v-col>
             </v-row>
           </BlogCard>
 
@@ -98,9 +94,7 @@
               p_span_3="Leave a comment"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >security</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
             </BlogCardBody>
           </v-card>
 
@@ -121,9 +115,7 @@
               P_span_2="May 17, 2019"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >Software</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>Software</v-btn>
             </BlogCardBody>
           </v-card>
 
@@ -144,9 +136,7 @@
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
               p_text_head="okay"
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >security</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
             </BlogCardBody>
           </v-card>
         </v-col>
@@ -155,12 +145,7 @@
           <v-card class="px-10 py-8 mb-16" color="#F9FAFA" elevation="0" tile>
             <v-card-title>Search</v-card-title>
             <v-card-actions>
-              <v-text-field
-                placeholder="search"
-                append-icon="mdi-magnify"
-                solo
-                flat
-              ></v-text-field>
+              <v-text-field placeholder="search" append-icon="mdi-magnify" solo flat></v-text-field>
             </v-card-actions>
           </v-card>
 
@@ -263,25 +248,10 @@
   </main>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
-import { ref } from 'vue'
-import BlogCard from "../../components/BlogCard.vue";
-import BlogCardBody from "~/components/BlogCardBody.vue";
-import {
-  mdiChevronRight,
-  mdiFacebook,
-  mdiTwitter,
-  mdiGooglePlus,
-} from "@mdi/js";
-
-interface Post {
-  img: String;
-  headText: String;
-  date: String;
-}
-
-type button = String;
+import { ref } from "vue";
+import { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus } from "@mdi/js";
 
 export default {
   components: { BlogCard, BlogCardBody },
@@ -294,8 +264,8 @@ export default {
     showMainP: true,
   }),
 
-  setup (){
-    const Posts: Post[] = [
+  setup() {
+    const Posts = [
       {
         img: "post1.png",
         headText: "Motion Animation And VR Headset",
@@ -311,16 +281,16 @@ export default {
         headText: "Awesome Tips to Become CEO Of Big NetWork Startup",
         date: "May 17, 2019",
       },
-    ]
+    ];
 
-    const button: button[]= ["Digital", "Networking", "New", "Security", "Software"]
+    const button = ["Digital", "Networking", "New", "Security", "Software"];
 
-    const showSpan = (showSpanText: Boolean) => {
+    const showSpan = (showSpanText) => {
       return !showSpanText;
-    }
+    };
 
-    return {Posts, button, showSpan}
-  }
+    return { Posts, button, showSpan };
+  },
 };
 </script>
 

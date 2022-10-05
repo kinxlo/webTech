@@ -266,7 +266,7 @@
   </main>
 </template>
 
-<script lang="ts">
+<script>
 import { mdiMinus, mdiPlus } from "@mdi/js";
 import Vue from "vue";
 

@@ -7,7 +7,7 @@
     flat
   >
     <section class="d-flex flex-column align-center">
-      
+
       <div class="text-center px-16 mx-3 heading">
         <h3 style="font-size: 30px" class="mb-5">{{ title }}</h3>
         <p style="line-height: 20px" class="text-capitalize">
@@ -42,7 +42,7 @@
   </v-card>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import { mdiChevronRight } from "@mdi/js";
 export default Vue.extend({

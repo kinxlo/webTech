@@ -18,7 +18,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { reactive } from "vue";
 
 const state = reactive({

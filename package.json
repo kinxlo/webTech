@@ -32,8 +32,6 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",

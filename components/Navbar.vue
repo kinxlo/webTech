@@ -141,7 +141,7 @@
   </client-only>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import {
   mdiAccountCreditCard,
   mdiFaceAgent,

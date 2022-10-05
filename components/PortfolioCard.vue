@@ -12,7 +12,7 @@
   </v-card>
 </template>
 
-<script setup lang="ts">
+<script setup>
 defineProps({
   img: String,
   desc: String,

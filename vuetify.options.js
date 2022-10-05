@@ -2,13 +2,13 @@
 
 // import colors from 'vuetify/es5/util/colors'
 // export default {
-    // customVariables: ['~/assets/variables.scss'],
-    // treeShake: true,
+// customVariables: ['~/assets/variables.scss'],
+// treeShake: true,
 //     theme: {
 //         options: {
 //             customProperties: true,
 //         },
-        // dark: true,
+// dark: true,
 //         themes: {
 //             light: {
 //                 primary: '#377DFF',

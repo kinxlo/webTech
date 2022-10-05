@@ -112,7 +112,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { useAsync, useContext } from "@nuxtjs/composition-api";
 import { reactive } from "vue";
 import { groq } from "@nuxtjs/sanity";

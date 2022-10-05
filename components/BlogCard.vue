@@ -18,7 +18,7 @@
   </v-responsive>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import BlogBodyCard from "./BlogCardBody.vue";
 

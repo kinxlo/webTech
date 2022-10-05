@@ -98,7 +98,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { mdiCellphone } from "@mdi/js";
 import { reactive } from "vue";
 

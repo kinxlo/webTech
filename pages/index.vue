@@ -334,7 +334,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { mdiAccount, mdiFileCheck, mdiFileDocumentOutline, mdiPlus } from "@mdi/js";
 import { groq } from "@nuxtjs/sanity";
 import { useAsync, useContext } from "@nuxtjs/composition-api";

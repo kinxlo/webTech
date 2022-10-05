@@ -16,7 +16,7 @@
     </section>
   </v-card>
 </template>
-<script setup lang="ts">
+<script setup>
 defineProps({
   title: String,
   img: String,

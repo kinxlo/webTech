@@ -34,7 +34,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { mdiFacebook, mdiTwitter } from "@mdi/js";
 import { reactive } from "vue";
 
@@ -54,7 +54,7 @@ const state = reactive({
   },
 });
 
-function showProfileSolcials(e): void {
+function showProfileSolcials(e) {
   switch (e.type) {
     case `mouseenter`:
       state.show = !state.show;
