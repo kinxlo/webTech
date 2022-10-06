@@ -39,7 +39,7 @@ export default {
     // For Sanity
     "@nuxtjs/sanity/module",
     // composition api
-    "@nuxtjs/composition-api/module",
+    // "@nuxtjs/composition-api/module",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
