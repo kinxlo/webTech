@@ -16,10 +16,12 @@
     </section>
   </v-card>
 </template>
-<script setup>
-defineProps({
-  title: String,
-  img: String,
-  nav: Array,
-});
+<script>
+export default {
+  props: {
+    title: String,
+    img: String,
+    nav: Array,
+  },
+};
 </script>

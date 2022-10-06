@@ -8,7 +8,7 @@
     </section>
     <section class="d-flex align-center">
       <v-icon color="accent" @click.prevent="" :size="$vuetify.breakpoint.xs ? 30 : 60">{{
-        state.icon.mdiArrowLeftThinCircleOutline
+        icon.mdiArrowLeftThinCircleOutline
       }}</v-icon>
       <v-layout>
         <Hooper
@@ -19,7 +19,7 @@
           class="hooper ma-0 pa-0"
         >
           <slide
-            v-for="(head, i) in state.sectionSeven"
+            v-for="(head, i) in sectionSeven"
             :key="i"
             class="hopper_item d-flex align-center justify-center"
           >
@@ -29,8 +29,8 @@
           </slide>
         </Hooper>
       </v-layout>
-      <v-icon color="accent" @click="" :size="$vuetify.breakpoint.xs ? 30 : 60">{{
-        state.icon.mdiArrowRightThinCircleOutline
+      <v-icon color="accent" :size="$vuetify.breakpoint.xs ? 30 : 60">{{
+        icon.mdiArrowRightThinCircleOutline
       }}</v-icon>
     </section>
     <section class="d-flex flex-column align-center py-5 px-md-16 text-center">
@@ -46,27 +46,33 @@
   </main>
 </template>
 
-<script setup>
+<script>
 import { Hooper, Slide } from "hooper";
 import "hooper/dist/hooper.css";
 import { mdiArrowLeftThinCircleOutline, mdiArrowRightThinCircleOutline } from "@mdi/js";
-import { reactive } from "vue";
 import { groq } from "@nuxtjs/sanity";
-import { useAsync, useContext } from "@nuxtjs/composition-api";
+const query = groq`*[_type == "workSeven"]`;
 
-const state = reactive({
-  sectionSeven: {},
-
-  icon: {
-    mdiArrowLeftThinCircleOutline,
-    mdiArrowRightThinCircleOutline,
+export default {
+  components: {
+    Hooper,
+    Slide,
   },
-});
-const sectionSeven = groq`*[_type == "workSeven"]`;
 
-const sanity = useContext().app.$sanity;
+  data: () => ({
+    sectionSeven: {},
 
-state.sectionSeven = useAsync(() => sanity.fetch(sectionSeven));
+    icon: {
+      mdiArrowLeftThinCircleOutline,
+      mdiArrowRightThinCircleOutline,
+    },
+  }),
+
+  async fetch() {
+    const sanity = this.$sanity;
+    this.sectionSeven = await sanity.fetch(query);
+  },
+};
 </script>
 
 <style lang="scss">

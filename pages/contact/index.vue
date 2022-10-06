@@ -3,14 +3,14 @@
     <Banner
       title="Contact Us"
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664454637/webtech/Rectangle_8_d0lzrx.png"
-      :nav="state.nav"
+      :nav="nav"
     />
     <!-- SECTION ONE -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row>
         <v-col cols="12" sm="6" v-for="n in 4" :key="n" class="mb-10 mb-md-0 d-flex justify-center">
           <div class="d-flex align-start">
-            <v-icon large color="accent">{{ state.icon.mdiCellphone }}</v-icon>
+            <v-icon large color="accent">{{ icon.mdiCellphone }}</v-icon>
             <div class="ml-5">
               <h5 style="font-size: 20px" class="font-weight-bold mb-3">Phone</h5>
               <p style="font-size: 14px" class="info--text">
@@ -98,16 +98,17 @@
   </main>
 </template>
 
-<script setup>
+<script>
 import { mdiCellphone } from "@mdi/js";
-import { reactive } from "vue";
 
-const state = reactive({
-  nav: ["Home", "About"],
-  icon: {
-    mdiCellphone,
-  },
-});
+export default {
+  data: () => ({
+    nav: ["Home", "About"],
+    icon: {
+      mdiCellphone,
+    },
+  }),
+};
 </script>
 
 <style></style>

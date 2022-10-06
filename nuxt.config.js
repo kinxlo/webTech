@@ -38,8 +38,6 @@ export default {
     "@nuxtjs/vuetify",
     // For Sanity
     "@nuxtjs/sanity/module",
-    // composition api
-    "@nuxtjs/composition-api/module",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

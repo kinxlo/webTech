@@ -43,7 +43,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -65,7 +65,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -87,7 +87,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -109,7 +109,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -131,7 +131,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -158,7 +158,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -180,7 +180,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -202,7 +202,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -224,7 +224,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -246,7 +246,7 @@
                   <v-icon v-if="toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiMinus }}
                   </v-icon>
-                  <v-icon v-else="!toggleIcon" color="#377DFF" class="plus mr-3 px-0 py-0">
+                  <v-icon v-else color="#377DFF" class="plus mr-3 px-0 py-0">
                     {{ icons.mdiPlus }}
                   </v-icon>
                   <p>Lorem ipsum dolor sit amet, consec</p>
@@ -268,9 +268,8 @@
 
 <script>
 import { mdiMinus, mdiPlus } from "@mdi/js";
-import Vue from "vue";
 
-export default Vue.extend({
+export default {
   data: () => ({
     nav: ["Blog", "Contact"],
     icons: { mdiMinus, mdiPlus },
@@ -290,7 +289,7 @@ export default Vue.extend({
       this.toggleIcon = !this.toggleIcon;
     },
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>

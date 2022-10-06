@@ -12,11 +12,11 @@
   </v-card>
 </template>
 
-<script setup>
-defineProps({
-  img: String,
-  desc: String,
-});
+<script>
+export default {
+  props: {
+    img: String,
+    desc: String,
+  },
+};
 </script>
-
-<style></style>

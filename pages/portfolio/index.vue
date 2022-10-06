@@ -3,7 +3,7 @@
     <Banner
       title="Portfolio"
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664454274/webtech/Rectangle_7_zce5yx.png"
-      :nav="state.nav"
+      :nav="nav"
     />
     <section class="cc-wrapper v-spacing">
       <v-row>
@@ -18,12 +18,12 @@
   </main>
 </template>
 
-<script setup>
-import { reactive } from "vue";
-
-const state = reactive({
-  nav: ["Services", "Blog"],
-});
+<script>
+export default {
+  data: () => ({
+    nav: ["Services", "Blog"],
+  }),
+};
 </script>
 
 <style></style>

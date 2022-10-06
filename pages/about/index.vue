@@ -3,21 +3,11 @@
     <Banner
       title="About"
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
-      :nav="state.nav"
+      :nav="nav"
     />
     <!-- SECTION TWO -->
-    <v-layout
-      flex-column-reverse
-      flex-lg-row
-      align-center
-      class="cc-wrapper my-16 py-16"
-    >
-      <v-card
-        flat
-        class="about_img_sec_2 rounded-0 mr-md-16"
-        width="470"
-        height="630"
-      >
+    <v-layout flex-column-reverse flex-lg-row align-center class="cc-wrapper my-16 py-16">
+      <v-card flat class="about_img_sec_2 rounded-0 mr-md-16" width="470" height="630">
         <v-img
           class="img-fluid"
           src="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664420899/webtech/Rectangle_5_u8qgms.png"
@@ -31,14 +21,11 @@
           >
             About
           </h2>
-          <h2 class="font-m py-2 font-weight-bold d-inline letter-spacing">
-            Us
-          </h2>
+          <h2 class="font-m py-2 font-weight-bold d-inline letter-spacing">Us</h2>
         </div>
         <p class="info--text" style="line-height: 30px">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-          laudantium ullam similique nobis adipisci magnam dicta rerum, et
-          numquam voluptatibus.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed laudantium ullam similique
+          nobis adipisci magnam dicta rerum, et numquam voluptatibus.
         </p>
         <section class="pl-lg-10 my-10">
           <v-row no-gutters>
@@ -50,10 +37,7 @@
               class="mb-10 mb-md-0 d-flex justify-center"
             >
               <div class="pa-lg-3 pr-md-15 info--text">
-                <h4
-                  class="mb-3 font-weight-bold text-center text-md-left"
-                  style="font-size: 20px"
-                >
+                <h4 class="mb-3 font-weight-bold text-center text-md-left" style="font-size: 20px">
                   Awesome Features
                 </h4>
                 <p class="info--text" style="line-height: 24px">
@@ -75,10 +59,7 @@
           >
             Our
           </h2>
-          <h2
-            style="font-size: 40px"
-            class="font-m py-2 font-weight-bold d-inline"
-          >
+          <h2 style="font-size: 40px" class="font-m py-2 font-weight-bold d-inline">
             Best Workers
           </h2>
         </div>
@@ -86,7 +67,7 @@
           <v-col
             cols="12"
             md="4"
-            v-for="(person, i) in state.sectionThree"
+            v-for="(person, i) in sectionThree"
             :key="i"
             class="d-flex align-center justify-center mb-16 mb-md-0"
           >
@@ -112,20 +93,21 @@
   </main>
 </template>
 
-<script setup>
-import { useAsync, useContext } from "@nuxtjs/composition-api";
-import { reactive } from "vue";
+<script>
 import { groq } from "@nuxtjs/sanity";
+const query = groq`*[_type == "workThree"]`;
 
-const sectionThree = groq`*[_type == "workThree"]`;
-const sanity = useContext().app.$sanity;
+export default {
+  data: () => ({
+    nav: ["Home", "Services"],
+  }),
 
-const state = reactive({
-  sectionThree: {},
-  nav: ["Home", "Services"],
-});
-
-state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
+  async asyncData({ app }) {
+    const sanity = app.$sanity;
+    const sectionThree = await sanity.fetch(query);
+    return { sectionThree };
+  },
+};
 </script>
 
 <style></style>

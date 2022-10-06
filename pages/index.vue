@@ -73,10 +73,10 @@
       <v-layout flex-column flex-md-row align-center justify-space-between class="my-16">
         <v-sheet class="text-center mb-16 mb-md-0">
           <v-avatar color="accent" size="180">
-            <SanityImage :asset-id="state.sectionOne[0].img.asset._ref" auto="format" />
+            <SanityImage :asset-id="sectionOne[0].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
-            {{ state.sectionOne[0].desc }}
+            {{ sectionOne[0].desc }}
           </h2>
         </v-sheet>
         <div class="d-none d-md-block">
@@ -84,10 +84,10 @@
         </div>
         <v-sheet class="text-center mb-16 mb-md-0">
           <v-avatar color="accent" size="180">
-            <SanityImage :asset-id="state.sectionOne[1].img.asset._ref" auto="format" />
+            <SanityImage :asset-id="sectionOne[1].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
-            {{ state.sectionOne[1].desc }}
+            {{ sectionOne[1].desc }}
           </h2>
         </v-sheet>
         <div class="d-none d-md-block">
@@ -95,10 +95,10 @@
         </div>
         <v-sheet class="text-center mb-16 mb-md-0">
           <v-avatar color="accent" size="180">
-            <SanityImage :asset-id="state.sectionOne[2].img.asset._ref" auto="format" />
+            <SanityImage :asset-id="sectionOne[2].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
-            {{ state.sectionOne[2].desc }}
+            {{ sectionOne[2].desc }}
           </h2>
         </v-sheet>
       </v-layout>
@@ -110,7 +110,7 @@
           <v-col
             cols="12"
             md="4"
-            v-for="(article, i) in state.sectionTwo"
+            v-for="(article, i) in sectionTwo"
             :key="i"
             class="d-flex flex-column flex-md-row align-center align-md-start my-10"
           >
@@ -161,7 +161,7 @@
             md="6"
             lg="4"
             class="d-flex justify-center mb-16 mb-md-0"
-            v-for="(person, i) in state.sectionThree"
+            v-for="(person, i) in sectionThree"
             :key="i"
           >
             <ProfileCard
@@ -334,32 +334,35 @@
   </main>
 </template>
 
-<script setup>
+<script>
 import { mdiAccount, mdiFileCheck, mdiFileDocumentOutline, mdiPlus } from "@mdi/js";
 import { groq } from "@nuxtjs/sanity";
-import { useAsync, useContext } from "@nuxtjs/composition-api";
-import { reactive } from "vue";
+const query1 = groq`*[_type == "workOne"]`;
+const query2 = groq`*[_type == "workTwo"]`;
+const query3 = groq`*[_type == "workThree"]`;
 
-const state = reactive({
-  sectionOne: {},
-  sectionTwo: {},
-  sectionThree: {},
-  icon: {
-    mdiAccount,
-    mdiFileCheck,
-    mdiFileDocumentOutline,
-    mdiPlus,
+export default {
+  data: () => ({
+    icon: {
+      mdiAccount,
+      mdiFileCheck,
+      mdiFileDocumentOutline,
+      mdiPlus,
+    },
+  }),
+
+  async asyncData({ app }) {
+    const sanity = app.$sanity;
+    /***
+     * NOTE THAT ASYNCDATA() DOES NOT ALLOW 'this.', we use context (ctx)
+     *BECAUSE OF THAT, WE CANNOT GET THE DATA VAIRIABLES.
+     ***/
+    const sectionOne = await sanity.fetch(query1);
+    const sectionTwo = await sanity.fetch(query2);
+    const sectionThree = await sanity.fetch(query3);
+    return { sectionOne, sectionTwo, sectionThree };
   },
-});
-
-const sectionOne = groq`*[_type == "workOne"]`;
-const sectionTwo = groq`*[_type == "workTwo"]`;
-const sectionThree = groq`*[_type == "workThree"]`;
-const sanity = useContext().app.$sanity;
-
-state.sectionOne = useAsync(() => sanity.fetch(sectionOne));
-state.sectionTwo = useAsync(() => sanity.fetch(sectionTwo));
-state.sectionThree = useAsync(() => sanity.fetch(sectionThree));
+};
 </script>
 
 <style></style>

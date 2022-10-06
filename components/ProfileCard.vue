@@ -12,13 +12,13 @@
       <SanityImage :asset-id="img" auto="format" />
       <Transition>
         <v-sheet
-          v-if="state.show"
+          v-if="show"
           id="profileSocials"
           width="100%"
           class="accent profile_socials pa-3 justify-center d-flex"
         >
           <NuxtLink to="/" v-for="n in 5" :key="n" class="mx-2">
-            <v-icon color="white">{{ state.icon.mdiFacebook }}</v-icon>
+            <v-icon color="white">{{ icon.mdiFacebook }}</v-icon>
           </NuxtLink>
         </v-sheet>
       </Transition>
@@ -34,37 +34,41 @@
   </section>
 </template>
 
-<script setup>
+<script>
 import { mdiFacebook, mdiTwitter } from "@mdi/js";
-import { reactive } from "vue";
 
-defineProps({
-  width: Number,
-  height: Number,
-  name: String,
-  title: String,
-  img: String,
-});
-
-const state = reactive({
-  show: false,
-  icon: {
-    mdiTwitter,
-    mdiFacebook,
+export default {
+  props: {
+    width: Number,
+    height: Number,
+    name: String,
+    title: String,
+    img: String,
   },
-});
 
-function showProfileSolcials(e) {
-  switch (e.type) {
-    case `mouseenter`:
-      state.show = !state.show;
-      break;
-    case `mouseleave`:
-      state.show = !state.show;
-      break;
-  }
-}
+  data: () => ({
+    show: false,
+    icon: {
+      mdiTwitter,
+      mdiFacebook,
+    },
+  }),
+
+  methods: {
+    showProfileSolcials(e) {
+      switch (e.type) {
+        case `mouseenter`:
+          this.show = !this.show;
+          break;
+        case `mouseleave`:
+          this.show = !this.show;
+          break;
+      }
+    },
+  },
+};
 </script>
+
 <style lang="scss" scoped>
 .v-enter-active,
 .v-leave-active {

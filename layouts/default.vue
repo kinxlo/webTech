@@ -1,48 +1,49 @@
 <template>
   <v-app class="px-5">
     <Prenav />
-    <Navbar ref="nav" :setFixed="state.fixed" />
+    <Navbar ref="nav" :setFixed="fixed" />
     <Nuxt />
 
     <Footer />
     <v-btn dark color="accent" ref="topButton" fab large @click.stop="scrollToTop" class="d-none">
-      <v-icon>{{ state.icon.up }}</v-icon>
+      <v-icon>{{ icon.up }}</v-icon>
     </v-btn>
   </v-app>
 </template>
 
-<script setup>
+<script>
 import { mdiArrowUp } from "@mdi/js";
-import { onMounted, reactive, ref } from "vue";
 
-const nav = ref(null);
-const topButton = ref(null);
-const state = reactive({
-  fixed: false,
-  icon: {
-    up: mdiArrowUp,
+export default {
+  data: () => ({
+    fixed: false,
+    icon: {
+      up: mdiArrowUp,
+    },
+  }),
+
+  mounted() {
+    this.fixNavbar();
   },
-});
 
-function scrollToTop() {
-  window.scrollTo(0, 0); //very simple function
-}
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0); //very simple function
+    },
 
-onMounted(() => {
-  fixNavbar();
-});
+    fixNavbar() {
+      document.addEventListener("DOMContentLoaded", () => {
+        window.addEventListener("scroll", () => {
+          let { clientHeight } = this.$refs.nav.$el;
+          window.scrollY > clientHeight ? (this.fixed = true) : (this.fixed = false);
 
-const fixNavbar = () => {
-  document.addEventListener("DOMContentLoaded", () => {
-    window.addEventListener("scroll", () => {
-      let { clientHeight } = nav.value.$el;
-      window.scrollY > clientHeight ? (state.fixed = true) : (state.fixed = false);
-
-      window.scrollY > 1000
-        ? topButton.value.$el.classList.remove("d-none")
-        : topButton.value.$el.classList.add("d-none");
-    });
-  });
+          window.scrollY > 1000
+            ? this.$refs.topButton.$el.classList.remove("d-none")
+            : this.$refs.topButton.$el.classList.add("d-none");
+        });
+      });
+    },
+  },
 };
 </script>
 

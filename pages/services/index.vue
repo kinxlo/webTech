@@ -2,7 +2,7 @@
   <main>
     <Banner
       title="Services"
-      :nav="state.nav"
+      :nav="nav"
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664450831/webtech/Rectangle_6_n4i8bd.png"
     />
     <section class="v-spacing cc-wrapper">
@@ -15,12 +15,12 @@
   </main>
 </template>
 
-<script setup>
-import { reactive } from "vue";
-
-const state = reactive({
-  nav: ["About", "Portfolio"],
-});
+<script>
+export default {
+  data: () => ({
+    nav: ["About", "Portfolio"],
+  }),
+};
 </script>
 
 <style></style>

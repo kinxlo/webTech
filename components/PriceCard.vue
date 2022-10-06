@@ -7,7 +7,6 @@
     flat
   >
     <section class="d-flex flex-column align-center">
-
       <div class="text-center px-16 mx-3 heading">
         <h3 style="font-size: 30px" class="mb-5">{{ title }}</h3>
         <p style="line-height: 20px" class="text-capitalize">
@@ -43,9 +42,8 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { mdiChevronRight } from "@mdi/js";
-export default Vue.extend({
+export default {
   name: "PriceCard",
   props: ["title", "subTitle", "items", "price", "color", "theme"],
   data: () => {
@@ -53,7 +51,7 @@ export default Vue.extend({
       icons: { mdiChevronRight },
     };
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>
