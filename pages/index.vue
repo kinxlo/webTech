@@ -25,7 +25,7 @@
               </div>
             </section>
             <section class="mt-16 mt-md-0">
-              <p class="mr-md-10 white--text">
+              <p class="mr-md-10 pl-5  white--text">
                 Always on the lookout for the hi-tech advancements. Build not only a
                 <br />
                 product that can sell well, but a platform through which to deliver it.

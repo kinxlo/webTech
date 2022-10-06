@@ -5,7 +5,7 @@
         <v-layout class="cc-wrapper align-center pa-0">
           <NuxtLink to="/">
             <v-toolbar-title class="pa-0">
-              <v-img max-width="16.9rem" src="/Frame.svg" alt="logo"></v-img>
+              <v-img class="logo" src="/Frame.svg" alt="logo"></v-img>
             </v-toolbar-title>
           </NuxtLink>
 

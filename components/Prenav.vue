@@ -4,10 +4,10 @@
       <span class="white--text">+123 456 789</span>
       <!-- <v-spacer></v-spacer> -->
       <div>
-        <v-icon dark x-large class="ml-5 hvr-grow pa-2" color="">{{ icon.mdiInstagram }}</v-icon>
-        <v-icon dark x-large class="ml-5 hvr-grow pa-2" color="">{{ icon.mdiBasketball }}</v-icon>
-        <v-icon dark x-large class="ml-5 hvr-grow pa-2" color="">{{ icon.mdiTwitter }}</v-icon>
-        <v-icon dark x-large class="ml-5 hvr-grow pa-2" color="">{{ icon.mdiYoutube }}</v-icon>
+        <v-icon dark class="hvr-grow pa-1 ml-2" color="">{{ icon.mdiInstagram }}</v-icon>
+        <v-icon dark class="hvr-grow pa-1 ml-2" color="">{{ icon.mdiBasketball }}</v-icon>
+        <v-icon dark class="hvr-grow pa-1 ml-2" color="">{{ icon.mdiTwitter }}</v-icon>
+        <v-icon dark class="hvr-grow pa-1 ml-2" color="">{{ icon.mdiYoutube }}</v-icon>
       </div>
     </v-layout>
   </v-layout>
