@@ -2,28 +2,38 @@
   <main>
     <Banner
       title="Portfolio"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664454274/webtech/Rectangle_7_zce5yx.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664454274/webtech/Rectangle_7_zce5yx.png"
       :nav="state.nav"
     />
-    <v-layout class="cc-wrapper v-spacing">
+    <section class="cc-wrapper v-spacing">
       <v-row>
-        <v-col cols="4" v-for="n in 6" :key="n">
+        <v-col md="4" v-for="item in portfolio" :key="item._id">
           <PortfolioCard
-            img="https://images.unsplash.com/photo-1415604934674-561df9abf539?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8b2JqZWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-            desc=" Lorem ipsum dolor sit amet consectetur, adipisicing."
+            :img="item.img.asset._ref"
+            :desc="item.desc"
           />
         </v-col>
       </v-row>
-    </v-layout>
+    </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive, ref } from "vue";
+import { groq } from "@nuxtjs/sanity";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
 
 const state = reactive({
-  nav: ['About', 'Portfolio'],
+  nav: ["Services", "Blog"],
 });
+
+const portfolio = ref<any>([])
+const sanity = useContext().app.$sanity;
+const query = groq `*[_type == "portfolio"]`;
+portfolio.value = useAsync(() => sanity.fetch(query));
+
+
+
 </script>
 
 <style></style>

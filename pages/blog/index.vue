@@ -2,53 +2,29 @@
   <main>
     <Banner
       title="Blog"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664417563/webtech/Rectangle_4_whmbrs.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
     <v-layout class="cc-wrapper v-spacing">
       <v-row class="align-flex-start">
         <v-col>
-          <BlogCard
-            imageUrl="motion.png"
-            headtext="Motion Animation And VR Headset"
-            P_span_1="Emmajohnson"
-            P_span_2="May 17, 2019"
-            p_span_3="4 Comments"
-            p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
-          >
-            <v-btn outlined elevation="0" tile>Networking</v-btn>
-            <v-btn outlined elevation="0" tile>Security</v-btn>
-          </BlogCard>
+          <div v-for="card in blogCard" :key="card._id">
+            <BlogCard
+              imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896549/webtech/chat_rzzb7n.png"
+              :assetId="card.img.asset._ref"
+              :headtext="card.headText"
+              :P_span_1="card.text1"
+              :P_span_2="card.text2"
+              :p_span_3="card.text3"
+              :p_text="card.mainText"
+            >
+              <v-btn outlined elevation="0" tile>Networking</v-btn>
+              <v-btn outlined elevation="0" tile>Security</v-btn>
+            </BlogCard>
+          </div>
 
           <BlogCard
-            imageUrl="chess.png"
-            headtext="Motion Animation And VR Headset"
-            P_span_1="Emmajohnson"
-            P_span_2="May 17, 2019"
-            p_span_3="Leave a comment"
-            p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
-            btn_1="Networking"
-            btn_2="Security"
-          >
-            <v-btn outlined elevation="0" tile>Networking</v-btn>
-            <v-btn outlined elevation="0" tile>Security</v-btn>
-          </BlogCard>
-          <BlogCard
-            imageUrl="changes.png"
-            headtext="Motion Animation And VR Headset"
-            P_span_1="Emmajohnson"
-            P_span_2="May 17, 2019"
-            p_span_3="Leave a comment"
-            p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
-            btn_1="Networking"
-            btn_2="Security"
-          >
-            <v-btn outlined elevation="0" tile>Networking</v-btn>
-            <v-btn outlined elevation="0" tile>Security</v-btn>
-          </BlogCard>
-          
-          <BlogCard
-            imageUrl="chat.png"
+            imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896549/webtech/chat_rzzb7n.png"
             headtext="Sample Post Format: Link"
             P_span_1="Emmajohnson"
             P_span_2="May 17, 2019"
@@ -62,24 +38,20 @@
             <v-row class="rows last-row">
               <v-col class="cols">Anna:</v-col>
               <v-col
-                >In pellentesque id nisl cursus finibus. Proin maximus diam ut
-                scelerisque scelerisque.</v-col
+                >In pellentesque id nisl cursus finibus. Proin maximus diam ut scelerisque
+                scelerisque.</v-col
               >
             </v-row>
             <v-row class="rows">
               <v-col class="cols">Steave:</v-col>
               <v-col
-                >. Pellentesque fringilla lorem vel lectus sagittis, id accumsan
-                arcu varius. Maecenas quis ligula id dui finibus
-                fermentum.</v-col
+                >. Pellentesque fringilla lorem vel lectus sagittis, id accumsan arcu varius.
+                Maecenas quis ligula id dui finibus fermentum.</v-col
               >
             </v-row>
             <v-row class="rows last-row">
               <v-col class="cols">Anna:</v-col>
-              <v-col
-                >Donec mollis pretium egestas. Fusce ornare id sapien at
-                ultrices.</v-col
-              >
+              <v-col>Donec mollis pretium egestas. Fusce ornare id sapien at ultrices.</v-col>
             </v-row>
           </BlogCard>
 
@@ -100,9 +72,7 @@
               p_span_3="Leave a comment"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >security</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
             </BlogCardBody>
           </v-card>
 
@@ -123,9 +93,7 @@
               P_span_2="May 17, 2019"
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >Software</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>Software</v-btn>
             </BlogCardBody>
           </v-card>
 
@@ -146,9 +114,7 @@
               p_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae est accumsan, efficitur velit eu, ullamcorper sapien. Suspendisse aliquam libero euismod, tempus nisl."
               p_text_head="okay"
             >
-              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile
-                >security</v-btn
-              >
+              <v-btn class="mb-7 btnn" color="#377DFF" elevation="0" tile>security</v-btn>
             </BlogCardBody>
           </v-card>
         </v-col>
@@ -157,12 +123,7 @@
           <v-card class="px-10 py-8 mb-16" color="#F9FAFA" elevation="0" tile>
             <v-card-title>Search</v-card-title>
             <v-card-actions>
-              <v-text-field
-                placeholder="search"
-                append-icon="mdi-magnify"
-                solo
-                flat
-              ></v-text-field>
+              <v-text-field placeholder="search" append-icon="mdi-magnify" solo flat></v-text-field>
             </v-card-actions>
           </v-card>
 
@@ -233,11 +194,11 @@
           <v-sheet max-width="306" class="mt-16">
             <h4>Popular Posts</h4>
             <v-list
-              v-for="(pos, i) in Posts"
+              v-for="(pos, i) in result"
               :key="i"
               class="d-flex align-center justify-space-around mb-8"
             >
-              <v-img max-width="70" max-height="70" :src="pos.img" />
+              <SanityImage :asset-id="pos.img.asset._ref" auto="format" />
               <div class="text-left ml-3">
                 <p>{{ pos.headText }}</p>
                 <p class="ml-3">{{ pos.date }}</p>
@@ -266,62 +227,54 @@
 </template>
 
 <script lang="ts">
-
+import { groq } from "@nuxtjs/sanity";
+import { ref, useAsync, useContext } from "@nuxtjs/composition-api";
 import BlogCard from "../../components/BlogCard.vue";
 import BlogCardBody from "~/components/BlogCardBody.vue";
-import {
-  mdiChevronRight,
-  mdiFacebook,
-  mdiTwitter,
-  mdiGooglePlus,
-} from "@mdi/js";
-
-interface Post {
-  img: String;
-  headText: String;
-  date: String;
-}
-
-type button = String;
+import { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus } from "@mdi/js";
 
 export default {
   components: { BlogCard, BlogCardBody },
 
   data: () => ({
-    nav: ["Homepage", "Blog"],
+    nav: ["Portfolio", "Pricing"],
     icons: { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus },
 
     showSpanText: true,
     showMainP: true,
   }),
 
-  setup (){
-    const Posts: Post[] = [
-      {
-        img: "post1.png",
-        headText: "Motion Animation And VR Headset",
-        date: "May 17, 2019",
-      },
-      {
-        img: "post2.png",
-        headText: "Top 5 Amazing changing For The Social Media Industry",
-        date: "May 17, 2019",
-      },
-      {
-        img: "post3.svg",
-        headText: "Awesome Tips to Become CEO Of Big NetWork Startup",
-        date: "May 17, 2019",
-      },
-    ]
+  setup() {
+    interface Post {
+      img: String;
+      headText: String;
+      date: String;
+    }
 
-    const button: button[]= ["Digital", "Networking", "New", "Security", "Software"]
+    type button = String;
+
+    const button: button[] = ["Digital", "Networking", "New", "Security", "Software"];
 
     const showSpan = (showSpanText: Boolean) => {
       return !showSpanText;
-    }
+    };
 
-    return {Posts, button, showSpan}
-  }
+    const sanity = useContext().app.$sanity;
+
+    const query = groq`*[_type == "blogPost"]`;
+
+    const result = ref<any>([]);
+
+    result.value = useAsync(() => sanity.fetch<Post[]>(query));
+
+    const blogCardQuery = groq`*[_type == "blogCard"]`;
+
+    const blogCard = ref<any>([]);
+
+    blogCard.value = useAsync(() => sanity.fetch(blogCardQuery));
+
+    return { button, showSpan, result, blogCard };
+  },
 };
 </script>
 

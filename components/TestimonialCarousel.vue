@@ -2,25 +2,27 @@
   <main>
     <section class="py-5 text-center">
       <h2
-        style="font-size: 40px"
-        class="font-m accent--text left_border pl-7 py-2 font-weight-bold d-inline"
+        class="font-m font-header accent--text left_border pl-7 py-2 font-weight-bold d-inline"
       >
         Our
       </h2>
-      <h2 style="font-size: 40px" class="font-m py-2 font-weight-bold d-inline">
+      <h2 class="font-m font-header py-2 font-weight-bold d-inline">
         Testimonials
       </h2>
     </section>
     <section class="d-flex align-center">
-      <v-icon color="accent" @click.prevent="" size="60">{{
-        state.icon.mdiArrowLeftThinCircleOutline
-      }}</v-icon>
+      <v-icon
+        color="accent"
+        @click.prevent=""
+        :size="$vuetify.breakpoint.xs ? 30 : 60"
+        >{{ state.icon.mdiArrowLeftThinCircleOutline }}</v-icon
+      >
       <v-layout>
         <Hooper
           :centerMode="true"
           ref="carousel"
           id="carousel"
-          :itemsToShow="3"
+          :itemsToShow="$vuetify.breakpoint.xs ? 1 : 3"
           class="hooper ma-0 pa-0"
         >
           <slide
@@ -34,12 +36,15 @@
           </slide>
         </Hooper>
       </v-layout>
-      <v-icon color="accent" size="60">{{
-        state.icon.mdiArrowRightThinCircleOutline
-      }}</v-icon>
+      <v-icon
+        color="accent"
+        @click=""
+        :size="$vuetify.breakpoint.xs ? 30 : 60"
+        >{{ state.icon.mdiArrowRightThinCircleOutline }}</v-icon
+      >
     </section>
-    <section class="text-center py-5 px-16">
-      <p style="font-size: 20px" class="info--text">
+    <section class="d-flex flex-column align-center py-5 px-md-16 text-center">
+      <p class="info--text font-subtitle">
         Donec eget elit vel urna varius pharetra. Suspendisse sodales venenatis
         lorem nec tincidunt. Donec dignissim purus ut nulla ultricies.
       </p>

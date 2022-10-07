@@ -9,7 +9,7 @@
         {{ title }}
       </h1>
       <v-sheet color="transparent">
-        <NuxtLink class="white--text" v-for="n in nav" :key="n" to="/">
+        <NuxtLink class="white--text" v-for="n in nav" :key="n" :to="`${n == 'Home' ? '/' : n}`">
           <span class="mx-5" style="font-size: 20px">{{ n }}</span>
         </NuxtLink>
       </v-sheet>

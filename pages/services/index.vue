@@ -2,25 +2,49 @@
   <main>
     <Banner
       title="Services"
-      :nav="state.nav"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664450831/webtech/Rectangle_6_n4i8bd.png"
+      :nav="nav"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664450831/webtech/Rectangle_6_n4i8bd.png"
     />
-    <v-layout class="v-spacing cc-wrapper">
+    <section class="v-spacing cc-wrapper">
       <v-row>
-        <v-col cols="4" v-for="n in 6" :key="n">
-          <ServiceCard />
+        <v-col md="4" v-for="item in service" :key="item._id">
+          <ServiceCard :service="item" />
         </v-col>
       </v-row>
-    </v-layout>
+    </section>
   </main>
 </template>
 
-<script setup lang="ts">
-import { reactive } from 'vue';
+<script lang="ts">
+import { ref } from "vue";
+import { groq } from "@nuxtjs/sanity";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
+export default {
+  data() {
+    return {
+      nav: ["About", "Portfolio"],
+      result: {
+        type: Array,
+      },
+    };
+  },
 
-const state = reactive({
-  nav: ['About', 'Portfolio'],
-});
+  setup() {
+    interface Service {
+      img: String;
+      title: String;
+      desc: String;
+    }
+
+    const sanity = useContext().app.$sanity;
+
+    const query = groq`*[_type == "services"]`;
+    const service = ref<any>([]);
+    service.value = useAsync(() => sanity.fetch<Service[]>(query));
+
+    return { service };
+  },
+};
 </script>
 
 <style></style>

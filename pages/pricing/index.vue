@@ -2,39 +2,30 @@
   <main>
     <Banner
       title="Pricing"
-      img="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664417563/webtech/Rectangle_4_whmbrs.png"
+      img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
     <!-- section two -->
-    <v-sheet
-      class="cc-wrapper v-spacing d-flex flex-row flex-wrap justify-space-around align-content-space-between"
-    >
-      <PriceCard
-        title="Base"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="55"
-        :items="items1"
-        class="base mb-2"
-        color="#F9FAFA"
-      />
-      <PriceCard
-        title="Medium"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="65"
-        :items="items1"
-        color="#377DFF"
-        class="medium mb-2"
-      />
-      <PriceCard
-        title="Pro"
-        class="pro mb-2"
-        subTitle="Vivamus blandit gravida erat id aliquam"
-        price="105"
-        :items="items1"
-        color="#141D28"
-        styles="style1"
-      />
-    </v-sheet>
+    <v-layout class="cc-wrapper v-spacing">
+      <v-row no-gutters>
+        <v-col
+          v-for="item in pricing"
+          :key="item._id"
+          cols="12"
+          md="4"
+          class="d-flex justify-center mb-10 mb-md-0"
+        >
+          <PriceCard
+            :title="item.title"
+            :price="item.price"
+            :subTitle="item.subTitle"
+            :items="items1"
+            :theme="item.theme"
+          >
+          </PriceCard>
+        </v-col>
+      </v-row>
+    </v-layout>
 
     <!-- section three -->
     <v-sheet class="cc-wrapper v-spacing">
@@ -42,10 +33,10 @@
         <span class="head">Have</span> a Question?
       </h3>
       <v-row>
-        <v-col>
-          <v-card width="555" elevation="0" flat tile>
+        <v-col class="d-flex justify-center">
+          <v-card width="555" flat tile>
             <v-expansion-panels accordion flat>
-              <v-expansion-panel color="#F8F8F9" class="mb-5">
+              <v-expansion-panel v-for="item in accordion" :key="item._id" color="#F8F8F9" class="mb-5">
                 <v-expansion-panel-header
                   class="v-expansion-panel-header"
                   @click="handleIconToggle"
@@ -65,145 +56,17 @@
                   >
                     {{ icons.mdiPlus }}
                   </v-icon>
-                  <p>Lorem ipsum dolor sit amet, consec</p>
+                  <p>{{item.title}}</p>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content class="ml-9">
-                  <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel color="#F8F8F9" class="mb-5">
-                <v-expansion-panel-header
-                  class="v-expansion-panel-header"
-                  @click="handleIconToggle"
-                  hide-actions
-                >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiMinus }}
-                  </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiPlus }}
-                  </v-icon>
-                  <p>Lorem ipsum dolor sit amet, consec</p>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content class="ml-9">
-                  <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel color="#F8F8F9" class="mb-5">
-                <v-expansion-panel-header
-                  class="v-expansion-panel-header"
-                  @click="handleIconToggle"
-                  hide-actions
-                >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiMinus }}
-                  </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiPlus }}
-                  </v-icon>
-                  <p>Lorem ipsum dolor sit amet, consec</p>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content class="ml-9">
-                  <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel color="#F8F8F9" class="mb-5">
-                <v-expansion-panel-header
-                  class="v-expansion-panel-header"
-                  @click="handleIconToggle"
-                  hide-actions
-                >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiMinus }}
-                  </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiPlus }}
-                  </v-icon>
-                  <p>Lorem ipsum dolor sit amet, consec</p>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content class="ml-9">
-                  <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
-                  </p>
-                </v-expansion-panel-content>
-              </v-expansion-panel>
-
-              <v-expansion-panel color="#F8F8F9" class="mb-5">
-                <v-expansion-panel-header
-                  class="v-expansion-panel-header"
-                  @click="handleIconToggle"
-                  hide-actions
-                >
-                  <v-icon
-                    v-if="toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiMinus }}
-                  </v-icon>
-                  <v-icon
-                    v-else="!toggleIcon"
-                    color="#377DFF"
-                    class="plus mr-3 px-0 py-0"
-                  >
-                    {{ icons.mdiPlus }}
-                  </v-icon>
-                  <p>Lorem ipsum dolor sit amet, consec</p>
-                </v-expansion-panel-header>
-                <v-expansion-panel-content class="ml-9">
-                  <p>
-                    Maecenas gravida sollicitudin lacinia. Donec ut ultrices
-                    arcu, a ullamcorper enim. Pellentesque elementum eget dolor
-                    eu maximus. Maecenas at porta lacus.
-                  </p>
+                  <p>{{item.subTitle}}</p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
           </v-card>
         </v-col>
-        <v-col>
-          <v-card width="555" elevation="0" flat tile>
+        <v-col class="d-flex justify-center">
+          <v-card width="555" flat tile>
             <v-expansion-panels accordion flat>
               <v-expansion-panel color="#F8F8F9" class="mb-5">
                 <v-expansion-panel-header
@@ -359,7 +222,6 @@
                   </p>
                 </v-expansion-panel-content>
               </v-expansion-panel>
-
             </v-expansion-panels>
           </v-card>
         </v-col>
@@ -370,11 +232,13 @@
 
 <script lang="ts">
 import { mdiMinus, mdiPlus } from "@mdi/js";
+import { ref, useAsync, useContext } from "@nuxtjs/composition-api";
+import { groq } from "@nuxtjs/sanity";
 import Vue from "vue";
 
 export default Vue.extend({
   data: () => ({
-    nav: ["Homepage", "pricing"],
+    nav: ["Blog", "Contact"],
     icons: { mdiMinus, mdiPlus },
     items1: [
       "Donec tincidunt",
@@ -383,15 +247,29 @@ export default Vue.extend({
       "Etiam vulputate suscipit",
     ],
 
+    themes: [`theme1`, `theme2`, `theme3`],
     toggleIcon: false,
   }),
 
   methods: {
     handleIconToggle() {
       this.toggleIcon = !this.toggleIcon;
-      console.log("icon");
     },
   },
+
+  setup() {
+    const sanity = useContext().app.$sanity;
+    const query = groq`*[_type == "priceCard"]`;
+    const pricing = ref<any>([]);
+    pricing.value = useAsync(() => sanity.fetch(query));
+
+    const accordionQuery = groq`*[_type == "priceAccordion"]`;
+    const accordion = ref<any>([]);
+    accordion.value = useAsync(() => sanity.fetch(accordionQuery));
+    
+
+    return{ pricing, accordion }
+  }
 });
 </script>
 
@@ -410,6 +288,9 @@ main {
   color: #377dff;
 }
 
+.styles {
+  border: 1px solid red;
+}
 .test {
   border: 1px solid red;
 }

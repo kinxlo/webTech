@@ -1,26 +1,20 @@
 :root {
-  // --font-sans:
-  //   'Assistant',
-  //   'Philosopher',
-  //   -apple-system,
-  //   system-ui,
-  //   sans-serif;
-  // --font-serif:
-  //   'Cormorant Garamond',
-  //   'Lora',
-  //   serif;
-  // --font-mono:
-  //   'IBM Plex Mono',
-  //   'Inconsolata',
-  //   monospace;
+  --mainOverlay: #121b26ba;
+  --mainAccent: #377dff;
+  --darkBg: #141d28;
+}
 
-  --mainOverlay-light: #121B26BA;
-  --mainAccent-light: #377DFF;
-  --lightBg: #fbf4f3;
-  --darkBg: #0f171f;
+html,
+body,
+#__nuxt,
+#__layout {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 
-  --mainOverlay: var(--mainOverlay-light);
-  --mainAccent: var(--mainAccent-light)
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow: -moz-scrollbars-none !important; //for older versions of firefox
 }
 
 // main entry scss file.
@@ -29,8 +23,61 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
+  scroll-behavior: smooth;
+}
 
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.hover-accent {
+  color: #fff !important;
+  &:hover {
+    color: var(--mainAccent) !important;
+  }
+}
+/* exact link will show the primary color for only the exact matching link */
+.nuxt-link-exact-active {
+  color: var(--mainAccent) !important;
+}
+
+.font-jumbo {
+  font-size: 40px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
+
+.font-header {
+  font-size: 30px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 40px;
+  }
+}
+
+.font-title {
+  font-size: 20px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 30px;
+  }
+}
+
+.font-subtitle {
+  font-size: 16px;
+
+  @media screen and (min-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .letter-spacing {
@@ -38,9 +85,10 @@
 }
 
 .cc-wrapper {
-  max-width: 1200px;
+  max-width: 1216px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1em;
 }
 
 .v-spacing {
@@ -60,8 +108,7 @@ h4,
 h5,
 h6 {
   font-weight: 400 !important;
-  font-family: 'Montserrat',
-    sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 button {
@@ -75,7 +122,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #141D28;
+  color: #141d28;
 }
 
 p,
@@ -93,7 +140,7 @@ span {
 }
 
 .font-m {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 .font-p {
@@ -101,31 +148,22 @@ span {
 }
 
 .left_border {
-  border-left: 3px solid #377DFF;
+  border-left: 3px solid #377dff;
 }
 
 .bottom_border {
-  border-bottom: 1px solid #377DFF;
+  border-bottom: 1px solid #377dff;
 }
-
-// .d-flex {
-//   gap: 10px;
-//   gap: 10px 20px;
-//   /* row-gap column gap */
-//   row-gap: 10px;
-//   /* sets only for rows */
-//   column-gap: 20px;
-//   /* sets only for columns */
-// }
 
 .hero {
   position: relative;
-  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/v1664304177/webtech/Rectangle_1_sxwzbj.png) no-repeat center;
+  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664304177/webtech/Rectangle_1_sxwzbj.png)
+    no-repeat center;
   background-size: cover;
   //   background-blend-mode:luminosity;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -148,15 +186,17 @@ span {
   }
 
   .hero_title_number {
-    font-size: 140px;
+    font-size: 70px;
     opacity: 0.13;
+
+    @media screen and (min-width: 600px) {
+      font-size: 140px;
+    }
   }
 
   .hero_title {
-    border-left: 3px solid #377DFF;
+    border-left: 3px solid #377dff;
   }
-
-
 
   .superhero {
     // !create a mixin
@@ -178,7 +218,8 @@ span {
 }
 
 .section_4 {
-  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/v1664304148/webtech/Rectangle_goskdz.png) no-repeat center;
+  background: url(https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664304148/webtech/Rectangle_goskdz.png)
+    no-repeat center;
   background-color: rgba(247, 247, 247, 0.9);
   background-size: cover;
   background-blend-mode: screen;
@@ -198,19 +239,8 @@ span {
 }
 
 .hooper {
-  // border: 1px solid red;
   height: 20rem !important;
-  // width: 50% !important;
-
-  .is-current {
-    .v-avatar {
-      // border: 2px solid red;
-      width: 250px !important;
-      height: 250px !important;
-    }
-  }
 }
-
 
 .sec_7_img {
   transform: translate(-60px, -230px);
@@ -219,5 +249,6 @@ span {
   left: 0;
 }
 
-@import './about.scss';
-@import './portfolio.scss'
+@import "./about.scss";
+@import "./portfolio.scss";
+@import "./hover/hover.scss";

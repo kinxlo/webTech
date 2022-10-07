@@ -2,12 +2,20 @@
   "name": "webtech_p1",
   "version": "1.0.0",
   "private": true,
+  "description": "Just another project.",
+  "author": "Kingsley Solomon, Tobi",
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+  "keywords": [
+    "vue",
+    "nuxt",
+    "SPA"
+  ],
   "dependencies": {
     "@mdi/js": "^7.0.96",
     "@nuxtjs/composition-api": "^0.33.1",
@@ -27,7 +35,13 @@
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "prettier": "2.7.1",
     "sass": "^1.55.0",
     "sass-loader": "10"
   }

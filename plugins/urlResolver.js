@@ -8,4 +8,3 @@ export default ({ $sanity }, inject) => {
 
     inject('urlFor', urlFor)
 }
-
