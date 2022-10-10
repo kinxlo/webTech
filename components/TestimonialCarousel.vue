@@ -26,7 +26,7 @@
           class="hooper ma-0 pa-0"
         >
           <slide
-            v-for="(head, i) in state.sectionSeven"
+            v-for="(head, i) in sectionSeven"
             :key="i"
             class="hopper_item d-flex align-center justify-center"
           >
@@ -68,24 +68,22 @@ import {
   mdiArrowLeftThinCircleOutline,
   mdiArrowRightThinCircleOutline,
 } from "@mdi/js";
-import { reactive } from "vue";
+import { reactive, ref } from "vue";
 import { groq } from "@nuxtjs/sanity";
 import { useAsync, useContext } from "@nuxtjs/composition-api";
 
 const state = reactive({
-  sectionSeven: {},
-
   icon: {
     mdiArrowLeftThinCircleOutline,
     mdiArrowRightThinCircleOutline,
   },
 });
-const sectionSeven = groq`*[_type == "workSeven"]`;
+
 
 const sanity = useContext().app.$sanity;
-
-state.sectionSeven = useAsync(() => sanity.fetch(sectionSeven));
-console.log(state.sectionSeven);
+const query = groq`*[_type == "workSeven"]`;
+const sectionSeven = ref<any>([]);
+sectionSeven.value = useAsync(() => sanity.fetch(query));
 </script>
 
 <style lang="scss">

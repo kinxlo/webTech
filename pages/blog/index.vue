@@ -5,13 +5,13 @@
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
+    <!-- <SanityImage :asset-id="blogCard[0].img.asset._ref" auto="format" /> -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row class="align-flex-start">
         <v-col>
           <div v-for="card in blogCard" :key="card._id">
             <BlogCard
-              imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/v1664896549/webtech/chat_rzzb7n.png"
-              :assetId="card.img.asset._ref"
+              :img="card.img.asset._ref"
               :headtext="card.headText"
               :P_span_1="card.text1"
               :P_span_2="card.text2"

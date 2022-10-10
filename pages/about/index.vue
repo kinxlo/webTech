@@ -102,7 +102,7 @@
       </v-layout>
     </v-layout>
     <!-- SECTION FOUR -->
-    <v-layout class="overflow-x-auto">
+    <v-layout class="overflow-x-auto layout">
       <PictureGrid v-for="n in 4" :key="n" />
     </v-layout>
     <!-- SECTION FIVE -->
@@ -134,4 +134,37 @@ sectionThree.value = useAsync(() => sanity.fetch(sectionThreeQuery));
 
 </script>
 
-<style></style>
+<style>
+::-webkit-scrollbar {
+    width: 1vw;
+    height: 1vh;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #f90;
+    background-image: -webkit-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ec8f02;
+}
+  
+</style>

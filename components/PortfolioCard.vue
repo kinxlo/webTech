@@ -1,6 +1,5 @@
 <template>
   <v-card class="mx-auto portfolio_card" max-width="370">
-    <!-- <v-img :src="img" alt="img"> </v-img> -->
     <SanityImage :asset-id="img" auto="format" />
     <v-sheet
       color="var(--mainOverlay)"

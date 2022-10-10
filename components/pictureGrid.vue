@@ -11,10 +11,7 @@
       src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
       alt="img"
     ></v-img>
-    <v-sheet
-      color="var(--mainOverlay)"
-      class="plus_icon d-none align-center justify-center"
-    >
+    <v-sheet color="var(--mainOverlay)" class="plus_icon d-none align-center justify-center">
       <v-icon color="accent" size="50">{{ state.icon.mdiPlus }}</v-icon>
     </v-sheet>
   </v-card>

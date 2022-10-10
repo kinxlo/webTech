@@ -27,6 +27,7 @@
       </v-row>
     </v-layout>
 
+    <!-- @click="handleIconToggle(item._id)"  -->
     <!-- section three -->
     <v-sheet class="cc-wrapper v-spacing">
       <h3 class="text-center mb-13">
@@ -39,18 +40,19 @@
               <v-expansion-panel v-for="item in accordion" :key="item._id" color="#F8F8F9" class="mb-5">
                 <v-expansion-panel-header
                   class="v-expansion-panel-header"
-                  @click="handleIconToggle"
                   hide-actions
                 >
                   <v-icon
-                    v-if="toggleIcon"
+                    @click="item.show = false"
+                    v-if="item.show"
                     color="#377DFF"
                     class="plus mr-3 px-0 py-0"
                   >
                     {{ icons.mdiMinus }}
                   </v-icon>
                   <v-icon
-                    v-else="!toggleIcon"
+                   v-else 
+                   @click="item.show = true"
                     color="#377DFF"
                     class="plus mr-3 px-0 py-0"
                   >
@@ -65,7 +67,7 @@
             </v-expansion-panels>
           </v-card>
         </v-col>
-        <v-col class="d-flex justify-center">
+        <!-- <v-col class="d-flex justify-center">
           <v-card width="555" flat tile>
             <v-expansion-panels accordion flat>
               <v-expansion-panel color="#F8F8F9" class="mb-5">
@@ -224,7 +226,7 @@
               </v-expansion-panel>
             </v-expansion-panels>
           </v-card>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-sheet>
   </main>
@@ -238,7 +240,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   data: () => ({
-    nav: ["Blog", "Contact"],
+    nav: ["Pricing", "Contact"],
     icons: { mdiMinus, mdiPlus },
     items1: [
       "Donec tincidunt",
@@ -252,8 +254,12 @@ export default Vue.extend({
   }),
 
   methods: {
-    handleIconToggle() {
-      this.toggleIcon = !this.toggleIcon;
+    
+    handleIconToggle(id: String) {
+      const filteredId = this.accordion.find((item: any) => item._id === id)
+      console.log(filteredId);
+      if(id === filteredId._id ) return this.toggleIcon = !this.toggleIcon
+      else !this.toggleIcon
     },
   },
 

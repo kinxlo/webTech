@@ -11,6 +11,7 @@ import BlogPost from "./BlogPost";
 import BlogCard from "./BlogCard";
 import PriceCard from "./PriceCard";
 import priceAccordion from "./priceAccordion";
+import contact from "./contact";
 
 export default createSchema({
   name: "default",
@@ -25,5 +26,6 @@ export default createSchema({
     BlogCard,
     PriceCard,
     priceAccordion,
+    contact,
   ]),
 });

@@ -8,7 +8,11 @@
     <section class="v-spacing cc-wrapper">
       <v-row>
         <v-col md="4" v-for="item in service" :key="item._id">
-          <ServiceCard :service="item" />
+          <ServiceCard 
+             :img="item.img.asset._ref"
+             :title="item.title" 
+             :desc="item.desc"
+          />
         </v-col>
       </v-row>
     </section>

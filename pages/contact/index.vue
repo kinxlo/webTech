@@ -8,13 +8,13 @@
     <!-- SECTION ONE -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row>
-        <v-col cols="12" sm="6" v-for="n in 4" :key="n" class="mb-10 mb-md-0 d-flex justify-center">
+        <v-col cols="12" sm="6" v-for="item in contactItem" :key="item._id" class="mb-10 mb-md-0 d-flex justify-center">
           <div class="d-flex align-start">
-            <v-icon large color="accent">{{ state.icon.mdiCellphone }}</v-icon>
+            <SanityImage :asset-id="item.img.asset._ref" auto="format" />
             <div class="ml-5">
-              <h5 style="font-size: 20px" class="font-weight-bold mb-3">Phone</h5>
+              <h5 style="font-size: 20px" class="font-weight-bold mb-3">{{item.title}}</h5>
               <p style="font-size: 14px" class="info--text">
-                Call customer services on 808-872-9343
+                {{item.desc}}
               </p>
             </div>
           </div>
@@ -101,6 +101,8 @@
 <script setup lang="ts">
 import { mdiCellphone } from "@mdi/js";
 import { reactive } from "vue";
+import { ref, useAsync, useContext } from "@nuxtjs/composition-api";
+import { groq } from "@nuxtjs/sanity";
 
 const state = reactive({
   nav: ["Home", "About"],
@@ -108,6 +110,12 @@ const state = reactive({
     mdiCellphone,
   },
 });
+
+const sanity = useContext().app.$sanity;
+const query = groq`*[_type == "contact"]`;
+const contactItem = ref<any>([]);
+contactItem.value = useAsync(() => sanity.fetch(query));
+
 </script>
 
 <style></style>

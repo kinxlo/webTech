@@ -1,4 +1,8 @@
 {
+  "vueCompilerOptions": {
+    "target": 2.7
+  },
+  
   "compilerOptions": {
     "target": "ES2018",
     "module": "ESNext",
@@ -37,5 +41,5 @@
     "node_modules",
     ".nuxt",
     "dist"
-  ],
+  ]
 }

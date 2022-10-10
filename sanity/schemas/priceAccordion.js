@@ -12,6 +12,11 @@ export default {
             name: 'subTitle',
             title: 'SubTitle',
             type: 'string',
+        },
+        {
+            name: 'show',
+            title: 'Show',
+            type: 'boolean'
         }
     ]
 

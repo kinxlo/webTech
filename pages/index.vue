@@ -72,7 +72,7 @@
 
       <v-layout flex-column flex-md-row align-center justify-space-between class="my-16">
         <v-sheet class="text-center mb-16 mb-md-0">
-          <v-avatar color="accent" size="180">
+          <v-avatar size="180">
             <SanityImage :asset-id="sectionOne[0].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
@@ -83,7 +83,7 @@
           <v-img src="/arrowUP.svg" alt="img"></v-img>
         </div>
         <v-sheet class="text-center mb-16 mb-md-0">
-          <v-avatar color="accent" size="180">
+          <v-avatar size="180">
             <SanityImage :asset-id="sectionOne[1].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
@@ -94,7 +94,7 @@
           <v-img width="100%" src="/arrowDown.svg" alt="img"></v-img>
         </div>
         <v-sheet class="text-center mb-16 mb-md-0">
-          <v-avatar color="accent" size="180">
+          <v-avatar size="180">
             <SanityImage :asset-id="sectionOne[2].img.asset._ref" auto="format" />
           </v-avatar>
           <h2 class="font-title mt-3">
