@@ -29,5 +29,16 @@ export default {
             title: 'Theme',
             type: 'string',
         },
+        {
+            name: 'order',
+            title: 'Order',
+            type: 'number',
+            hidden: true
+        },
+        {
+            name: 'number',
+            title: 'Number',
+            type: 'number',
+        },
     ]
 }

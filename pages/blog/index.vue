@@ -5,12 +5,13 @@
       img="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
       :nav="nav"
     />
-    <!-- <SanityImage :asset-id="blogCard[0].img.asset._ref" auto="format" /> -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row class="align-flex-start">
         <v-col>
           <div v-for="card in blogCard" :key="card._id">
             <BlogCard
+               imageUrl="https://res.cloudinary.com/kingsleysolomon/image/upload/f_auto,q_auto/v1664417563/webtech/Rectangle_4_whmbrs.png"
+              :info="card"
               :img="card.img.asset._ref"
               :headtext="card.headText"
               :P_span_1="card.text1"
@@ -194,7 +195,7 @@
           <v-sheet max-width="306" class="mt-16">
             <h4>Popular Posts</h4>
             <v-list
-              v-for="(pos, i) in result"
+              v-for="(pos, i) in blogPost"
               :key="i"
               class="d-flex align-center justify-space-around mb-8"
             >
@@ -226,15 +227,13 @@
   </main>
 </template>
 
-<script lang="ts">
+<script>
 import { groq } from "@nuxtjs/sanity";
-import { ref, useAsync, useContext } from "@nuxtjs/composition-api";
-import BlogCard from "../../components/BlogCard.vue";
-import BlogCardBody from "~/components/BlogCardBody.vue";
 import { mdiChevronRight, mdiFacebook, mdiTwitter, mdiGooglePlus } from "@mdi/js";
+const blogPostQuery = groq`*[_type == "blogPost"]`;
+const blogCardQuery = groq`*[_type == "blogCard"]`;
 
 export default {
-  components: { BlogCard, BlogCardBody },
 
   data: () => ({
     nav: ["Portfolio", "Pricing"],
@@ -242,38 +241,20 @@ export default {
 
     showSpanText: true,
     showMainP: true,
+    button: ["Digital", "Networking", "New", "Security", "Software"]
   }),
 
-  setup() {
-    interface Post {
-      img: String;
-      headText: String;
-      date: String;
-    }
-
-    type button = String;
-
-    const button: button[] = ["Digital", "Networking", "New", "Security", "Software"];
-
-    const showSpan = (showSpanText: Boolean) => {
+  methods: {
+    showSpan (showSpanText)  {
       return !showSpanText;
-    };
+    }
+  },
 
-    const sanity = useContext().app.$sanity;
-
-    const query = groq`*[_type == "blogPost"]`;
-
-    const result = ref<any>([]);
-
-    result.value = useAsync(() => sanity.fetch<Post[]>(query));
-
-    const blogCardQuery = groq`*[_type == "blogCard"]`;
-
-    const blogCard = ref<any>([]);
-
-    blogCard.value = useAsync(() => sanity.fetch(blogCardQuery));
-
-    return { button, showSpan, result, blogCard };
+  async asyncData({ app }) {
+    const sanity = app.$sanity;
+    const blogPost = await sanity.fetch(blogPostQuery);
+    const blogCard = await sanity.fetch(blogCardQuery);
+    return { blogPost, blogCard };
   },
 };
 </script>

@@ -40,8 +40,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script>
 export default {
   name: "BlogCardBody",
   props: {
@@ -60,11 +59,11 @@ export default {
     color: String,
     format: Boolean,
   },
-  setup() {
-    return {
-      showSpanText: true,
-    };
-  },
+
+  data: () => ({
+    showSpanText: true,
+  }),
+  
 };
 </script>
 

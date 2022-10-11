@@ -17,6 +17,7 @@
     "SPA"
   ],
   "dependencies": {
+    "@emailjs/browser": "^3.7.0",
     "@mdi/js": "^7.0.96",
     "@nuxtjs/composition-api": "^0.33.1",
     "@nuxtjs/sanity": "0.10.0",

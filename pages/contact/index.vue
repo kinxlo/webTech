@@ -8,13 +8,19 @@
     <!-- SECTION ONE -->
     <v-layout class="cc-wrapper v-spacing">
       <v-row>
-        <v-col cols="12" sm="6" v-for="item in contactItem" :key="item._id" class="mb-10 mb-md-0 d-flex justify-center">
+        <v-col
+          cols="12"
+          sm="6"
+          v-for="item in contactItem"
+          :key="item._id"
+          class="mb-10 mb-md-0 d-flex justify-center"
+        >
           <div class="d-flex align-start">
             <SanityImage :asset-id="item.img.asset._ref" auto="format" />
             <div class="ml-5">
-              <h5 style="font-size: 20px" class="font-weight-bold mb-3">{{item.title}}</h5>
+              <h5 style="font-size: 20px" class="font-weight-bold mb-3">{{ item.title }}</h5>
               <p style="font-size: 14px" class="info--text">
-                {{item.desc}}
+                {{ item.desc }}
               </p>
             </div>
           </div>
@@ -31,7 +37,7 @@
     </v-sheet>
     <!-- SECTION THREE -->
     <v-layout class="cc-wrapper">
-      <v-form class="my-16 mx-auto">
+      <v-form ref="form"  class="my-16 mx-auto">
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
@@ -42,6 +48,7 @@
                 outlined
                 flat
                 placeholder="First name"
+                name="user_firstName"
               ></v-text-field>
             </v-col>
 
@@ -53,6 +60,7 @@
                 outlined
                 flat
                 placeholder="last name"
+                name="user_lastName"
               ></v-text-field>
             </v-col>
 
@@ -65,6 +73,7 @@
                 outlined
                 flat
                 placeholder="Email Address"
+                name="user_email"
               ></v-text-field>
             </v-col>
 
@@ -76,6 +85,7 @@
                 outlined
                 flat
                 placeholder="Subject"
+                name="user_subject"
               ></v-text-field>
             </v-col>
             <v-col cols="12">
@@ -86,10 +96,11 @@
                 outlined
                 flat
                 placeholder="Write your message"
+                name="message"
               ></v-textarea>
             </v-col>
             <v-col class="text-right">
-              <v-btn color="accent rounded-0 px-10" large>Send message</v-btn>
+              <v-btn @click.prevent="handleSubmit" color="accent rounded-0 px-10" large>Send message</v-btn>
             </v-col>
           </v-row>
         </v-container>
@@ -100,9 +111,10 @@
 
 <script setup lang="ts">
 import { mdiCellphone } from "@mdi/js";
-import { reactive } from "vue";
-import { ref, useAsync, useContext } from "@nuxtjs/composition-api";
+import { ref, reactive } from "vue";
+import { useAsync, useContext } from "@nuxtjs/composition-api";
 import { groq } from "@nuxtjs/sanity";
+import emailjs from "@emailjs/browser";
 
 const state = reactive({
   nav: ["Home", "About"],
@@ -111,11 +123,34 @@ const state = reactive({
   },
 });
 
+const form = ref();
+
+// console.log( this.$ref.form)
+
+const handleSubmit = () => {
+  console.log("form");
+
+  emailjs
+    .sendForm(
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
+      // this.$ref.form,
+      process.env.EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log("SUCCESS!", result.text);
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
+};
+
 const sanity = useContext().app.$sanity;
 const query = groq`*[_type == "contact"]`;
 const contactItem = ref<any>([]);
 contactItem.value = useAsync(() => sanity.fetch(query));
-
 </script>
 
 <style></style>
